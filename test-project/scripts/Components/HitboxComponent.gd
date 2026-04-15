@@ -10,5 +10,6 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D):
-	if body.name == "Dale":
-		body.queue_free()
+	if body is TileMapLayer:
+		owner.health = 0.0
+		owner.death()

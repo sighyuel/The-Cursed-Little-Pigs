@@ -14,6 +14,7 @@ size = Vector2(14, 42)
 
 [node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh")]
 script = ExtResource("1_2kyhc")
+health = 10
 piggy = "May"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")

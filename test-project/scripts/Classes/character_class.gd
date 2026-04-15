@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name character
 
 #global variables
+@export var health : int
 @export var piggy : String
 @export var collision : CollisionShape2D
 #for now, use the character mesh
@@ -35,6 +36,11 @@ func _process(_delta: float):
 			active += 1
 		else:
 			active = 1
+
+func death():
+	if health <= 0:
+		queue_free()
+		queue_redraw()
 
 #basic movement for all piggies
 func _movement():
