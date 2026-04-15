@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dhco13nrbojub"]
+
+[ext_resource type="Script" uid="uid://udv2dhjdpr3a" path="res://scripts/Characters/perry.gd" id="1_na5ya"]
+[ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_wjqgi"]
+[ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_bcp48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wjqgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjqgi"]
+size = Vector2(16, 16)
+
+[node name="Perry" type="CharacterBody2D" unique_id=771990693 node_paths=PackedStringArray("collision", "charMesh")]
+slide_on_ceiling = false
+script = ExtResource("1_na5ya")
+piggy = "Perry"
+collision = NodePath("charCol")
+charMesh = NodePath("mesh")
+MAX_VELOCITY = 5.0
+JUMP_VELOCITY = 500.0
+acceleration = 5.0
+metadata/_custom_type_script = "uid://ui4vyukh73sy"
+
+[node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
+visible = false
+shape = SubResource("RectangleShape2D_njcns")
+
+[node name="mesh" type="MeshInstance2D" parent="." unique_id=2126410221]
+scale = Vector2(20, 20)
+mesh = SubResource("BoxMesh_wjqgi")
+
+[node name="Indicator" type="ColorRect" parent="." unique_id=1000644162]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -7.0
+offset_right = -15.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthComponent" parent="." unique_id=418957202 instance=ExtResource("2_wjqgi")]
+unique_name_in_owner = true
+
+[node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_bcp48")]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=466315033]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_wjqgi")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://brsydevgxjdbn"]
+
+[ext_resource type="Script" uid="uid://ui4vyukh73sy" path="res://scripts/Classes/character_class.gd" id="1_ce2gr"]
+
+[node name="Node2D" type="Node2D" unique_id=592722319]
+
+[node name="character" type="CharacterBody2D" parent="." unique_id=927806878]
+unique_name_in_owner = true
+script = ExtResource("1_ce2gr")
+metadata/_custom_type_script = "uid://ui4vyukh73sy"

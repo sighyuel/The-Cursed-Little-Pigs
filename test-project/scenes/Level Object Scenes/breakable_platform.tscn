@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://byk6fpot64dxq"]
+
+[ext_resource type="Script" uid="uid://clt8qgdnifwo" path="res://scripts/Breakable-Platform/break_detection.gd" id="1_tnq1m"]
+[ext_resource type="Texture2D" uid="uid://cvqepobq25kq6" path="res://assets/Objects for Levels/elementWood047.png" id="2_gqysx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbmds"]
+size = Vector2(12, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bxj4j"]
+size = Vector2(12, 0.5)
+
+[node name="single_use_platform" type="StaticBody2D" unique_id=1495796103]
+script = ExtResource("1_tnq1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1633715508]
+shape = SubResource("RectangleShape2D_tbmds")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=592644834]
+position = Vector2(1.1920929e-07, 0)
+scale = Vector2(0.05454546, 0.078571424)
+texture = ExtResource("2_gqysx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=583245784]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1907616000]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_bxj4j")
+
+[node name="Timer" type="Timer" parent="." unique_id=432126755]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
