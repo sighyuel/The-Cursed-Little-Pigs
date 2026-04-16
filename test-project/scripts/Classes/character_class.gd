@@ -27,6 +27,7 @@ var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
 
+
 func _ready():
 	add_to_group("character")
 
@@ -40,7 +41,7 @@ func _process(_delta: float):
 func death():
 	if health <= 0:
 		queue_free()
-		queue_redraw()
+		
 		
 #basic movement for all piggies
 func _movement():
