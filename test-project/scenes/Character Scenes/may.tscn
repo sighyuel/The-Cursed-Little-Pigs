@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b4pitpfa8v7jx" path="res://scripts/Characters/may.gd" id="1_2kyhc"]
 [ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_bhony"]
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_6me4a"]
+[ext_resource type="PackedScene" uid="uid://bem4xqgkbotbi" path="res://scenes/Component Scenes/interaction_area.tscn" id="4_713vo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qbito"]
 size = Vector2(20, 45)
@@ -12,7 +13,10 @@ size = Vector2(20, 45)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyhc"]
 size = Vector2(14, 42)
 
-[node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ll5m6"]
+radius = 26.0
+
+[node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh") groups=["characters"]]
 script = ExtResource("1_2kyhc")
 piggy = "May"
 collision = NodePath("charCol")
@@ -47,3 +51,9 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=727228342]
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_2kyhc")
+
+[node name="InteractionArea" parent="." unique_id=638860442 instance=ExtResource("4_713vo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=762280738]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_ll5m6")
