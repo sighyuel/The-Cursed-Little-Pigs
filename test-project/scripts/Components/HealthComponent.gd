@@ -7,8 +7,6 @@ var health : float
 func _ready():
 	health = MAX_HEALTH
 	
-func damage(attack: Attack):
-	health -= attack.attack_damage
-	
+func death():
 	if health <= 0:
 		queue_free()

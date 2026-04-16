@@ -41,7 +41,7 @@ func death():
 	if health <= 0:
 		queue_free()
 		queue_redraw()
-
+		
 #basic movement for all piggies
 func _movement():
 	move_dir = Input.get_axis("ui_left","ui_right")

@@ -13,6 +13,8 @@ size = Vector2(20, 45)
 size = Vector2(14, 42)
 
 [node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh")]
+collision_layer = 2
+collision_mask = 8
 script = ExtResource("1_2kyhc")
 health = 10
 piggy = "May"
