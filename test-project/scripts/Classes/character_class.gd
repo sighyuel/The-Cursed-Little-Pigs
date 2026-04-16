@@ -11,6 +11,7 @@ class_name character
 @export var sprite : Sprite2D
 @export var MAX_VELOCITY = 30.0
 @export var JUMP_VELOCITY = 300.0
+@export var climb_speed = 20
 @export var acceleration = 30.0
 @onready var active = 1
 #calling the nodes here so they arent called constantly
@@ -26,7 +27,6 @@ var move_dir = 0.0
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
-
 
 func _ready():
 	add_to_group("character")
@@ -46,6 +46,7 @@ func death():
 #basic movement for all piggies
 func _movement():
 	move_dir = Input.get_axis("ui_left","ui_right")
+	
 	speed = move_dir * acceleration
 	global_position.x += speed
 	#aka jump

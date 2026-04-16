@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dv5o6w3dq7fij"]
+
+[ext_resource type="Script" uid="uid://bkj2v2g2inwd0" path="res://scripts/Level Objects/ladder.gd" id="1_rerow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rerow"]
+size = Vector2(36, 92)
+
+[node name="Ladder" type="Area2D" unique_id=185563685]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_rerow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1838347053]
+position = Vector2(0, -46)
+shape = SubResource("RectangleShape2D_rerow")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="4_4q5fk"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="5_7x2h6"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="6_4oln7"]
+[ext_resource type="PackedScene" uid="uid://dv5o6w3dq7fij" path="res://scenes/Level Object Scenes/ladder.tscn" id="7_mhhr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -1106,3 +1107,6 @@ unique_name_in_owner = true
 position = Vector2(-6, -19)
 health = 0
 JUMP_VELOCITY = 600.0
+
+[node name="Ladder" parent="." unique_id=185563685 instance=ExtResource("7_mhhr2")]
+position = Vector2(183, 17)
