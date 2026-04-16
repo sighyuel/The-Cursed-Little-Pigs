@@ -32,9 +32,17 @@ func _process(delta):
 		label.hide()
 
 func _sort_by_distance_to_players(area1, area2):
-	var area1_to_player = players.global_position.distance_to(area1.global_position)
-	var area2_to_player = players.global_position.distance_to(area2.global_position)
-	return area1_to_player < area2_to_player
+	var area1_to_player1 = players[0].global_position.distance_to(area1.global_position)
+	var area2_to_player1 = players[0].global_position.distance_to(area2.global_position)
+	return area1_to_player1 < area2_to_player1
+	var area1_to_player2 = players[1].global_position.distance_to(area1.global_position)
+	var area2_to_player2 = players[1].global_position.distance_to(area1.global_position)
+	return area1_to_player2 < area1_to_player2
+	var area1_to_player3 = players[2].global_position.distance_to(area1.global_position)
+	var area2_to_player3 = players[2].global_position.distance_to(area1.global_position)
+	return area1_to_player3 < area1_to_player3
+	
+	
 	
 
 func _input(event):
