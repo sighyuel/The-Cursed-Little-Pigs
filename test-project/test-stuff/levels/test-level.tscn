@@ -1118,7 +1118,7 @@ position = Vector2(-80, -15)
 
 [node name="Dale" parent="." unique_id=1644848735 instance=ExtResource("5_7x2h6")]
 unique_name_in_owner = true
-position = Vector2(169, -10)
+position = Vector2(-150, -10)
 
 [node name="May" parent="." unique_id=1187849158 instance=ExtResource("6_4oln7")]
 unique_name_in_owner = true
@@ -1132,5 +1132,5 @@ speed = Vector2(4, 0)
 metadata/_custom_type_script = "uid://cdb8ej2s0pki6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WindArea2d" unique_id=1827213977]
-position = Vector2(202, 5)
+position = Vector2(194, 2)
 shape = SubResource("RectangleShape2D_j7nd3")
