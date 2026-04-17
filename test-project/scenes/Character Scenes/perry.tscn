@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://udv2dhjdpr3a" path="res://scripts/Characters/perry.gd" id="1_na5ya"]
 [ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_wjqgi"]
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_bcp48"]
-[ext_resource type="PackedScene" uid="uid://bem4xqgkbotbi" path="res://scenes/Component Scenes/interaction_area.tscn" id="4_p7v80"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
 
@@ -11,9 +10,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjqgi"]
 size = Vector2(16, 16)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_fd7e2"]
-radius = 15.0
 
 [node name="Perry" type="CharacterBody2D" unique_id=771990693 node_paths=PackedStringArray("collision", "charMesh") groups=["characters"]]
 slide_on_ceiling = false
@@ -59,8 +55,3 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=466315033]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_wjqgi")
-
-[node name="InteractionArea" parent="." unique_id=638860442 instance=ExtResource("4_p7v80")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1581244869]
-shape = SubResource("CircleShape2D_fd7e2")

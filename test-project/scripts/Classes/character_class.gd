@@ -25,6 +25,7 @@ var move_dir = 0.0
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
+var wind_velocity: Vector2 = Vector2.ZERO
 
 func _ready():
 	add_to_group("character")

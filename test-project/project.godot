@@ -19,10 +19,6 @@ run/main_scene="uid://h0av8kw4uam5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://picture of john godot/icon.svg"
 
-[autoload]
-
-InteractionManager="*uid://brdxup0t6rn0d"
-
 [file_customization]
 
 folder_colors={
@@ -69,6 +65,7 @@ interact={
 [layer_names]
 
 2d_render/layer_3="Spikes"
+2d_physics/layer_1="players"
 2d_physics/layer_3="Spikes"
 
 [physics]
