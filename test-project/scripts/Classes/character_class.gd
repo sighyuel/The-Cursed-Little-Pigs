@@ -19,14 +19,17 @@ class_name character
 @onready var mesh = $mesh
 @onready var rect = $Indicator
 var speed = 0.0
-var max_height = 15
-var max_sprite_height = 300
+var max_height = 7
+var max_sprite_height = 150
 var glide = .0001
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_dir = 0.0
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
+var on_ladder: bool = false
+var coin_counter = 0
+
 
 func _ready():
 	add_to_group("character")
@@ -37,10 +40,15 @@ func _process(_delta: float):
 			active += 1
 		else:
 			active = 1
+			
+
+func set_count(new_coin_count: int) -> void:
+	coin_counter = new_coin_count
 
 func death():
 	if health <= 0:
 		queue_free()
+		
 		
 		
 #basic movement for all piggies

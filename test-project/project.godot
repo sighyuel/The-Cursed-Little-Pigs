@@ -19,6 +19,10 @@ run/main_scene="uid://h0av8kw4uam5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://picture of john godot/icon.svg"
 
+[autoload]
+
+Global_Variables="*uid://c76uokgfhvm1j"
+
 [file_customization]
 
 folder_colors={

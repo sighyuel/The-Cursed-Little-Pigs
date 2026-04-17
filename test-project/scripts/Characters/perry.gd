@@ -6,8 +6,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 #when perry extends, if this goes below to -1, it messes up the move_dir
-	if acceleration <= 0:
-		acceleration = 0
+	if acceleration <= .5:
+		acceleration = .5
 	if active == 2:
 		rect.visible = true
 		_movement()

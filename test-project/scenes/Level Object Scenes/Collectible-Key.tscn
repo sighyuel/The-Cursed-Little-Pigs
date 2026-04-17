@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://caygxpvg85prd"]
+
+[ext_resource type="Script" uid="uid://d2wvn0621homr" path="res://scripts/Level Objects/collectible_key.gd" id="1_egvaj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ga26y"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kjxss"]
+
+[sub_resource type="Gradient" id="Gradient_xsue1"]
+offsets = PackedFloat32Array(0, 0.0030864198)
+colors = PackedColorArray(0, 0, 0, 1, 0.8537441, 0.85374373, 7.70092e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2i6wm"]
+gradient = SubResource("Gradient_xsue1")
+
+[sub_resource type="Animation" id="Animation_egvaj"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-2.3841858e-07, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2.3841858e-06, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ga26y"]
+resource_name = "up_down"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2),
+"points": PackedFloat32Array(-2.3841858e-07, -0.25, 0, 0.25, 0, 0, -0.085, -3.973643e-08, 0, 0, 0, -0.07000001, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667, 0.93)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2),
+"points": PackedFloat32Array(2.3841858e-06, -0.25, 0, 0.25, 0, -11.4, -0.16515252, 6.3999996, 0, 0, 0, -0.4536257, 1, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667, 0.93)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjxss"]
+_data = {
+&"RESET": SubResource("Animation_egvaj"),
+&"up_down": SubResource("Animation_ga26y")
+}
+
+[node name="CollectibleKey" type="Area2D" unique_id=1180161614 groups=["key"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_egvaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=247081520]
+shape = SubResource("CircleShape2D_ga26y")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=316201963]
+position = Vector2(-2.3841858e-07, 2.3841858e-06)
+scale = Vector2(20.022678, 20.000004)
+mesh = SubResource("SphereMesh_kjxss")
+texture = SubResource("GradientTexture1D_2i6wm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=710892356]
+libraries/ = SubResource("AnimationLibrary_kjxss")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

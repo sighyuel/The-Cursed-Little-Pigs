@@ -52,7 +52,7 @@ unique_name_in_owner = true
 [node name="ladder_detect_ray" parent="." unique_id=1353371322 instance=ExtResource("3_p7v80")]
 unique_name_in_owner = true
 position = Vector2(0, -9.26)
-scale = Vector2(5.83, 2)
+scale = Vector2(3.22, 2)
 target_position = Vector2(0, 9.09091)
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_bcp48")]
