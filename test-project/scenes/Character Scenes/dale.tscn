@@ -13,6 +13,7 @@ size = Vector2(34, 30)
 size = Vector2(28, 27)
 
 [node name="Dale" type="CharacterBody2D" unique_id=1644848735 node_paths=PackedStringArray("collision", "charMesh")]
+collision_layer = 8
 script = ExtResource("1_kqgx1")
 piggy = "Dale"
 collision = NodePath("charCol")

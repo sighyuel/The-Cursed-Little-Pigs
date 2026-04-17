@@ -1106,17 +1106,19 @@ scale = Vector2(5.835, 5.835)
 position = Vector2(259, 95)
 scale = Vector2(5.535, 5.535)
 
-[node name="Perry" parent="." unique_id=771990693 instance=ExtResource("4_4q5fk")]
+[node name="Character" type="Node" parent="." unique_id=210121331]
+
+[node name="Perry" parent="Character" unique_id=771990693 instance=ExtResource("4_4q5fk")]
 unique_name_in_owner = true
 position = Vector2(-54, -21)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
-
-[node name="Dale" parent="." unique_id=1644848735 instance=ExtResource("5_7x2h6")]
+[node name="Dale" parent="Character" unique_id=1644848735 instance=ExtResource("5_7x2h6")]
 unique_name_in_owner = true
 position = Vector2(43, -20)
 
-[node name="May" parent="." unique_id=1187849158 instance=ExtResource("6_4oln7")]
+[node name="May" parent="Character" unique_id=1187849158 instance=ExtResource("6_4oln7")]
 unique_name_in_owner = true
 position = Vector2(-6, -19)
 JUMP_VELOCITY = 600.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]

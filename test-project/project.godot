@@ -8,12 +8,21 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Cursed_Little_Pigs_Alpha"
 run/main_scene="uid://h0av8kw4uam5"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://picture of john godot/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=760
 
 [file_customization]
 
@@ -52,7 +61,9 @@ A={
 [layer_names]
 
 2d_render/layer_3="Spikes"
-2d_physics/layer_3="Spikes"
+2d_physics/layer_2="May"
+2d_physics/layer_3="Perry"
+2d_physics/layer_4="Dale"
 
 [physics]
 
