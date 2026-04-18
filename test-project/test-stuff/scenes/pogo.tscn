@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://lot82cr82vef"]
 
-[ext_resource type="Script" uid="uid://c8ndm0x2dmt4t" path="res://test-stuff/scripts/pogo.gd" id="1_smoeh"]
+[ext_resource type="Script" path="res://test-stuff/scripts/pogo.gd" id="1_smoeh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekvec"]
-size = Vector2(21, 136)
+size = Vector2(21, 124)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ekvec"]
 
@@ -20,12 +20,12 @@ collision_mask = 2
 script = ExtResource("1_smoeh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1642011174]
-position = Vector2(0.5, -58)
+position = Vector2(0.5, -52)
 shape = SubResource("RectangleShape2D_ekvec")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1611983361]
-position = Vector2(0.5, -58)
-scale = Vector2(21, 136)
+position = Vector2(0.5, -52.000004)
+scale = Vector2(21, 124.00001)
 mesh = SubResource("BoxMesh_ekvec")
 texture = SubResource("GradientTexture1D_go4l1")
 

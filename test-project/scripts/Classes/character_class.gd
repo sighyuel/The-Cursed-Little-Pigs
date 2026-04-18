@@ -29,6 +29,7 @@ var may_is_flying = false
 var dale_ground_pounding = false
 var on_ladder: bool = false
 var coin_counter = 0
+var tree_reset_height = 60
 
 
 func _ready():
@@ -76,11 +77,13 @@ func _perry_stretch():
 		tree_mode_activated = true
 
 func _perry_reset():
-	if Input.is_action_just_pressed("B"):
+	if Input.is_action_just_pressed("B") and tree_mode_activated:
 		mesh.scale.y = 19.75
 		charCol.scale.y = 1
 		acceleration = 5
 		JUMP_VELOCITY = 300.0
+		global_position.y -= tree_reset_height
+		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities
 func _dale_slam():
