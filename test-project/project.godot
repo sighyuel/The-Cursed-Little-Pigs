@@ -21,8 +21,9 @@ config/icon="res://picture of john godot/icon.svg"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/stretch/mode="viewport"
 
 [file_customization]
 
@@ -71,4 +72,5 @@ A={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

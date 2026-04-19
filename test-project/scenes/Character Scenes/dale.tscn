@@ -4,15 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_qt8g0"]
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_5r3sg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oudw0"]
-size = Vector2(34, 30)
-
 [sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltdmu"]
+radius = 32.0
+height = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k47w"]
 size = Vector2(28, 27)
 
 [node name="Dale" type="CharacterBody2D" unique_id=1644848735 node_paths=PackedStringArray("collision", "charMesh")]
+z_index = 5
 collision_layer = 8
 collision_mask = 9
 script = ExtResource("1_kqgx1")
@@ -23,26 +25,25 @@ JUMP_VELOCITY = 500.0
 acceleration = 2.0
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
-[node name="charCol" type="CollisionShape2D" parent="." unique_id=770709682]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_oudw0")
-
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=990098150]
-position = Vector2(-9.536743e-07, -4.999999)
-scale = Vector2(33.999996, 30)
+scale = Vector2(64, 64)
 mesh = SubResource("BoxMesh_lm3dp")
+
+[node name="charCol" type="CollisionShape2D" parent="." unique_id=770709682]
+shape = SubResource("CapsuleShape2D_ltdmu")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=760327598]
 offset_left = -5.0
-offset_top = -33.0
+offset_top = -48.0
 offset_right = 5.0
-offset_bottom = -24.0
+offset_bottom = -38.0
 
 [node name="HealthComponent" parent="." unique_id=418957202 instance=ExtResource("2_qt8g0")]
 unique_name_in_owner = true
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_5r3sg")]
 unique_name_in_owner = true
+visible = false
 collision_layer = 0
 collision_mask = 4
 health_component = NodePath("../HealthComponent")
