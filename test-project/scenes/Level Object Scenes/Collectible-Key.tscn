@@ -87,5 +87,4 @@ texture = SubResource("GradientTexture1D_2i6wm")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=710892356]
 libraries/ = SubResource("AnimationLibrary_kjxss")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
