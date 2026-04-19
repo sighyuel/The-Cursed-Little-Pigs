@@ -7,7 +7,18 @@ func _physics_process(delta: float) -> void:
 		velocity.y += gravity * delta
 	if is_on_floor():
 		gravity = 980
+	
 	if active == 3:
-		rect.visible = true
-		_movement()
 		_may_glide()
+		if _on_ladder:
+			ladder_movement(delta)
+		else:
+			_movement(delta)
+		if _is_on_ladder() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
+			_on_ladder = true
+		else:
+			_on_ladder = false
+		if is_on_floor() and Input.is_action_just_pressed("ui_down"):
+			GlobalSignals.oneway_disabled.emit()
+		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
+		rect.visible = true
