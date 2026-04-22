@@ -121,5 +121,5 @@ func _dale_slam():
 #may's abilities
 func _may_glide():
 	if Input.is_action_pressed("Y") and not is_on_floor():
-		velocity.y += gravity * glide
+		velocity.y = gravity * glide
 		gravity = 100
