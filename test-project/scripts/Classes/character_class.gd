@@ -21,8 +21,6 @@ var max_height = 6
 var max_sprite_height = 300
 var tree_reset_height = 100
 var glide = .0001
-var max_height = 7
-var max_sprite_height = 150
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_dir = 0.0
 var tree_mode_activated = false
@@ -31,7 +29,6 @@ var dale_ground_pounding = false
 var wind_velocity: Vector2 = Vector2.ZERO
 var on_ladder: bool = false
 var coin_counter = 0
-var tree_reset_height = 60
 @onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
 var _on_ladder : bool = false
 var _ladder_x_pos : float
