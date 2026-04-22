@@ -19,4 +19,4 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Node2D:
 		GlobalSignals.coin_collect.emit()
 	_coin_complete() 
-	queue_free()# Replace with function body.
+	queue_free()
