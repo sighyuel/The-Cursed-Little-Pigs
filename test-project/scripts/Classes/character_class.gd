@@ -128,4 +128,3 @@ func _may_glide(delta):
 		velocity.y += gravity * delta
 	if velocity.y >= glide_fall:
 		velocity.y = glide_fall
-
