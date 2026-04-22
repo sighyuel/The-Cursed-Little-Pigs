@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 		gravity = 980
 	
 	if active == 3:
-		_may_glide()
+		_may_glide(delta)
 		if _on_ladder:
 			ladder_movement(delta)
 		else:
