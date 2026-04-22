@@ -1,11 +1,5 @@
 extends character
 
-#@onready var interaction_area: InteractionArea = $InteractionArea
-
-func _ready():
-	#interaction_area.interact = Callable(self, "_on_interact")
-	pass
-
 func _physics_process(delta: float) -> void:
 	velocity += wind_velocity * 0.4 
 	move_and_slide()
