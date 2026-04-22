@@ -1,10 +1,13 @@
 extends character
 
 func _physics_process(delta: float) -> void:
+	velocity += wind_velocity * 0.4 
 	move_and_slide()
 	rect.visible = false
-	if not is_on_floor():
+	if not is_on_floor() && wind_velocity.y == 0.0:
 		velocity.y += gravity * delta
+	elif wind_velocity.y >0.0:
+		delta = 0
 	if is_on_floor():
 		gravity = 980
 	
@@ -22,3 +25,4 @@ func _physics_process(delta: float) -> void:
 			GlobalSignals.oneway_disabled.emit()
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
+

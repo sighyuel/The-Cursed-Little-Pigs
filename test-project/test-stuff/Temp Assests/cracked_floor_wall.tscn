@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://crkyppn7ssn0"]
+
+[node name="Cracked floor_wall" type="Sprite2D" unique_id=149284180]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1380642178]
+offset_right = 215.0
+offset_bottom = 19.0
+color = Color(0.654902, 0.654902, 0.65882355, 1)
