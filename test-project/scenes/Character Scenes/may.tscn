@@ -4,15 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_bhony"]
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_6me4a"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbito"]
-size = Vector2(20, 45)
-
 [sub_resource type="BoxMesh" id="BoxMesh_ii0t2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gk5rk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyhc"]
 size = Vector2(14, 42)
 
-[node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh") groups=["characters"]]
+[node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh")]
+z_index = 5
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_2kyhc")
 piggy = "May"
 collision = NodePath("charCol")
@@ -20,26 +22,25 @@ charMesh = NodePath("mesh")
 acceleration = 5.0
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
-[node name="charCol" type="CollisionShape2D" parent="." unique_id=1686499719]
-position = Vector2(0, -12.5)
-shape = SubResource("RectangleShape2D_qbito")
-
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=1836331763]
-position = Vector2(0, -12.499999)
-scale = Vector2(20, 45)
+scale = Vector2(20, 30)
 mesh = SubResource("BoxMesh_ii0t2")
 
+[node name="charCol" type="CollisionShape2D" parent="." unique_id=1686499719]
+shape = SubResource("CapsuleShape2D_gk5rk")
+
 [node name="Indicator" type="ColorRect" parent="." unique_id=1239872276]
-offset_left = -4.0
-offset_top = -48.0
-offset_right = 4.0
-offset_bottom = -40.0
+offset_left = -5.0
+offset_top = -30.0
+offset_right = 5.0
+offset_bottom = -20.0
 
 [node name="HealthComponent" parent="." unique_id=418957202 instance=ExtResource("2_bhony")]
 unique_name_in_owner = true
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_6me4a")]
 unique_name_in_owner = true
+visible = false
 collision_layer = 0
 collision_mask = 4
 health_component = NodePath("../HealthComponent")

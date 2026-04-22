@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b6e3s7gvw0p7p"]
+
+[ext_resource type="Script" uid="uid://bw2n8h1rd6hgk" path="res://test-stuff/scripts/key.gd" id="1_koef3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyp27"]
+size = Vector2(87, 44)
+
+[node name="Key" type="Area2D" unique_id=444807382]
+script = ExtResource("1_koef3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1400312936]
+position = Vector2(-2.5, 18)
+shape = SubResource("RectangleShape2D_wyp27")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=32415798]
+
+[node name="Temp sprite" type="ColorRect" parent="Sprite2D2" unique_id=655317774]
+offset_left = 4.0
+offset_right = 36.0
+offset_bottom = 36.0
+color = Color(1, 1, 0.5294118, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D2/Temp sprite" unique_id=919870829]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 3.0
+offset_bottom = 18.0
+color = Color(1, 1, 0.5294118, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Sprite2D2/Temp sprite" unique_id=336641628]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 10.0
+offset_right = -37.0
+offset_bottom = 36.0
+color = Color(1, 1, 0.5294118, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Sprite2D2/Temp sprite" unique_id=16673565]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 9.0
+offset_right = -22.0
+offset_bottom = 35.0
+color = Color(1, 1, 0.5294118, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="4_4q5fk"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="5_7x2h6"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="6_4oln7"]
-[ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="7_mhhr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -1082,9 +1081,6 @@ physics_layer_1/collision_layer = 4
 physics_layer_1/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_1skdl")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7nd3"]
-size = Vector2(147, 42)
-
 [node name="Game" type="Node2D" unique_id=1841273835]
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1153758394]
@@ -1103,35 +1099,26 @@ tile_set = SubResource("TileSet_u6624")
 
 [node name="single_use_platform" parent="Breakable Platforms" unique_id=1495796103 instance=ExtResource("3_j7nd3")]
 unique_name_in_owner = true
-position = Vector2(-116.95, 1)
-rotation = 1.5428711
+position = Vector2(259.00003, 39)
 scale = Vector2(5.835, 5.835)
 
 [node name="single_use_platform2" parent="Breakable Platforms" unique_id=325655080 instance=ExtResource("3_j7nd3")]
 position = Vector2(259, 95)
 scale = Vector2(5.535, 5.535)
 
-[node name="Perry" parent="." unique_id=771990693 instance=ExtResource("4_4q5fk")]
-unique_name_in_owner = true
-position = Vector2(-20, -4)
+[node name="Character" type="Node" parent="." unique_id=210121331]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
-
-[node name="Dale" parent="." unique_id=1644848735 instance=ExtResource("5_7x2h6")]
+[node name="Perry" parent="Character" unique_id=771990693 instance=ExtResource("4_4q5fk")]
 unique_name_in_owner = true
-position = Vector2(250, -10)
+position = Vector2(-54, -21)
 
-[node name="May" parent="." unique_id=1187849158 instance=ExtResource("6_4oln7")]
+[node name="Dale" parent="Character" unique_id=1644848735 instance=ExtResource("5_7x2h6")]
 unique_name_in_owner = true
-position = Vector2(42, -6)
+position = Vector2(43, -20)
+
+[node name="May" parent="Character" unique_id=1187849158 instance=ExtResource("6_4oln7")]
+unique_name_in_owner = true
+position = Vector2(-6, -19)
 JUMP_VELOCITY = 600.0
 
-[node name="WindArea2d" type="Area2D" parent="." unique_id=354804172]
-position = Vector2(-194, -7)
-script = ExtResource("7_mhhr2")
-speed = Vector2(4, 0)
-metadata/_custom_type_script = "uid://cdb8ej2s0pki6"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WindArea2d" unique_id=1827213977]
-position = Vector2(51, 1)
-shape = SubResource("RectangleShape2D_j7nd3")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]

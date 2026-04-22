@@ -6,8 +6,8 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_wjqgi"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cbal2"]
-height = 50.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
+size = Vector2(20, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjqgi"]
 size = Vector2(16, 16)
@@ -31,7 +31,7 @@ scale = Vector2(20, 50)
 mesh = SubResource("BoxMesh_wjqgi")
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
-shape = SubResource("CapsuleShape2D_cbal2")
+shape = SubResource("RectangleShape2D_njcns")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=1000644162]
 anchors_preset = 8
@@ -40,9 +40,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -5.0
-offset_top = -40.0
+offset_top = -170.0
 offset_right = 5.0
-offset_bottom = -30.0
+offset_bottom = -160.0
 grow_horizontal = 2
 grow_vertical = 2
 
