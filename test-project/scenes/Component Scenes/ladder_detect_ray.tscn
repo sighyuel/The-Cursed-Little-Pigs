@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ddavqlnlsktct"]
+
+[node name="ladder_detect_ray" type="RayCast2D" unique_id=1353371322]
+scale = Vector2(5.83, 0.99)
+target_position = Vector2(0, 29)
+collision_mask = 16
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false

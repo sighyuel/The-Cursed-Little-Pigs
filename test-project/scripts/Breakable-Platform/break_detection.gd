@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 var time = 1
+@onready var timer : Timer
 
 func _ready():
 	set_process(false)
