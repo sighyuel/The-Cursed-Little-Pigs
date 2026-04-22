@@ -20,12 +20,12 @@ slide_on_ceiling = false
 script = ExtResource("1_na5ya")
 health = 10
 piggy = "Perry"
-collision = NodePath("charCol")
-charMesh = NodePath("mesh")
 MAX_VELOCITY = 5.0
 JUMP_VELOCITY = 500.0
 acceleration = 5.0
 ladder_speed = -100.0
+collision = NodePath("charCol")
+charMesh = NodePath("mesh")
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
