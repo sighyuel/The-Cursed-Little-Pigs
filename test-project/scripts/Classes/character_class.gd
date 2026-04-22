@@ -9,7 +9,6 @@ class_name character
 @export var charMesh : MeshInstance2D
 #use sprite once we have sprites
 @export var sprite : Sprite2D
-@export var MAX_VELOCITY = 30.0
 @export var JUMP_VELOCITY = 300.0
 @export var acceleration = 30.0
 @onready var active = 1
@@ -20,7 +19,6 @@ class_name character
 var speed = 0.0
 var max_height = 7
 var max_sprite_height = 150
-var glide = .0005
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_dir = 0.0
 var tree_mode_activated = false
@@ -34,6 +32,7 @@ var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
+var glide_fall : int = 50
 
 func _ready():
 	add_to_group("character")
@@ -65,17 +64,10 @@ func ladder_movement(delta : float) -> void:
 		velocity.y = 0.0
 		
 
-
-
-func set_count(new_coin_count: int) -> void:
-	coin_counter = new_coin_count
-
 func death():
 	if health <= 0:
 		queue_free()
-		
-		
-		
+
 #basic movement for all piggies
 func _movement(_delta: float):
 	move_dir = Input.get_axis("ui_left","ui_right")
@@ -119,7 +111,8 @@ func _dale_slam():
 		mesh.scale.x = 42
 
 #may's abilities
-func _may_glide():
+func _may_glide(delta):
 	if Input.is_action_pressed("Y") and not is_on_floor():
-		velocity.y = gravity * glide
-		gravity = 100
+		velocity.y += gravity * delta
+	if velocity.y >= glide_fall:
+		velocity.y = glide_fall
