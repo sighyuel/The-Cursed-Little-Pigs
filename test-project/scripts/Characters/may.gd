@@ -25,4 +25,3 @@ func _physics_process(delta: float) -> void:
 			GlobalSignals.oneway_disabled.emit()
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
-

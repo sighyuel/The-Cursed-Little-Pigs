@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://h0av8kw4uam5"]
 
-[ext_resource type="Script" path="res://test-stuff/levels/test_level.gd" id="1_fjkdh"]
+[ext_resource type="Script" uid="uid://brviopotbm4em" path="res://test-stuff/levels/test_level.gd" id="1_fjkdh"]
 [ext_resource type="Texture2D" uid="uid://c5rkwk0npviiu" path="res://assets/Tile Sets/goodly-2x.png" id="1_iul4n"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Level Object Scenes/spikes.tscn" id="2_iul4n"]
 [ext_resource type="PackedScene" uid="uid://ccoiqbcaq4vvp" path="res://scenes/Level Object Scenes/ladder_top.tscn" id="3_4oln7"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="7_mhhr2"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="8_j7nd3"]
 [ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Level Object Scenes/circle saw.tscn" id="9_4q5fk"]
-[ext_resource type="PackedScene" uid="uid://dv5o6w3dq7fij" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
+[ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
