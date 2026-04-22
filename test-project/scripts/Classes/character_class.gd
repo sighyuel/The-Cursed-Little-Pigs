@@ -37,6 +37,7 @@ var _ladder_snap_weight : float = 10.0
 
 func _ready():
 	add_to_group("character")
+	_on_ladder = false
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Right Bumper"):
