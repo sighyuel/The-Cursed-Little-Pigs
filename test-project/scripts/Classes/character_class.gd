@@ -101,7 +101,7 @@ func _perry_stretch():
 func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
 
-		mesh.scale.y = 50
+		mesh.scale.y = 20
 		charCol.scale.y = 1
 		acceleration = 3
 		JUMP_VELOCITY = 400.0

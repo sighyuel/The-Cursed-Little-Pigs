@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="4_kneoj"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="5_q8mqc"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oudw0"]
 size = Vector2(34, 30)
-
-[sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k47w"]
 size = Vector2(28, 27)
@@ -22,20 +22,19 @@ health = 10
 piggy = "Dale"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")
-MAX_VELOCITY = 100.0
 JUMP_VELOCITY = 500.0
 acceleration = 2.0
 ladder_speed = -150.515
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
-[node name="charCol" type="CollisionShape2D" parent="." unique_id=770709682]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_oudw0")
-
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=990098150]
 position = Vector2(-9.536743e-07, -4.999999)
 scale = Vector2(33.999996, 30)
 mesh = SubResource("BoxMesh_lm3dp")
+
+[node name="charCol" type="CollisionShape2D" parent="." unique_id=770709682]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_oudw0")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=760327598]
 offset_left = -5.0
@@ -48,6 +47,7 @@ unique_name_in_owner = true
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_5r3sg")]
 unique_name_in_owner = true
+modulate = Color(6.9187954e-06, 0.48818338, 0.03603145, 1)
 collision_layer = 0
 collision_mask = 20
 health_component = NodePath("../HealthComponent")

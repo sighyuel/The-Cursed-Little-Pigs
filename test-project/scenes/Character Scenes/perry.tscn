@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_p7v80"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_fd7e2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_wjqgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjqgi"]
 size = Vector2(16, 16)
@@ -20,20 +20,19 @@ slide_on_ceiling = false
 script = ExtResource("1_na5ya")
 health = 10
 piggy = "Perry"
-MAX_VELOCITY = 5.0
+collision = NodePath("charCol")
+charMesh = NodePath("mesh")
 JUMP_VELOCITY = 500.0
 acceleration = 5.0
 ladder_speed = -100.0
-collision = NodePath("charCol")
-charMesh = NodePath("mesh")
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
-
-[node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
-shape = SubResource("RectangleShape2D_njcns")
 
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=2126410221]
 scale = Vector2(20, 20)
 mesh = SubResource("BoxMesh_wjqgi")
+
+[node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
+shape = SubResource("RectangleShape2D_njcns")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=1000644162]
 anchors_preset = 8
@@ -66,5 +65,6 @@ collision_mask = 20
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=466315033]
+modulate = Color(0, 0.4862745, 0.03529412, 1)
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_wjqgi")
