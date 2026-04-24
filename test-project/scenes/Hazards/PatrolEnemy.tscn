@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://1oonbtfb2xx2"]
 
-[ext_resource type="Script" uid="uid://dk27d46yd7qxh" path="res://scenes/area_2d.gd" id="1_svk5y"]
+[ext_resource type="Script" uid="uid://dk27d46yd7qxh" path="res://scripts/Hazards/PatrolEnemy.gd" id="1_4e83o"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_dl81w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rgpn"]
 
-[node name="Area2D" type="Area2D" unique_id=812782412]
-script = ExtResource("1_svk5y")
+[node name="PatrolEnemy" type="Area2D" unique_id=812782412]
+script = ExtResource("1_4e83o")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=669148822]
 scale = Vector2(20, 20)
