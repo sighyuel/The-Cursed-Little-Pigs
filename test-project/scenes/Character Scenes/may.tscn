@@ -51,6 +51,7 @@ position = Vector2(0, -34.34)
 scale = Vector2(3.74, 1.54)
 
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("4_ll5m6")]
+visible = false
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_6me4a")]
 unique_name_in_owner = true

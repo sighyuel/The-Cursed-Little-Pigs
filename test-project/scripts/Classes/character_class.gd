@@ -34,7 +34,7 @@ var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
-var glide_fall : int = 50
+var glide_fall : int = 100
 var max_ladder_height : int = 10
 
 func _ready():
@@ -88,7 +88,7 @@ func _movement(_delta: float):
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		mesh.scale.y += 10
+		mesh.scale.y += 7
 		charCol.scale.y += .5
 		rect.position.y = -170
 		$Ladder.scale.y += .5
@@ -99,7 +99,6 @@ func _perry_stretch():
 		charCol.scale.y = max_height
 		mesh.scale.y = max_sprite_height
 		$Ladder.scale.y = max_ladder_height
-		JUMP_VELOCITY = 0
 		tree_mode_activated = true
 
 func _perry_reset():
@@ -128,5 +127,5 @@ func _dale_slam():
 func _may_glide(delta):
 	if Input.is_action_pressed("Y") and not is_on_floor():
 		velocity.y += gravity * delta
-	if velocity.y >= glide_fall:
-		velocity.y = glide_fall
+		if velocity.y >= glide_fall:
+			velocity.y = glide_fall

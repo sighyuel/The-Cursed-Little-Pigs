@@ -61,3 +61,4 @@ position = Vector2(0, -19.95)
 
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("5_q8mqc")]
 unique_name_in_owner = true
+visible = false

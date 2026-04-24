@@ -52,6 +52,7 @@ grow_vertical = 2
 unique_name_in_owner = true
 
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("4_fd7e2")]
+visible = false
 
 [node name="Ladder" parent="." unique_id=185563685 instance=ExtResource("4_56pri")]
 position = Vector2(0, 1)
