@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://y53l4gsbbxvp"]
+
+[ext_resource type="Script" path="res://scripts/Level Objects/circle_saw.gd" id="1_13jwt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22jcu"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_13jwt"]
+
+[node name="CircleSaw" type="Area2D" unique_id=504590791]
+collision_mask = 2
+script = ExtResource("1_13jwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1825341653]
+shape = SubResource("CircleShape2D_22jcu")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=24263228]
+position = Vector2(8.046627e-07, 3.9041042e-06)
+scale = Vector2(20.02268, 20.000008)
+mesh = SubResource("SphereMesh_13jwt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
