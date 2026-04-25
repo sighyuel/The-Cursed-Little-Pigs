@@ -1,14 +1,13 @@
 extends character
-@onready var ladder: Area2D = $Ladder
 
+@onready var ladder: Area2D = $Ladder
 
 func _physics_process(delta: float) -> void:
 	print(tree_mode_activated)
 	velocity += wind_velocity * 0.4 
 	move_and_slide()
 	rect.visible = false
-	if tree_mode_activated:
-		ladder.monitoring = true
+	
 	if not is_on_floor() && wind_velocity.y == 0.0:
 		velocity.y += gravity * delta
 	elif wind_velocity.y >0.0:
@@ -16,6 +15,7 @@ func _physics_process(delta: float) -> void:
 #when perry extends, if this goes below to -1, it messes up the move_dir
 	if acceleration <= .5:
 		acceleration = .5
+	
 	if active == 2:
 		if _on_ladder:
 			ladder_movement(delta)

@@ -1,21 +1,24 @@
 extends CharacterBody2D
 class_name character
 
-#global variables
 @export var health : int
 @export var piggy : String
 @export var collision : CollisionShape2D
+
 #for now, use the character mesh
 @export var charMesh : MeshInstance2D
+
 #use sprite once we have sprites
 @export var sprite : Sprite2D
 @export var JUMP_VELOCITY = 300.0
 @export var acceleration = 30.0
-@onready var active = 1
+
 #calling the nodes here so they arent called constantly
+@onready var active = 1
 @onready var charCol = $charCol
 @onready var mesh = $mesh
 @onready var rect = $Indicator
+@onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
 var speed = 0.0
 var max_height = 6
 var max_sprite_height = 115
@@ -23,25 +26,35 @@ var tree_reset_height = 100
 var glide = .0001
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_dir = 0.0
+#variables for abilities
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
+#wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
+
+#Ladder variables
 var on_ladder: bool = false
-var coin_counter = 0
-@onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
 var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
+
+#controls how fast may glides down
 var glide_fall : int = 100
+#controls how high perry's ladder can go
 var max_ladder_height : int = 10
 
 func _ready():
 	add_to_group("character")
 	_on_ladder = false
+	if RoomChangeGlobal.Activate:
+		global_position = RoomChangeGlobal.PlayerPos
+		if RoomChangeGlobal.PlayerJumpOnEnter:
+			velocity.y = -JUMP_VELOCITY
+		RoomChangeGlobal.Activate = false
 
-
+#controls the character switching / may make this a global
 func _process(_delta):
 	if Input.is_action_just_pressed("Right Bumper"):
 		if active != 3:
@@ -49,7 +62,7 @@ func _process(_delta):
 		else:
 			active = 1
 
-
+#using the raycast to detect if it is colliding or not
 func _is_on_ladder() -> bool:
 	if not ladder_detection_ray.is_colliding():
 		return false
@@ -57,6 +70,7 @@ func _is_on_ladder() -> bool:
 	_ladder_x_pos = ladder_detection_ray.get_collider().global_position.x
 	return true
 
+#controls the movement of the ladder
 func ladder_movement(delta : float) -> void:
 	global_position.x = lerp(global_position.x, _ladder_x_pos,_ladder_snap_weight * delta)
 	var direction : float = Input.get_axis("ui_down","ui_up")
@@ -68,9 +82,6 @@ func ladder_movement(delta : float) -> void:
 		velocity.y = 0.0
 		
 
-func death():
-	if health <= 0:
-		queue_free()
 
 #basic movement for all piggies
 func _movement(_delta: float):
@@ -101,6 +112,7 @@ func _perry_stretch():
 		$Ladder.scale.y = max_ladder_height
 		tree_mode_activated = true
 
+#resets perry back to original height
 func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
 

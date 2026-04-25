@@ -23,6 +23,7 @@ config/icon="res://picture of john godot/icon.svg"
 
 Global_Variables="*uid://c76uokgfhvm1j"
 GlobalSignals="*uid://dgk20kfm7c7ox"
+RoomChangeGlobal="*uid://cf1xx7g2wma6y"
 
 [display]
 

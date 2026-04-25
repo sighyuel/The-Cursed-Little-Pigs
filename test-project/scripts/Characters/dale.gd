@@ -1,12 +1,12 @@
 extends character
 
-
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	rect.visible = false
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
 	if active == 1:
 		if _on_ladder:
 			ladder_movement(delta)
