@@ -7,7 +7,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if active == 1:
+	if Global_Variables.active == 1:
 		if _on_ladder:
 			ladder_movement(delta)
 		else:

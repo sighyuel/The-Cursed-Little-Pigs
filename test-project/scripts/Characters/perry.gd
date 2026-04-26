@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if acceleration <= .5:
 		acceleration = .5
 	
-	if active == 2:
+	if Global_Variables.active == 2:
 		if _on_ladder:
 			ladder_movement(delta)
 		else:
