@@ -1,45 +1,76 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1776816549
-::res://assets/::1776215673
-::res://assets/Objects for Levels/::1776635634
-elementWood047.png::CompressedTexture2D/CompressedTexture2D::6280107520365423431::1776215673::1776816550::1::::<><><>0<>0<>c547f0520f78a1fe189bd09b66d4a04c<>res://.godot/imported/elementWood047.png-4fac6c5926c739bc727189fe7112681a.ctex::
-::res://assets/Tile Sets/::1776635634
-goodly-2x.png::CompressedTexture2D/CompressedTexture2D::6914248120204914492::1776215673::1776816550::1::::<><><>0<>0<>77390d978a9ed4eb2efdbf6dbfa542cc<>res://.godot/imported/goodly-2x.png-262f21c95a4f4b2a14494aa3eb78ee1d.ctex::
-spikes1.png::CompressedTexture2D/CompressedTexture2D::8710201217568562227::1776215673::1776816550::1::::<><><>0<>0<>b7b5060482949d630bc73677a2990b28<>res://.godot/imported/spikes1.png-a2eadc37a3fb02b22ec5942769d75dd8.ctex::
-::res://levels/::1776215673
-::res://picture of john godot/::1776635634
-icon.svg::CompressedTexture2D/CompressedTexture2D::1790880795757653::1776215673::1776816550::1::::<><><>0<>0<>dfd5381ba7305ea7805c00d9ee415a84<>res://.godot/imported/icon.svg-6bce65967ccae18efa6a6e54da775ec3.ctex::
-::res://scenes/::1776566920
-::res://scenes/Character Scenes/::1776566920
-dale.tscn::PackedScene/PackedScene::2591754782580769629::1776215673::0::1::::<><><>0<>0<><>::uid://duphuklqumh32::::res://scripts/Characters/dale.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn
-may.tscn::PackedScene/PackedScene::7094721854675017518::1776566920::0::1::::<><><>0<>0<><>::uid://b4pitpfa8v7jx::::res://scripts/Characters/may.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn
-perry.tscn::PackedScene/PackedScene::7655610672104468525::1776566920::0::1::::<><><>0<>0<><>::uid://udv2dhjdpr3a::::res://scripts/Characters/perry.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn
-::res://scenes/Class Scenes/::1776215673
-character_class.tscn::PackedScene/PackedScene::3618252633158836211::1776215673::0::1::::<><><>0<>0<><>::uid://ui4vyukh73sy::::res://scripts/Classes/character_class.gd
-::res://scenes/Component Scenes/::1776215673
-health_component.tscn::PackedScene/PackedScene::8169769870742202761::1776215673::0::1::::<><><>0<>0<><>::uid://bljyxyeutcwj1::::res://scripts/Components/HealthComponent.gd
-hitbox_component.tscn::PackedScene/PackedScene::7286011741456946548::1776215673::0::1::::<><><>0<>0<><>::uid://dy4rmjqivlhfb::::res://scripts/Components/HitboxComponent.gd
-::res://scenes/Hazards/::1776635634
-wind_area_2d.tscn::PackedScene::5473110872600177338::1776635634::0::1::::<><><>0<>0<><>::uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd
-::res://scenes/Level Object Scenes/::1776215673
-breakable_platform.tscn::PackedScene/PackedScene::4093488674675118434::1776215673::0::1::::<><><>0<>0<><>::uid://clt8qgdnifwo::::res://scripts/Breakable-Platform/break_detection.gd<>uid://cvqepobq25kq6::::res://assets/Objects for Levels/elementWood047.png
-::res://scripts/::1776566920
-::res://scripts/Breakable-Platform/::1776215673
-break_detection.gd::GDScript/GDScript::164299246428575102::1776215673::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://scripts/Characters/::1776566920
-dale.gd::GDScript/GDScript::8594465867958834895::1776215673::0::1::::<>character<><>0<>0<><>::
-may.gd::GDScript/GDScript::4453383277152497601::1776566920::0::1::::<>character<><>0<>0<><>::
-perry.gd::GDScript/GDScript::1411293448103574276::1776566920::0::1::::<>character<><>0<>0<><>::
-::res://scripts/Classes/::1776566920
-character_class.gd::GDScript/GDScript::1422091481176847260::1776566920::0::1::::character<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/Components/::1776215673
-HealthComponent.gd::GDScript/GDScript::3178576912258027364::1776215673::0::1::::HealthComponent<>Node2D<><>0<>0<><>::
-HitboxComponent.gd::GDScript/GDScript::8904715369482711535::1776215673::0::1::::HitboxComponent<>Area2D<><>0<>0<><>::
-::res://scripts/Hazards/::1776635638
-wind_area_2d.gd::GDScript::4987483595262989919::1776635638::0::1::::WindArea2d<>Area2D<><>0<>0<><>::
-::res://test-stuff/::1776215673
-::res://test-stuff/levels/::1776635638
-test-level.tscn::PackedScene::542970600747442406::1776635638::0::1::::<><><>0<>0<><>::uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd
-::res://test-stuff/scenes/::1776215673
-::res://test-stuff/scripts/::1776215673
-hurtbox.gd::GDScript/GDScript::1264283535866759560::1776215673::0::1::::Attack<>RefCounted<><>0<>0<><>::
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1777417409
+::res://assets/::1776261998
+::res://assets/Objects for Levels/::1776872484
+elementWood047.png::CompressedTexture2D/CompressedTexture2D::6280107520365423431::1776261998::1777417410::1::::<><><>0<>0<>430104f48fd177bbb231e50e0611d040<>res://.godot/imported/elementWood047.png-4fac6c5926c739bc727189fe7112681a.ctex::
+::res://assets/Tile Sets/::1776872484
+goodly-2x.png::CompressedTexture2D/CompressedTexture2D::6914248120204914492::1776261998::1777417410::1::::<><><>0<>0<>bd616dc9502fe7260acbd99470bf1022<>res://.godot/imported/goodly-2x.png-262f21c95a4f4b2a14494aa3eb78ee1d.ctex::
+spikes1.png::CompressedTexture2D/CompressedTexture2D::8710201217568562227::1776261998::1777417410::1::::<><><>0<>0<>d8f16143741822dcafad6a9946835b52<>res://.godot/imported/spikes1.png-a2eadc37a3fb02b22ec5942769d75dd8.ctex::
+::res://picture of john godot/::1776872484
+icon.svg::CompressedTexture2D/CompressedTexture2D::1790880795757653::1776261998::1777417410::1::::<><><>0<>0<>dc72425d44800f40dbc269b6d8954aaf<>res://.godot/imported/icon.svg-6bce65967ccae18efa6a6e54da775ec3.ctex::
+::res://scenes/::1777417386
+::res://scenes/Character Scenes/::1777417327
+dale.tscn::PackedScene::2591754782580769629::1777417327::0::1::::<><><>0<>0<><>::uid://duphuklqumh32::::res://scripts/Characters/dale.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn
+may.tscn::PackedScene::7094721854675017518::1777417321::0::1::::<><><>0<>0<><>::uid://b4pitpfa8v7jx::::res://scripts/Characters/may.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn
+perry.tscn::PackedScene::7655610672104468525::1777417327::0::1::::<><><>0<>0<><>::uid://udv2dhjdpr3a::::res://scripts/Characters/perry.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn
+::res://scenes/Class Scenes/::1776261998
+character_class.tscn::PackedScene::3618252633158836211::1776261998::0::1::::<><><>0<>0<><>::uid://ui4vyukh73sy::::res://scripts/Classes/character_class.gd
+::res://scenes/Component Scenes/::1777417321
+camera_component.tscn::PackedScene::5874855701062636239::1777417321::0::1::::<><><>0<>0<><>::
+health_component.tscn::PackedScene::8169769870742202761::1776261998::0::1::::<><><>0<>0<><>::uid://bljyxyeutcwj1::::res://scripts/Components/HealthComponent.gd
+hitbox_component.tscn::PackedScene::7286011741456946548::1776261998::0::1::::<><><>0<>0<><>::uid://dy4rmjqivlhfb::::res://scripts/Components/HitboxComponent.gd
+killzone.tscn::PackedScene::4274387478921631870::1777417321::0::1::::<><><>0<>0<><>::uid://bidhnfqc8ve8n::::res://scripts/Components/killzone.gd
+ladder_detect_ray.tscn::PackedScene::7371132809907542195::1777417321::0::1::::<><><>0<>0<><>::
+::res://scenes/Hazards/::1777417327
+wind_area_2d.tscn::PackedScene::5473110872600177338::1777417321::0::1::::<><><>0<>0<><>::uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd
+::res://scenes/Level 1/::1777417386
+::res://scenes/Level 1/Character Rooms/::1777417386
+may's_room___level_1.tscn::PackedScene::7119707700913396318::1777417386::0::1::::<><><>0<>0<><>::uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn
+::res://scenes/Level Object Scenes/::1777417327
+breakable_platform.tscn::PackedScene::4093488674675118434::1777417321::0::1::::<><><>0<>0<><>::uid://clt8qgdnifwo::::res://scripts/Breakable-Platform/break_detection.gd<>uid://cvqepobq25kq6::::res://assets/Objects for Levels/elementWood047.png
+circle saw.tscn::PackedScene::2530543424873951843::1777417327::0::1::::<><><>0<>0<><>::uid://wtau3joakgub::::res://scripts/Level Objects/circle_saw.gd
+Collectible-Key.tscn::PackedScene::4822792629309101697::1777417321::0::1::::<><><>0<>0<><>::uid://d2wvn0621homr::::res://scripts/Level Objects/collectible_key.gd
+ladder.tscn::PackedScene::7719569775492267869::1777417321::0::1::::<><><>0<>0<><>::uid://bkj2v2g2inwd0::::res://scripts/Level Objects/ladder.gd
+ladder_top.tscn::PackedScene::4942634707499218965::1777417321::0::1::::<><><>0<>0<><>::uid://b8x2ykrawt03s::::res://scripts/Level Objects/ladder_platform.gd
+platform.tscn::PackedScene::8181834074606366462::1777417321::0::1::::<><><>0<>0<><>::uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png
+spikes.tscn::PackedScene::7675725966299635925::1777417321::0::1::::<><><>0<>0<><>::uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png
+::res://scripts/::1777417321
+::res://scripts/Breakable-Platform/::1777417321
+break_detection.gd::GDScript::164299246428575102::1777417321::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://scripts/Characters/::1777417321
+dale.gd::GDScript::8594465867958834895::1777417321::0::1::::<>character<><>0<>0<><>::
+may.gd::GDScript::4453383277152497601::1777417321::0::1::::<>character<><>0<>0<><>::
+perry.gd::GDScript::1411293448103574276::1777417321::0::1::::<>character<><>0<>0<><>::
+::res://scripts/Classes/::1777417386
+character_class.gd::GDScript::1422091481176847260::1777417386::0::1::::character<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/Components/::1777417321
+HealthComponent.gd::GDScript::3178576912258027364::1777417321::0::1::::HealthComponent<>Node2D<><>0<>0<><>::
+HitboxComponent.gd::GDScript::8904715369482711535::1777417321::0::1::::HitboxComponent<>Area2D<><>0<>0<><>::
+killzone.gd::GDScript::2954573087799090807::1777417321::0::1::::<>Area2D<><>0<>0<><>::
+::res://scripts/Global Scripts/::1777417321
+global-signals.gd::GDScript::7602723427646039619::1777417321::0::1::::<>Node<><>0<>0<><>::
+global_variables.gd::GDScript::7084119949888788837::1777417321::0::1::::<>Node<><>0<>0<><>::
+::res://scripts/Hazards/::1777417327
+wind_area_2d.gd::GDScript::4987483595262989919::1777417321::0::1::::WindArea2d<>Area2D<><>0<>0<><>::
+::res://scripts/Level Objects/::1777417327
+circle_saw.gd::GDScript::1583414938435486481::1777417327::0::1::::<>Area2D<><>0<>0<><>::
+collectible_key.gd::GDScript::9101076774298835417::1777417321::0::1::::<>Area2D<><>0<>0<><>::
+ladder.gd::GDScript::3108566808973924255::1777417321::0::1::::Ladder<>Area2D<><>0<>0<><>::
+ladder_platform.gd::GDScript::4751815981475309158::1777417321::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://test-stuff/::1777417321
+::res://test-stuff/levels/::1777417386
+test-level.tscn::PackedScene::542970600747442406::1777417386::0::1::::<><><>0<>0<><>::uid://brviopotbm4em::::res://test-stuff/levels/test_level.gd<>uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://dhmgc5r1ncy50::::res://scenes/Level Object Scenes/spikes.tscn<>uid://ccoiqbcaq4vvp::::res://scenes/Level Object Scenes/ladder_top.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://bcb2xewaflgml::::res://scenes/Level Object Scenes/circle saw.tscn<>uid://dh8oglowmwkph::::res://scenes/Level Object Scenes/ladder.tscn
+test_level.gd::GDScript::3623494505774335832::1777417321::0::1::::<>Node2D<><>0<>0<><>::
+::res://test-stuff/Mock lvls/::1777417321
+mock_lvl_1.tscn::PackedScene::2363895181612525439::1777417321::0::1::::<><><>0<>0<><>::uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn
+mock_lvl_2.tscn::PackedScene::6862166914251647857::1777417321::0::1::::<><><>0<>0<><>::uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://crkyppn7ssn0::::res://test-stuff/Temp Assests/cracked_floor_wall.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn
+::res://test-stuff/scenes/::1777417321
+ladder_detect.tscn::PackedScene::5005335327070733699::1777417321::0::1::::<><><>0<>0<><>::
+pogo.tscn::PackedScene::802192544674267113::1777417321::0::1::::<><><>0<>0<><>::res://test-stuff/scripts/pogo.gd
+::res://test-stuff/scripts/::1777417321
+hurtbox.gd::GDScript::1264283535866759560::1776261998::0::1::::Attack<>RefCounted<><>0<>0<><>::
+key.gd::GDScript::3987162103800256826::1777417321::0::1::::<>Area2D<><>0<>0<><>::
+pogo.gd::GDScript::7116115048594721257::1777417321::0::1::::<>Area2D<><>0<>0<><>::
+::res://test-stuff/Temp Assests/::1777417321
+cracked_floor_wall.tscn::PackedScene::176122949732933515::1777417321::0::1::::<><><>0<>0<><>::
+key.tscn::PackedScene::4572266258576668627::1777417321::0::1::::<><><>0<>0<><>::uid://bw2n8h1rd6hgk::::res://test-stuff/scripts/key.gd
