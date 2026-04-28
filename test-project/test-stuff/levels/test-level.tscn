@@ -2038,10 +2038,6 @@ health = 0
 unique_name_in_owner = true
 position = Vector2(-304, -255)
 health = 0
-MAX_VELOCITY = 30.0
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
-offset = Vector2(0, -160.32)
 
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
 
@@ -2066,3 +2062,6 @@ scale = Vector2(4.9, 4.9)
 [node name="CircleSaw2" parent="Kill Zones" unique_id=9222628 instance=ExtResource("9_4q5fk")]
 position = Vector2(375, -203)
 scale = Vector2(4.88, 4.88)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
+offset = Vector2(0, -160.32)

@@ -34,7 +34,7 @@ var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
-var glide_fall : int = 50
+@export var glide_fall : int = 50
 
 func _ready():
 	add_to_group("character")
