@@ -55,6 +55,7 @@ var _ladder_snap_weight : float = 10.0
 func _ready():
 	add_to_group("character")
 	_on_ladder = false
+	#room change logic
 	if RoomChangeGlobal.Activate:
 		global_position = RoomChangeGlobal.PlayerPos
 		if RoomChangeGlobal.PlayerJumpOnEnter:
@@ -77,7 +78,11 @@ func _is_on_ladder() -> bool:
 func ladder_movement(delta : float) -> void:
 	global_position.x = lerp(global_position.x, _ladder_x_pos,_ladder_snap_weight * delta)
 	var direction : float = Input.get_axis("ui_down","ui_up")
+	var direction_x : float = Input.get_axis("ui_left","ui_right")
 	velocity.x = 0.0
+	
+	if direction_x and Input.is_action_just_pressed("A"):
+		velocity.x = ladder_speed * direction
 	
 	if direction:
 		velocity.y = ladder_speed * direction
@@ -100,7 +105,6 @@ func _movement(_delta: float):
 		if Input.is_action_just_pressed("A"):
 			velocity.y = -JUMP_VELOCITY
 #endregion
-
 
 #region death function
 func death():

@@ -1,8 +1,12 @@
 extends character
 
+@onready var dale_camera = $Camera2D
+
+
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	rect.visible = false
+	dale_camera.enabled = false
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -22,3 +26,4 @@ func _physics_process(delta: float) -> void:
 		
 		_dale_slam()
 		rect.visible = true
+		dale_camera.enabled = true

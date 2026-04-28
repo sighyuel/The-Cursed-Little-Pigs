@@ -1,9 +1,12 @@
 extends character
 
+@onready var may_camera = $Camera2D
+
 func _physics_process(delta: float) -> void:
 	velocity += wind_velocity * 0.4 
 	move_and_slide()
 	rect.visible = false
+	may_camera.enabled = false
 	
 	if not is_on_floor() && wind_velocity.y == 0.0:
 		velocity.y += gravity * delta
@@ -27,3 +30,4 @@ func _physics_process(delta: float) -> void:
 		
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
+		may_camera.enabled = true

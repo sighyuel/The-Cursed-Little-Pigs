@@ -62,3 +62,7 @@ position = Vector2(0, -19.95)
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("5_q8mqc")]
 unique_name_in_owner = true
 visible = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
+zoom = Vector2(1.7, 1.7)
+position_smoothing_enabled = true

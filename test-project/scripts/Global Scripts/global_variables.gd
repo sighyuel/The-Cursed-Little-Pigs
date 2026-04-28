@@ -8,3 +8,8 @@ func _process(_delta):
 			active += 1
 		else:
 			active = 1
+	if Input.is_action_just_pressed("Left Bumper"):
+		if active != 1:
+			active -= 1
+		else:
+			active = 3

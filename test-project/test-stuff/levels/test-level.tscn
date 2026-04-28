@@ -2080,9 +2080,6 @@ unique_name_in_owner = true
 position = Vector2(-304, -255)
 health = 0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
-offset = Vector2(0, -160.32)
-
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
 
 [node name="Pogo" parent="Kill Zones" unique_id=1144140681 instance=ExtResource("8_j7nd3")]
