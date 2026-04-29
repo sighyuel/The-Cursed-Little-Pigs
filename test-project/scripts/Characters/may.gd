@@ -1,5 +1,6 @@
 extends character
 
+
 func _physics_process(delta: float) -> void:
 	velocity += wind_velocity * 0.4 
 	move_and_slide()

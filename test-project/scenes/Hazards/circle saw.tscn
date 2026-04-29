@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://y53l4gsbbxvp"]
+[gd_scene format=3 uid="uid://bcb2xewaflgml"]
 
-[ext_resource type="Script" path="res://scripts/Level Objects/circle_saw.gd" id="1_13jwt"]
+[ext_resource type="Script" uid="uid://wtau3joakgub" path="res://scripts/Hazards/circle_saw.gd" id="1_13jwt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22jcu"]
 

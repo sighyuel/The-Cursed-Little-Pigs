@@ -22,7 +22,6 @@ health = 10
 piggy = "Dale"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")
-MAX_VELOCITY = 100.0
 JUMP_VELOCITY = 500.0
 acceleration = 2.0
 ladder_speed = -150.515
@@ -62,3 +61,4 @@ position = Vector2(0, -19.95)
 
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("5_q8mqc")]
 unique_name_in_owner = true
+visible = false
