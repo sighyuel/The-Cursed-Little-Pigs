@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://donq6fcp8ji22" path="res://scenes/Component Scenes/health_component.tscn" id="2_wjqgi"]
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_bcp48"]
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_p7v80"]
+[ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="4_56pri"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_fd7e2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
@@ -20,12 +21,11 @@ slide_on_ceiling = false
 script = ExtResource("1_na5ya")
 health = 10
 piggy = "Perry"
-MAX_VELOCITY = 5.0
+collision = NodePath("charCol")
+charMesh = NodePath("mesh")
 JUMP_VELOCITY = 500.0
 acceleration = 5.0
 ladder_speed = -100.0
-collision = NodePath("charCol")
-charMesh = NodePath("mesh")
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
@@ -51,13 +51,16 @@ grow_vertical = 2
 [node name="HealthComponent" parent="." unique_id=418957202 instance=ExtResource("2_wjqgi")]
 unique_name_in_owner = true
 
-[node name="ladder_detect_ray" parent="." unique_id=1353371322 instance=ExtResource("3_p7v80")]
-unique_name_in_owner = true
-position = Vector2(0, -9.26)
-scale = Vector2(3.22, 2)
-target_position = Vector2(0, 9.09091)
-
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("4_fd7e2")]
+visible = false
+
+[node name="Ladder" parent="." unique_id=185563685 instance=ExtResource("4_56pri")]
+position = Vector2(0, 1)
+scale = Vector2(1, 1.01)
+
+[node name="ladder_detect_ray" parent="." unique_id=1353371322 instance=ExtResource("3_p7v80")]
+enabled = false
+target_position = Vector2(0, 15.151516)
 
 [node name="HitboxComponent" parent="." unique_id=267469894 node_paths=PackedStringArray("health_component") instance=ExtResource("3_bcp48")]
 unique_name_in_owner = true

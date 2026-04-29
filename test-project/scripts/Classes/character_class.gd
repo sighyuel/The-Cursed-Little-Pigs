@@ -18,7 +18,7 @@ class_name character
 @onready var rect = $Indicator
 var speed = 0.0
 var max_height = 6
-var max_sprite_height = 300
+var max_sprite_height = 115
 var tree_reset_height = 100
 var glide = .0001
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,7 +34,8 @@ var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
-var glide_fall : int = 50
+var glide_fall : int = 100
+var max_ladder_height : int = 10
 
 func _ready():
 	add_to_group("character")
@@ -87,26 +88,29 @@ func _movement(_delta: float):
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		mesh.scale.y += 20
+		mesh.scale.y += 7
 		charCol.scale.y += .5
 		rect.position.y = -170
+		$Ladder.scale.y += .5
 		#acceleration -= 1
 
-	if charCol.scale.y >= max_height and mesh.scale.y >= max_sprite_height:
+
+	if charCol.scale.y >= max_height and mesh.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
 		charCol.scale.y = max_height
 		mesh.scale.y = max_sprite_height
-		JUMP_VELOCITY = 0
+		$Ladder.scale.y = max_ladder_height
 		tree_mode_activated = true
 
 func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
 
-		mesh.scale.y = 50
-		charCol.scale.y = 1
+		mesh.scale.y = 30
+		charCol.scale.y = .5
 		acceleration = 3
 		JUMP_VELOCITY = 400.0
 		global_position.y -= tree_reset_height
 		rect.position.y = -40
+		$Ladder.scale.y = 1
 		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities
@@ -123,5 +127,5 @@ func _dale_slam():
 func _may_glide(delta):
 	if Input.is_action_pressed("Y") and not is_on_floor():
 		velocity.y += gravity * delta
-	if velocity.y >= glide_fall:
-		velocity.y = glide_fall
+		if velocity.y >= glide_fall:
+			velocity.y = glide_fall
