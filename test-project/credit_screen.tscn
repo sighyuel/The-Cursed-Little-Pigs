@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cmetcyxen21hs"]
+
+[sub_resource type="Animation" id="Animation_40x5x"]
+resource_name = "Move title"
+length = 5.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(476, 900), Vector2(476, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_vyy4h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(476, 38)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gugr"]
+_data = {
+&"Move title": SubResource("Animation_40x5x"),
+&"RESET": SubResource("Animation_vyy4h")
+}
+
+[node name="Credit Screen" type="Node2D" unique_id=301742647]
+
+[node name="Credit movement" type="Control" parent="." unique_id=1157682995]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="TextEdit" parent="Credit movement" unique_id=926427043]
+modulate = Color(0.9369487, 0.50937665, 0.8365897, 1)
+layout_mode = 0
+offset_left = 476.0
+offset_top = 38.0
+offset_right = 731.0
+offset_bottom = 89.00061
+scale = Vector2(3, 3)
+text = "             Cursed little pigs"
+editable = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Credit movement/Title" unique_id=207361255]
+libraries/ = SubResource("AnimationLibrary_1gugr")
+
+[node name="Main credits" type="TextEdit" parent="Credit movement" unique_id=1102665684]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 203.0
+offset_right = 801.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
+text = "Made by mr.taxevader, siulsighyuel, kom0, eariza3, kinokiita, awesomeking279"
+editable = false
+
+[node name="Progammer" type="TextEdit" parent="Credit movement" unique_id=858486659]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 354.0
+offset_right = 773.0
+offset_bottom = 396.0
+scale = Vector2(2, 2)
+text = "Progammer by:  eariza3, awesomeking279, mr.taxevader, siulsighyuel, kom0"
+
+[node name="Artist" type="TextEdit" parent="Credit movement" unique_id=360561047]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 498.0
+offset_right = 294.27155
+offset_bottom = 546.95624
+scale = Vector2(2, 2)
+text = "Art by: kinokiita, mr.taxevader"
+
+[node name="Level desginer" type="TextEdit" parent="Credit movement" unique_id=1193245774]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 499.0
+offset_right = 1099.0
+offset_bottom = 542.0
+scale = Vector2(2, 2)
+text = "Level designer by: mr.taxevader, siulsighyuel"
+
+[node name="Music" type="TextEdit" parent="Credit movement" unique_id=1079682085]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 639.0
+offset_right = 256.0
+offset_bottom = 687.0
+scale = Vector2(2, 2)
+text = "Music by: nekan0v1_"

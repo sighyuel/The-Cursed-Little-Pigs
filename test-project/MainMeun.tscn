@@ -13,29 +13,54 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 606.0
-offset_top = 122.0
-offset_right = 817.34827
-offset_bottom = 226.84338
-text = "Start game"
+offset_left = 555.0
+offset_top = 281.0
+offset_right = 766.5
+offset_bottom = 323.84338
+scale = Vector2(2, 2)
+text = "Start
+"
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 604.0
-offset_top = 262.0
-offset_right = 816.0
-offset_bottom = 359.0625
-text = "Options"
+offset_left = 560.0
+offset_top = 396.0
+offset_right = 767.0
+offset_bottom = 448.0
+scale = Vector2(2, 2)
+text = "Options (Out of order)"
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
-offset_left = 602.0
-offset_top = 387.0
-offset_right = 822.0
-offset_bottom = 464.0
+offset_left = 559.0
+offset_top = 522.0
+offset_right = 770.5
+offset_bottom = 559.0
+scale = Vector2(2, 2)
 text = "Quit
+"
+
+[node name="TextEdit" type="TextEdit" parent="Button_manager" unique_id=1553584227]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 72.0
+offset_right = 648.0
+offset_bottom = 117.333336
+scale = Vector2(3, 3)
+text = "              Cursed little pigs"
+editable = false
+
+[node name="Button" type="Button" parent="Button_manager" unique_id=297037759]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 628.0
+offset_right = 777.0
+offset_bottom = 670.0
+scale = Vector2(2, 2)
+text = "Credits
 "
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button_manager/Button" to="." method="_on_button_pressed"]
