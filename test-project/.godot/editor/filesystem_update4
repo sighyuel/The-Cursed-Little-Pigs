@@ -1,2 +1,8 @@
 res://scenes/Level 1/Character Rooms/may's_room___level_1.tscn
 res://scripts/Classes/character_class.gd
+res://scripts/Characters/may.gd
+res://test-stuff/levels/test-level.tscn
+res://scripts/Hazards/wind_area_2d.gd
+res://scripts/Characters/perry.gd
+res://scenes/Hazards/wind_area_2d.tscn
+res://test-stuff/scenes/pogo.tscn

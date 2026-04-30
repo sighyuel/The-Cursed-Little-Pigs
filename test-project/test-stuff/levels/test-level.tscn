@@ -11,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="6_h4r5i"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="7_mhhr2"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="8_j7nd3"]
-[ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Level Object Scenes/circle saw.tscn" id="9_4q5fk"]
+[ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Hazards/circle saw.tscn" id="9_4q5fk"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
+[ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="14_htqwx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -2016,6 +2017,9 @@ physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_htqwx")
 sources/1 = SubResource("TileSetAtlasSource_h4r5i")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44mqk"]
+size = Vector2(325, 46)
+
 [node name="Game" type="Node2D" unique_id=1841273835]
 script = ExtResource("1_fjkdh")
 
@@ -2077,7 +2081,7 @@ health = 0
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("5_7x2h6")]
 unique_name_in_owner = true
-position = Vector2(-304, -255)
+position = Vector2(148, -255)
 health = 0
 
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
@@ -2103,3 +2107,11 @@ scale = Vector2(4.9, 4.9)
 [node name="CircleSaw2" parent="Kill Zones" unique_id=9222628 instance=ExtResource("9_4q5fk")]
 position = Vector2(375, -203)
 scale = Vector2(4.88, 4.88)
+
+[node name="WindArea2D" parent="." unique_id=723245552 instance=ExtResource("14_htqwx")]
+position = Vector2(-229, -279)
+speed = Vector2(4, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindArea2D" unique_id=967300901]
+position = Vector2(-23, 17)
+shape = SubResource("RectangleShape2D_44mqk")

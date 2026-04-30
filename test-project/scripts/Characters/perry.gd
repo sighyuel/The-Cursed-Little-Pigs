@@ -5,7 +5,7 @@ extends character
 
 
 func _physics_process(delta: float) -> void:
-	print(tree_mode_activated)
+	print(wind_velocity)
 	velocity += wind_velocity * 0.4 
 	move_and_slide()
 	rect.visible = false

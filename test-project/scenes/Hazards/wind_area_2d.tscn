@@ -4,3 +4,5 @@
 
 [node name="WindArea2D" type="Area2D" unique_id=723245552]
 script = ExtResource("1_3t7eo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

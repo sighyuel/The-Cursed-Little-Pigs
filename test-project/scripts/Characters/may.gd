@@ -31,3 +31,4 @@ func _physics_process(delta: float) -> void:
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
 		may_camera.enabled = true
+		print(velocity.y)
