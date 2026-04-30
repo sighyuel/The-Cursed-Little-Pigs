@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cpx3arojx6v40" path="res://scenes/Component Scenes/camera_component.tscn" id="1_fkx7s"]
 [ext_resource type="PackedScene" uid="uid://crkyppn7ssn0" path="res://test-stuff/Temp Assests/cracked_floor_wall.tscn" id="2_6ixb8"]
 [ext_resource type="PackedScene" uid="uid://b6e3s7gvw0p7p" path="res://test-stuff/Temp Assests/key.tscn" id="3_i6ty0"]
+[ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="4_mthcl"]
+[ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="5_0ciit"]
+[ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="6_xd6j5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6ty0"]
 size = Vector2(1113, 56)
@@ -55,6 +58,7 @@ size = Vector2(170, 56)
 [node name="mock lvl 2" type="Node2D" unique_id=424352912]
 
 [node name="Camera Component" parent="." unique_id=605410305 instance=ExtResource("1_fkx7s")]
+zoom = Vector2(0.475, 0.475)
 
 [node name="level assets" type="Node2D" parent="." unique_id=571366910]
 
@@ -72,7 +76,7 @@ position = Vector2(1107, 663)
 position = Vector2(154, -332)
 
 [node name="Key3" parent="level assets" unique_id=599423422 instance=ExtResource("3_i6ty0")]
-position = Vector2(-78, 661)
+position = Vector2(-40, 659)
 
 [node name="level" type="Node" parent="." unique_id=2088228337]
 
@@ -131,6 +135,8 @@ offset_right = 815.0
 offset_bottom = 790.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="level/floor 5" unique_id=527560987]
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/floor 5/StaticBody2D" unique_id=2080754067]
 position = Vector2(1114, 27.5)
@@ -281,3 +287,12 @@ position = Vector2(-1419, 109)
 
 [node name="Cracked floor_wall5" parent="level" unique_id=1783941975 instance=ExtResource("2_6ixb8")]
 position = Vector2(-1423, 329)
+
+[node name="Dale" parent="level" unique_id=1644848735 instance=ExtResource("4_mthcl")]
+position = Vector2(345, 667)
+
+[node name="May" parent="level" unique_id=1187849158 instance=ExtResource("5_0ciit")]
+position = Vector2(298, 620)
+
+[node name="Perry" parent="level" unique_id=771990693 instance=ExtResource("6_xd6j5")]
+position = Vector2(228, 667)

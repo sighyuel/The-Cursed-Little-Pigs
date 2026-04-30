@@ -5,11 +5,8 @@ var _coin_count: int
 func _ready() -> void:
 	GlobalSignals.connect("coin_collect",_coin_collect)
 
-
-
 func _coin_collect() -> void:
 	_coin_count += 1
-
 
 func _coin_complete() -> void:
 	if _coin_count == 3:

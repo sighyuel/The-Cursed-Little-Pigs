@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_oudw0")
 
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=990098150]
 position = Vector2(-9.536743e-07, -4.999999)
-scale = Vector2(33.999996, 30)
+scale = Vector2(36.875, 30)
 mesh = SubResource("BoxMesh_lm3dp")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=760327598]
@@ -62,3 +62,7 @@ position = Vector2(0, -19.95)
 [node name="LadderDetect" parent="." unique_id=677375652 instance=ExtResource("5_q8mqc")]
 unique_name_in_owner = true
 visible = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
+zoom = Vector2(1.7, 1.7)
+position_smoothing_enabled = true
