@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bwf430dvwttqu"]
+
+[sub_resource type="Animation" id="Animation_fj01s"]
+resource_name = "char_switch"
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_54a7b"]
+_data = {
+&"char_switch": SubResource("Animation_fj01s")
+}
+
+[sub_resource type="Curve" id="Curve_fj01s"]
+_data = [Vector2(0, 0.2865169), 0.0, 0.0, 0, 0, Vector2(0.8962766, 0.2865169), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_54a7b"]
+size = 0.462
+curve = SubResource("Curve_fj01s")
+
+[node name="AnimationCharSwitch" type="AnimationPlayer" unique_id=402390188]
+libraries/ = SubResource("AnimationLibrary_54a7b")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1603024093]
+position = Vector2(24.125, 63.875)
+rotation = -0.008726646
+scale = Vector2(85.75, 256.5)
+mesh = SubResource("RibbonTrailMesh_54a7b")

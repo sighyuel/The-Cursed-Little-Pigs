@@ -26,4 +26,4 @@ func _physics_process(delta: float) -> void:
 		
 		_dale_slam()
 		rect.visible = true
-		dale_camera.enabled = true
+		_camera_transition()

@@ -33,6 +33,6 @@ func _physics_process(delta: float) -> void:
 		
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
-		perry_camera.enabled = true
+		_camera_transition()
 		_perry_stretch()
 		_perry_reset()

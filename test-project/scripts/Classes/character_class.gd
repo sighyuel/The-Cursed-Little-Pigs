@@ -21,19 +21,21 @@ class_name character
 @onready var mesh = $mesh
 @onready var rect = $Indicator
 @onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
+@onready var camera = $Camera2D
+
 #endregion
 
 var speed = 0.0
-var max_height = 6
-var max_sprite_height = 115
-var tree_reset_height = 60
-var glide = .0001
+
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var move_dir = 0.0
 #variables for abilities
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
+var max_height = 6
+var max_sprite_height = 115
+var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
 #controls how fast may glides down
@@ -56,13 +58,13 @@ func _ready():
 	add_to_group("character")
 	_on_ladder = false
 	#room change logic
-	if RoomChangeGlobal.Activate:
-		global_position = RoomChangeGlobal.PlayerPos
-		if RoomChangeGlobal.PlayerJumpOnEnter:
-			velocity.y = -JUMP_VELOCITY
-		RoomChangeGlobal.Activate = false
 
 
+#region camera functions
+func _camera_transition():
+	
+	camera.enabled = true
+#endregion
 
 #region ladder stuff
 
