@@ -5,17 +5,26 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1skdl"]
 texture = ExtResource("1_sdtdx")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0.449646, 0.35971832, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, -8, -0.62950706, 0, -8, -8)
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_u6624"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 4
-physics_layer_1/collision_mask = 0
+physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_1skdl")
 
 [node name="Spikes" type="TileMapLayer" unique_id=639613534]
