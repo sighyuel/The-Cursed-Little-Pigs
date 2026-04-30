@@ -17,8 +17,8 @@ class_name character
 @onready var mesh = $mesh
 @onready var rect = $Indicator
 var speed = 0.0
-var max_height = 6
-var max_sprite_height = 115
+@export var max_height = 6
+@export var max_sprite_height = 115
 var tree_reset_height = 100
 var glide = .0001
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
