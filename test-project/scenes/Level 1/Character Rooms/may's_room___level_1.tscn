@@ -1079,7 +1079,9 @@ scale = Vector2(5.74, 5.74)
 
 [node name="WindArea2D" parent="Hazards" unique_id=723245552 instance=ExtResource("6_vlkgh")]
 position = Vector2(206, 158)
-speed = Vector2(4, 0)
+collision_layer = 0
+collision_mask = 2
+speed = Vector2(-8, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/WindArea2D" unique_id=70944596]
 position = Vector2(234, 12.5)
