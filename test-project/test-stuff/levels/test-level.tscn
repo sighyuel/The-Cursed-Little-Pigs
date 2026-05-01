@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="8_j7nd3"]
 [ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Hazards/circle saw.tscn" id="9_4q5fk"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
-[ext_resource type="PackedScene" uid="uid://1oonbtfb2xx2" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
+[ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -2069,3 +2069,21 @@ scale = Vector2(4.88, 4.88)
 
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
 position = Vector2(-199, -251)
+
+[node name="GameButton" type="Control" parent="." unique_id=1173526227]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="GameButton" unique_id=1852479973]
+layout_mode = 0
+offset_left = 389.76782
+offset_top = 192.0
+offset_right = 675.0
+offset_bottom = 270.0
+text = "Quit Game
+
+"
+
+[connection signal="pressed" from="GameButton/Button" to="." method="_on_button_pressed"]
