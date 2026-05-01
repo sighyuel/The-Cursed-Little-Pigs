@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="4_pp3lx"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="6_vlkgh"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="7_ls0kl"]
+[ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="9_iff5j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pp3lx"]
 texture = ExtResource("1_qqpf2")
@@ -1041,6 +1042,9 @@ sources/0 = SubResource("TileSetAtlasSource_pp3lx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls0kl"]
 size = Vector2(544, 45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgxgs"]
+size = Vector2(87, 238.75)
+
 [node name="May\'s Room - Level 1" type="Node2D" unique_id=520772052]
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1517084578]
@@ -1061,7 +1065,7 @@ JUMP_VELOCITY = 400.0
 ladder_speed = -400.0
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("4_pp3lx")]
-position = Vector2(889, 98)
+position = Vector2(80, 131)
 
 [node name="Perry" parent="Characters" unique_id=771990693 instance=ExtResource("3_jeij2")]
 position = Vector2(64, 196)
@@ -1089,9 +1093,21 @@ shape = SubResource("RectangleShape2D_ls0kl")
 
 [node name="Pogo" parent="Hazards" unique_id=1144140681 instance=ExtResource("7_ls0kl")]
 position = Vector2(1488, 513)
+scale = Vector2(1, 0.62)
 
 [node name="Pogo2" parent="Hazards" unique_id=764347527 instance=ExtResource("7_ls0kl")]
 position = Vector2(1604, 237)
 
 [node name="Pogo3" parent="Hazards" unique_id=952019392 instance=ExtResource("7_ls0kl")]
 position = Vector2(1368, 237)
+
+[node name="WindArea2d" type="Area2D" parent="Hazards" unique_id=380547299]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("9_iff5j")
+speed = Vector2(0, -32)
+metadata/_custom_type_script = "uid://cdb8ej2s0pki6"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/WindArea2d" unique_id=1842206179]
+position = Vector2(1606, 407)
+shape = SubResource("RectangleShape2D_bgxgs")

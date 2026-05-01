@@ -70,7 +70,7 @@ func ladder_movement(delta : float) -> void:
 
 func death():
 	if health <= 0:
-		queue_free()
+		get_tree().call_deferred("reload_current_scene")
 
 #basic movement for all piggies
 func _movement(_delta: float):

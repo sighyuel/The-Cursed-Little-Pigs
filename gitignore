@@ -390,7 +390,7 @@ cpp.hint
 .directory
 
 # macOS
-.DS_Store
+*.DS_Store
 __MACOSX
 Godot.app
 
