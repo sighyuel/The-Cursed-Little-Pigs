@@ -27,13 +27,3 @@ func _object_exited(object: Node2D) -> void:
 	if "wind_velocity" in object:
 		object.wind_velocity -= speed
 		object.velocity.x = 0.0
-
-
-func _on_body_entered(body: Node2D) -> void:
-	if "wind_velocity" in body:
-		print("enter")
-		body.wind_velocity += speed
-		if speed.y < 0.0:
-			body.velocity.y = speed.y
-	if body.name == "Dale":
-		speed = Vector2(0.0, 0.0)

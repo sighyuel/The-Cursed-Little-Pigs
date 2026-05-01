@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://c8o3ss0rlavle"]
 
+[ext_resource type="Script" uid="uid://b7xvasogt5oqn" path="res://scenes/Level 1/Character Rooms/may's_room___level_1.gd" id="1_bgxgs"]
 [ext_resource type="Texture2D" uid="uid://c5rkwk0npviiu" path="res://assets/Tile Sets/goodly-2x.png" id="1_qqpf2"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Level Object Scenes/spikes.tscn" id="1_tjfir"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="2_jeij2"]
@@ -1040,12 +1041,13 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_pp3lx")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ls0kl"]
-size = Vector2(544, 45)
+size = Vector2(574, 403)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgxgs"]
-size = Vector2(87, 238.75)
+size = Vector2(87, 517.375)
 
 [node name="May\'s Room - Level 1" type="Node2D" unique_id=520772052]
+script = ExtResource("1_bgxgs")
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=1517084578]
 
@@ -1060,7 +1062,7 @@ tile_set = SubResource("TileSet_l2cc0")
 [node name="Characters" type="Node2D" parent="." unique_id=1170822404]
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_jeij2")]
-position = Vector2(899, 142)
+position = Vector2(29, 159)
 JUMP_VELOCITY = 400.0
 ladder_speed = -400.0
 
@@ -1085,11 +1087,12 @@ scale = Vector2(5.74, 5.74)
 position = Vector2(206, 158)
 collision_layer = 0
 collision_mask = 2
-speed = Vector2(-8, 0)
+speed = Vector2(-40, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/WindArea2D" unique_id=70944596]
-position = Vector2(234, 12.5)
+position = Vector2(231, -155.5)
 shape = SubResource("RectangleShape2D_ls0kl")
+debug_color = Color(5.5350365e-06, 0.64262354, 0.31987774, 0.41960785)
 
 [node name="Pogo" parent="Hazards" unique_id=1144140681 instance=ExtResource("7_ls0kl")]
 position = Vector2(1488, 513)
@@ -1105,9 +1108,10 @@ position = Vector2(1368, 237)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("9_iff5j")
-speed = Vector2(0, -32)
+speed = Vector2(0, -30)
 metadata/_custom_type_script = "uid://cdb8ej2s0pki6"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/WindArea2d" unique_id=1842206179]
-position = Vector2(1606, 407)
+position = Vector2(1616, 250.6875)
 shape = SubResource("RectangleShape2D_bgxgs")
+debug_color = Color(0, 0.6431373, 0.32156864, 0.41960785)

@@ -3,7 +3,7 @@ extends character
 @onready var may_camera = $Camera2D
 
 func _physics_process(delta: float) -> void:
-	velocity += wind_velocity * 0.4 
+	velocity += wind_velocity * 0.8
 	move_and_slide()
 	rect.visible = false
 	may_camera.enabled = false
