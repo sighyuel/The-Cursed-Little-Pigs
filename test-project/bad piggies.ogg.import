@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buehksl5glbia"
+path="res://.godot/imported/bad piggies.ogg-341b796dee30410d0c1d54a56e59c6ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://bad piggies.ogg"
+dest_files=["res://.godot/imported/bad piggies.ogg-341b796dee30410d0c1d54a56e59c6ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

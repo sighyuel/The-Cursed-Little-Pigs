@@ -19,6 +19,10 @@ run/main_scene="uid://h0av8kw4uam5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://picture of john godot/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://ebsla7gbn0qd"
+
 [autoload]
 
 Global_Variables="*uid://c76uokgfhvm1j"
@@ -28,6 +32,7 @@ GlobalSignals="*uid://dgk20kfm7c7ox"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [file_customization]
@@ -75,6 +80,7 @@ A={
 2d_physics/layer_3="Spikes"
 2d_physics/layer_4="Ground"
 2d_physics/layer_5="Ladder"
+2d_physics/layer_6="Layer 6"
 
 [physics]
 

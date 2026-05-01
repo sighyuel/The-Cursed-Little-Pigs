@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://cfbynoao0yg34"]
+
+[ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMeun.gd" id="1_qpwwh"]
+[ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_ouxw6"]
+[ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_6lnw2"]
+[ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_enp3u"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6lnw2"]
+color = Color(0.92941177, 0, 0.7058824, 1)
+thickness = 6
+
+[node name="Node2D" type="Node2D" unique_id=2099744671]
+script = ExtResource("1_qpwwh")
+
+[node name="Button_manager" type="Control" parent="." unique_id=1985874251]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 281.0
+offset_right = 766.5
+offset_bottom = 323.84338
+scale = Vector2(2, 2)
+text = "Start
+"
+
+[node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 396.0
+offset_right = 767.0
+offset_bottom = 448.0
+scale = Vector2(2, 2)
+text = "Options 
+"
+
+[node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 522.0
+offset_right = 770.5
+offset_bottom = 559.0
+scale = Vector2(2, 2)
+text = "Quit
+"
+
+[node name="Title" type="TextEdit" parent="Button_manager" unique_id=1553584227]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 72.0
+offset_right = 648.0
+offset_bottom = 117.333336
+scale = Vector2(3, 3)
+text = "             Cursed little piggy
+"
+editable = false
+scroll_vertical = 0.6296296296296295
+
+[node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 628.0
+offset_right = 777.0
+offset_bottom = 670.0
+scale = Vector2(2, 2)
+text = "Credits
+
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
+stream = ExtResource("2_ouxw6")
+autoplay = true
+bus = &"Music"
+
+[node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 367.0
+offset_top = 55.0
+offset_right = 1219.0
+offset_bottom = 870.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="OptionsBox" unique_id=1907951004]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "                  Options"
+
+[node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 717.0
+offset_right = 415.5
+offset_bottom = 754.0
+scale = Vector2(2, 2)
+text = "Back 
+
+
+"
+
+[node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 590.0
+offset_right = 816.0
+offset_bottom = 648.0
+theme_override_styles/slider = SubResource("StyleBoxLine_ouxw6")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_6lnw2")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6lnw2")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("3_6lnw2")
+audio_bus_name = "Music"
+
+[node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 275.0
+offset_right = 174.0
+offset_bottom = 347.0
+text = "FullScreen
+"
+script = ExtResource("4_enp3u")
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button_manager/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]
+[connection signal="toggled" from="OptionsBox/FullScreenControl" to="OptionsBox/FullScreenControl" method="_on_toggled"]
