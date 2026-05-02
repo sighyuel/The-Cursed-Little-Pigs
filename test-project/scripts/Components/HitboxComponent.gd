@@ -7,6 +7,5 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node2D):
-	if body is TileMapLayer:
+	if body is TileMapLayer or Area2D:
 		owner.health = 0.0
-		owner.death()

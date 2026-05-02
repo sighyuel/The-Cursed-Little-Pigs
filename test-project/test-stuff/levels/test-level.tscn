@@ -2008,6 +2008,9 @@ texture = ExtResource("6_h4r5i")
 4:0/0 = 0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.08992958, 0.35971832, -8, 8, -8, -8)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_h4r5i"]
+scenes/1/scene = ExtResource("8_j7nd3")
+
 [sub_resource type="TileSet" id="TileSet_44mqk"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 2
@@ -2015,6 +2018,7 @@ physics_layer_1/collision_layer = 4
 physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_htqwx")
 sources/1 = SubResource("TileSetAtlasSource_h4r5i")
+sources/5 = SubResource("TileSetScenesCollectionSource_h4r5i")
 
 [node name="Game" type="Node2D" unique_id=1841273835]
 script = ExtResource("1_fjkdh")
@@ -2028,7 +2032,7 @@ tile_set = SubResource("TileSet_lvb6n")
 
 [node name="Spikes" parent="TileMapLayers" unique_id=639613534 instance=ExtResource("2_iul4n")]
 unique_name_in_owner = true
-tile_map_data = PackedByteArray("AAAgAPD/AQABAAAAAAAgAPH/AQABAAAAAAAgAPL/AQABAAAAAAAgAPP/AQABAAAAAAAgAPT/AQABAAAAAAAgAPX/AQABAAAAAAAgAPb/AQABAAAAAAAgAPf/AQABAAAAAAAgAPj/AQABAAAAAAAgAPn/AQABAAAAAAAgAPr/AQABAAAAAAAgAPv/AQABAAAAAAAgAPz/AQABAAAAAAAgAP3/AQABAAAAAAAgAP7/AQABAAAAAAAgAP//AQABAAAAAAAgAAAAAQABAAAAAAAgAAEAAQABAAAAAAAgAAIAAQABAAAAAAAgAAMAAQABAAAAAAAgAAQAAQABAAAAAAAgAAUAAQABAAAAAAAgAAYAAQABAAAAAAAgAAcAAQABAAAAAAAgAAgAAQABAAAAAAAgAAkAAQABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAgAPD/AQABAAAAAAAgAPH/AQABAAAAAAAgAPL/AQABAAAAAAAgAPP/AQABAAAAAAAgAPT/AQABAAAAAAAgAPX/AQABAAAAAAAgAPb/AQABAAAAAAAgAPf/AQABAAAAAAAgAPj/AQABAAAAAAAgAPn/AQABAAAAAAAgAPr/AQABAAAAAAAgAPv/AQABAAAAAAAgAPz/AQABAAAAAAAgAP3/AQABAAAAAAAgAP7/AQABAAAAAAAgAP//AQABAAAAAAAgAAAAAQABAAAAAAAgAAEAAQABAAAAAAAgAAIAAQABAAAAAAAgAAMAAQABAAAAAAAgAAQAAQABAAAAAAAgAAUAAQABAAAAAAAgAAYAAQABAAAAAAAgAAcAAQABAAAAAAAgAAgAAQABAAAAAAAgAAkAAQABAAAAAAD1/+//BQAAAAAAAQD1//D/BQAAAAAAAQA=")
 tile_set = SubResource("TileSet_44mqk")
 
 [node name="Breakable Platforms" type="Node2D" parent="." unique_id=2145499946]
@@ -2103,3 +2107,6 @@ scale = Vector2(4.9, 4.9)
 [node name="CircleSaw2" parent="Kill Zones" unique_id=9222628 instance=ExtResource("9_4q5fk")]
 position = Vector2(375, -203)
 scale = Vector2(4.88, 4.88)
+
+[connection signal="body_entered" from="TileMapLayers/Spikes/Pogo" to="TileMapLayers/Spikes/Pogo" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayers/Spikes/@Area2D@87646" to="TileMapLayers/Spikes/@Area2D@87646" method="_on_body_entered"]

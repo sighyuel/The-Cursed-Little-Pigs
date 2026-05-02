@@ -1,12 +1,19 @@
 extends character
 
 @onready var dale_camera = $Camera2D
+var original_pos
 
+func _ready():
+	original_pos = get_position()
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	rect.visible = false
 	dale_camera.enabled = false
+	print(health)
+	if health == 0.0:
+		global_position = original_pos
+		health = 10
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta

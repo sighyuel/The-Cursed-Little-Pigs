@@ -1,13 +1,19 @@
 extends character
 
 @onready var perry_camera = $Camera2D
+var original_pos
+
+func _ready():
+	original_pos = get_global_position()
 
 func _physics_process(delta: float) -> void:
-	print(tree_mode_activated)
 	velocity += wind_velocity * 0.4 
 	move_and_slide()
 	rect.visible = false
 	perry_camera.enabled = false
+	if health == 0.0:
+		global_position = original_pos
+		health = 10
 	
 	if not is_on_floor() && wind_velocity.y == 0.0:
 		velocity.y += gravity * delta
