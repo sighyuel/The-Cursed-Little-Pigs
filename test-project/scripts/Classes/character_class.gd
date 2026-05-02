@@ -52,14 +52,10 @@ var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
 #endregion
 
-
-
 func _ready():
 	add_to_group("character")
 	_on_ladder = false
 	#room change logic
-
-
 #region camera functions
 func _camera_transition():
 	
@@ -133,7 +129,7 @@ func _perry_stretch():
 
 #resets perry back to original height
 func _perry_reset():
-	if Input.is_action_just_pressed("B"):
+	if Input.is_action_just_pressed("B") and tree_mode_activated:
 		mesh.scale.y = 21
 		charCol.scale.y = 1
 		acceleration = 3

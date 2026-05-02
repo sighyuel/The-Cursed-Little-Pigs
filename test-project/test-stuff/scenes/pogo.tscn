@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lot82cr82vef"]
 
-[ext_resource type="Script" path="res://test-stuff/scripts/pogo.gd" id="1_smoeh"]
+[ext_resource type="Script" uid="uid://c8ndm0x2dmt4t" path="res://test-stuff/scripts/pogo.gd" id="1_smoeh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekvec"]
 size = Vector2(21, 124)

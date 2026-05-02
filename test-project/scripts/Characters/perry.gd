@@ -1,8 +1,6 @@
 extends character
 
-@onready var ladder: Area2D = $Ladder
 @onready var perry_camera = $Camera2D
-
 
 func _physics_process(delta: float) -> void:
 	print(tree_mode_activated)
