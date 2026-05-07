@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bwf430dvwttqu"]
+
+[sub_resource type="Animation" id="Animation_fj01s"]
+resource_name = "char_switch"
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_54a7b"]
+_data = {
+&"char_switch": SubResource("Animation_fj01s")
+}
+
+[node name="AnimationCharSwitch" type="AnimationPlayer" unique_id=402390188]
+libraries/ = SubResource("AnimationLibrary_54a7b")

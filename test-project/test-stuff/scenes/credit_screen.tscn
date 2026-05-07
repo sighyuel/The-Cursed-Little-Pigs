@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cmetcyxen21hs"]
+
+[ext_resource type="Script" uid="uid://bti1w6pkxogv8" path="res://test-stuff/scenes/credit_screen.gd" id="1_we1kd"]
+[ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_psj60"]
+
+[node name="Credit Screen" type="Node2D" unique_id=301742647]
+script = ExtResource("1_we1kd")
+
+[node name="Credit movement" type="Control" parent="." unique_id=1157682995]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="TextEdit" parent="Credit movement" unique_id=926427043]
+modulate = Color(0.9369487, 0.50937665, 0.8365897, 1)
+layout_mode = 0
+offset_left = 390.0
+offset_top = 18.0
+offset_right = 645.0
+offset_bottom = 69.00061
+scale = Vector2(3, 3)
+text = "             Cursed little pigs"
+editable = false
+
+[node name="Main credits" type="TextEdit" parent="Credit movement" unique_id=1102665684]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 203.0
+offset_right = 801.0
+offset_bottom = 250.0
+scale = Vector2(2, 2)
+text = "Made by mr.taxevader, siulsighyuel, kom0, eariza3, kinokiita, awesomeking279"
+editable = false
+
+[node name="Progammer" type="TextEdit" parent="Credit movement" unique_id=858486659]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 354.0
+offset_right = 773.0
+offset_bottom = 396.0
+scale = Vector2(2, 2)
+text = "Progammer by:  eariza3, awesomeking279, mr.taxevader, siulsighyuel, kom0"
+
+[node name="Artist" type="TextEdit" parent="Credit movement" unique_id=360561047]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 498.0
+offset_right = 294.27155
+offset_bottom = 546.95624
+scale = Vector2(2, 2)
+text = "Art by: kinokiita, mr.taxevader"
+
+[node name="Level desginer" type="TextEdit" parent="Credit movement" unique_id=1193245774]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 499.0
+offset_right = 1099.0
+offset_bottom = 542.0
+scale = Vector2(2, 2)
+text = "Level designer by: mr.taxevader, siulsighyuel"
+
+[node name="Music" type="TextEdit" parent="Credit movement" unique_id=1079682085]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 639.0
+offset_right = 256.0
+offset_bottom = 687.0
+scale = Vector2(2, 2)
+text = "Music by: nekan0v1_"
+
+[node name="Button" type="Button" parent="Credit movement" unique_id=1194728364]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 711.0
+offset_right = 809.0
+offset_bottom = 802.0
+scale = Vector2(2, 2)
+text = "Back to menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=476681653]
+stream = ExtResource("2_psj60")
+autoplay = true
+
+[connection signal="pressed" from="Credit movement/Button" to="." method="_on_button_pressed"]

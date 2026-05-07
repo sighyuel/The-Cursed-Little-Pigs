@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c8jroke7dv2yh"]
+
+[ext_resource type="AudioStream" uid="uid://d3oifp6iy6y2p" path="res://assets/Sounds/jump_sound.wav" id="1_6bdti"]
+[ext_resource type="AudioStream" uid="uid://bc4skhq64ih0m" path="res://assets/Sounds/ground_smash.mp3" id="2_eosqk"]
+[ext_resource type="AudioStream" uid="uid://extkaybwtxhv" path="res://assets/Sounds/dale_slam_down.wav" id="3_1sad3"]
+
+[node name="Sounds" type="Node" unique_id=2000688459]
+
+[node name="sfx_jump" type="AudioStreamPlayer2D" parent="." unique_id=1101573375]
+stream = ExtResource("1_6bdti")
+
+[node name="GroundSmash" type="AudioStreamPlayer" parent="." unique_id=1402094829]
+stream = ExtResource("2_eosqk")
+
+[node name="DaleSlamDown" type="AudioStreamPlayer" parent="." unique_id=319250883]
+stream = ExtResource("3_1sad3")
