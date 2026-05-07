@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brviopotbm4em" path="res://test-stuff/levels/test_level.gd" id="1_fjkdh"]
 [ext_resource type="Texture2D" uid="uid://c5rkwk0npviiu" path="res://assets/Tile Sets/goodly-2x.png" id="1_iul4n"]
-[ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Level Object Scenes/spikes.tscn" id="2_iul4n"]
+[ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="2_iul4n"]
 [ext_resource type="PackedScene" uid="uid://ccoiqbcaq4vvp" path="res://scenes/Level Object Scenes/ladder_top.tscn" id="3_4oln7"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="3_j7nd3"]
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="4_4q5fk"]

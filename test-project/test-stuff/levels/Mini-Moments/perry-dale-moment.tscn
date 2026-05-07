@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://iqbjbeivalf4"]
 
 [ext_resource type="Script" uid="uid://brviopotbm4em" path="res://test-stuff/levels/test_level.gd" id="1_q3w1y"]
-[ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Level Object Scenes/spikes.tscn" id="2_dw8gv"]
+[ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="2_dw8gv"]
 [ext_resource type="PackedScene" uid="uid://bu8oxeh6ut1cc" path="res://test-stuff/tile-map-layers/grass-tilemaplayer.tscn" id="2_to68w"]
 [ext_resource type="Texture2D" uid="uid://c5rkwk0npviiu" path="res://assets/Tile Sets/goodly-2x.png" id="3_axeg8"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="4_21mpx"]
