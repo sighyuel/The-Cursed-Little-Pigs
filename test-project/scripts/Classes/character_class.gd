@@ -1,55 +1,73 @@
 extends CharacterBody2D
 class_name character
 
-#global variables
+#region export variables
 @export var health : int
 @export var piggy : String
 @export var collision : CollisionShape2D
+
 #for now, use the character mesh
 @export var charMesh : MeshInstance2D
+
 #use sprite once we have sprites
 @export var sprite : Sprite2D
 @export var JUMP_VELOCITY = 300.0
 @export var acceleration = 30.0
-@onready var active = 1
+#endregion
+
+#region onready variables
 #calling the nodes here so they arent called constantly
 @onready var charCol = $charCol
 @onready var mesh = $mesh
 @onready var rect = $Indicator
+@onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
+@onready var camera = $Camera2D
+@onready var jump_sound = $Sounds/sfx_jump
+@onready var dale_slam_down = $Sounds/DaleSlamDown
+
+#endregion
+
 var speed = 0.0
-@export var max_height = 6
-@export var max_sprite_height = 115
-var tree_reset_height = 100
-var glide = .0001
+
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+var fall_gravity: int = 2000
 var move_dir = 0.0
+#variables for abilities
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
+var max_height = 6
+var max_sprite_height = 115
+var tree_reset_height = 60
+#wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
+#controls how fast may glides down
+var glide_fall : int = 100
+#controls how high perry's ladder can go
+var max_ladder_height : int = 10
+var is_jumping = false
+#region ladder variables
+#Ladder variables
 var on_ladder: bool = false
-var coin_counter = 0
-@onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
 var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
-var glide_fall : int = 100
-@export var max_ladder_height : int = 10
+#endregion
 
 func _ready():
 	add_to_group("character")
 	_on_ladder = false
+	#room change logic
+#region camera functions
+func _camera_transition():
+	
+	camera.enabled = true
+#endregion
 
+#region ladder stuff
 
-func _process(_delta):
-	if Input.is_action_just_pressed("Right Bumper"):
-		if active != 3:
-			active += 1
-		else:
-			active = 1
-
-
+#using the raycast to detect if it is colliding or not
 func _is_on_ladder() -> bool:
 	if not ladder_detection_ray.is_colliding():
 		return false
@@ -57,20 +75,28 @@ func _is_on_ladder() -> bool:
 	_ladder_x_pos = ladder_detection_ray.get_collider().global_position.x
 	return true
 
+#controls the movement of the ladder
 func ladder_movement(delta : float) -> void:
 	global_position.x = lerp(global_position.x, _ladder_x_pos,_ladder_snap_weight * delta)
 	var direction : float = Input.get_axis("ui_down","ui_up")
+	var direction_x : float = Input.get_axis("ui_left","ui_right")
 	velocity.x = 0.0
+	
+	if direction_x and Input.is_action_just_pressed("A"):
+		velocity.x = ladder_speed * direction
 	
 	if direction:
 		velocity.y = ladder_speed * direction
 	else:
 		velocity.y = 0.0
 		
+#endregion
 
-func death():
-	if health <= 0:
-		queue_free()
+#region movement for pigs
+func _getgravity(velocity: Vector2):
+	if velocity.y < 0:
+		return gravity
+	return fall_gravity
 
 #basic movement for all piggies
 func _movement(_delta: float):
@@ -81,16 +107,27 @@ func _movement(_delta: float):
 
 	#aka jump
 	if is_on_floor():
+		if Input.is_action_just_released("A") and velocity.y < 0:
+			velocity.y = -JUMP_VELOCITY / 4
+			jump_sound.play()
 		if Input.is_action_just_pressed("A"):
 			velocity.y = -JUMP_VELOCITY
+			jump_sound.play()
+#endregion
 
+#region death function
+func death():
+	if health == 0.0:
+		get_tree().call_deferred("reload_current_scene")
+#endregion
 
+#region abilities for pigs
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		mesh.scale.y += 7
-		charCol.scale.y += .5
-		rect.position.y = -170
+		mesh.scale.y += 5
+		charCol.scale.y += .3
+		rect.position.y = -15
 		$Ladder.scale.y += .5
 		#acceleration -= 1
 
@@ -101,15 +138,15 @@ func _perry_stretch():
 		$Ladder.scale.y = max_ladder_height
 		tree_mode_activated = true
 
+#resets perry back to original height
 func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
-
-		mesh.scale.y = 30
-		charCol.scale.y = .5
+		mesh.scale.y = 21
+		charCol.scale.y = 1
 		acceleration = 3
 		JUMP_VELOCITY = 400.0
 		global_position.y -= tree_reset_height
-		rect.position.y = -40
+		rect.position.y = -10
 		$Ladder.scale.y = 1
 		tree_mode_activated = false
 
@@ -119,9 +156,12 @@ func _dale_slam():
 		global_position.y += 10
 		mesh.scale.x += 2
 		dale_ground_pounding = true
+		dale_slam_down.play()
 	else:
 		dale_ground_pounding = false
 		mesh.scale.x = 42
+		dale_slam_down.playing = false
+
 
 #may's abilities
 func _may_glide(delta):
@@ -129,3 +169,4 @@ func _may_glide(delta):
 		velocity.y += gravity * delta
 		if velocity.y >= glide_fall:
 			velocity.y = glide_fall
+#endregion
