@@ -1,6 +1,12 @@
-[gd_scene format=3 uid="uid://ct4nlmpxoto0i"]
+[gd_scene format=3 uid="uid://dih4h8d1x03gc"]
 
-[ext_resource type="Script" uid="uid://wtau3joakgub" path="res://scripts/Hazards/circle_saw.gd" id="1_13jwt"]
+[sub_resource type="GDScript" id="GDScript_mtcjj"]
+script/source = "extends Area2D
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is character:
+		get_tree().call_deferred(\"reload_current_scene\")# Replace with function body.
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22jcu"]
 
@@ -8,7 +14,7 @@
 
 [node name="CircleSaw" type="Area2D" unique_id=504590791]
 collision_mask = 2
-script = ExtResource("1_13jwt")
+script = SubResource("GDScript_mtcjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1825341653]
 shape = SubResource("CircleShape2D_22jcu")

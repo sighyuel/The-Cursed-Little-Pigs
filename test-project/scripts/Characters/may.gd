@@ -16,11 +16,11 @@ func _physics_process(delta: float) -> void:
 		health = 10
 	
 	if not is_on_floor() && wind_velocity.y == 0.0:
-		velocity.y += gravity * delta
-	elif wind_velocity.y >0.0:
+		velocity.y += _getgravity(velocity) * delta
+	elif wind_velocity.y > 0.0:
 		delta = 0
 	if is_on_floor():
-		gravity = 980
+		gravity = 1200
 	
 	if Global_Variables.active == 3:
 		_may_glide(delta)

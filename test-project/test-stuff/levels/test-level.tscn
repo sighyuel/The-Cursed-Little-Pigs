@@ -11,9 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="6_h4r5i"]
 [ext_resource type="Texture2D" uid="uid://clf6ad2iwll17" path="res://assets/Tile Sets/square-512-291232940.png" id="7_htqwx"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="7_mhhr2"]
-[ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Level Object Scenes/circle saw.tscn" id="9_4q5fk"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
-[ext_resource type="PackedScene" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
+[ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -3435,20 +3434,7 @@ unique_name_in_owner = true
 position = Vector2(-304, -255)
 health = 0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=777209548]
-offset = Vector2(0, -160.32)
-
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
-
-[node name="CircleSaw" parent="Kill Zones" unique_id=504590791 instance=ExtResource("9_4q5fk")]
-unique_name_in_owner = true
-z_index = -1
-position = Vector2(265.55, 0)
-scale = Vector2(4.9, 4.9)
-
-[node name="CircleSaw2" parent="Kill Zones" unique_id=9222628 instance=ExtResource("9_4q5fk")]
-position = Vector2(375, -203)
-scale = Vector2(4.88, 4.88)
 
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
 position = Vector2(-199, -251)

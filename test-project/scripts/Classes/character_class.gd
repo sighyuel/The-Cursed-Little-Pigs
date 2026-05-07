@@ -30,7 +30,7 @@ class_name character
 var speed = 0.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
-var fall_gravity: int = 2000
+var fall_gravity: int = 2300
 var move_dir = 0.0
 #variables for abilities
 var tree_mode_activated = false
@@ -108,7 +108,7 @@ func _movement(_delta: float):
 	#aka jump
 	if is_on_floor():
 		if Input.is_action_just_released("A") and velocity.y < 0:
-			velocity.y = -JUMP_VELOCITY / 4
+			velocity.y = -JUMP_VELOCITY / 12
 			jump_sound.play()
 		if Input.is_action_just_pressed("A"):
 			velocity.y = -JUMP_VELOCITY
