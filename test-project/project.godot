@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Cursed_Little_Pigs_Alpha"
-run/main_scene="uid://h0av8kw4uam5"
+run/main_scene="uid://cfbynoao0yg34"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://picture of john godot/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://ebsla7gbn0qd"
 
 [autoload]
 
@@ -29,6 +33,7 @@ RoomChangeGlobal="*uid://cf1xx7g2wma6y"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [file_customization]
