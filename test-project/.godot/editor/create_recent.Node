@@ -1,3 +1,6 @@
+Button
+ColorRect
+CanvasLayer
 CollisionShape2D
 WindArea2d
 Node2D
