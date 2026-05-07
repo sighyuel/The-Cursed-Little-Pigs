@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_p7v80"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="4_56pri"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_fd7e2"]
+[ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="7_3m2jw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njcns"]
 
@@ -75,3 +76,5 @@ shape = SubResource("RectangleShape2D_wjqgi")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
 zoom = Vector2(1.7, 1.7)
 position_smoothing_enabled = true
+
+[node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("7_3m2jw")]

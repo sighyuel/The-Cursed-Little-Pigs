@@ -22,12 +22,15 @@ class_name character
 @onready var rect = $Indicator
 @onready var ladder_detection_ray: RayCast2D = $ladder_detect_ray
 @onready var camera = $Camera2D
+@onready var jump_sound = $Sounds/sfx_jump
+@onready var dale_slam_down = $Sounds/DaleSlamDown
 
 #endregion
 
 var speed = 0.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+var fall_gravity: int = 2000
 var move_dir = 0.0
 #variables for abilities
 var tree_mode_activated = false
@@ -42,7 +45,7 @@ var wind_velocity: Vector2 = Vector2.ZERO
 var glide_fall : int = 100
 #controls how high perry's ladder can go
 var max_ladder_height : int = 10
-
+var is_jumping = false
 #region ladder variables
 #Ladder variables
 var on_ladder: bool = false
@@ -90,6 +93,10 @@ func ladder_movement(delta : float) -> void:
 #endregion
 
 #region movement for pigs
+func _getgravity(velocity: Vector2):
+	if velocity.y < 0:
+		return gravity
+	return fall_gravity
 
 #basic movement for all piggies
 func _movement(_delta: float):
@@ -100,8 +107,12 @@ func _movement(_delta: float):
 
 	#aka jump
 	if is_on_floor():
+		if Input.is_action_just_released("A") and velocity.y < 0:
+			velocity.y = -JUMP_VELOCITY / 4
+			jump_sound.play()
 		if Input.is_action_just_pressed("A"):
 			velocity.y = -JUMP_VELOCITY
+			jump_sound.play()
 #endregion
 
 #region death function
@@ -145,9 +156,12 @@ func _dale_slam():
 		global_position.y += 10
 		mesh.scale.x += 2
 		dale_ground_pounding = true
+		dale_slam_down.play()
 	else:
 		dale_ground_pounding = false
 		mesh.scale.x = 42
+		dale_slam_down.playing = false
+
 
 #may's abilities
 func _may_glide(delta):
