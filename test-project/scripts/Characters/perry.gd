@@ -11,12 +11,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	rect.visible = false
 	perry_camera.enabled = false
+	
 	if health == 0.0:
 		global_position = original_pos
 		health = 10
 	
 	if not is_on_floor() && wind_velocity.y == 0.0:
-		velocity.y += gravity * delta
+		velocity.y += _getgravity(velocity) * delta
 	elif wind_velocity.y >0.0:
 		delta = 0
 #when perry extends, if this goes below to -1, it messes up the move_dir
@@ -37,6 +38,7 @@ func _physics_process(delta: float) -> void:
 		
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
+		
 		_camera_transition()
 		_perry_stretch()
 		_perry_reset()

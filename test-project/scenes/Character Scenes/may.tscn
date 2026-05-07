@@ -23,9 +23,9 @@ health = 10
 piggy = "May"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")
-JUMP_VELOCITY = 200.0
+JUMP_VELOCITY = 100.0
 acceleration = 5.0
-ladder_speed = -100.0
+ladder_speed = -150.0
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=1686499719]
