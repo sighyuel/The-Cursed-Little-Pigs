@@ -1,5 +1,6 @@
 extends character
 
+
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	rect.visible = false
