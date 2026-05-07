@@ -1,1 +1,10 @@
-res://scenes/Level 1/Character Rooms/may's_room___level_1.tscn
+res://test-stuff/levels/Mini-Moments/perry-dale-moment.tscn
+res://test-stuff/levels/test_level.gd
+res://scripts/Breakable-Platform/break_detection.gd
+res://scripts/Characters/dale.gd
+res://scripts/Classes/character_class.gd
+res://scripts/Hazards/wind_area_2d.gd
+res://test-stuff/scenes/pogo.tscn
+res://test-stuff/scripts/pogo.gd
+res://scenes/Class Scenes/character_class.tscn
+res://test-stuff/levels/test-level.tscn
