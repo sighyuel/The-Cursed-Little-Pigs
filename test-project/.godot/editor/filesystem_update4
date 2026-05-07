@@ -1,7 +1,4 @@
-res://scenes/Level 1/Character Rooms/may's_room___level_1.tscn
-res://scenes/Class Scenes/character_class.tscn
-res://scripts/Classes/character_class.gd
-res://scripts/Global Scripts/RoomChangeGlobal.gd
-res://scenes/Level 1/Character Rooms/may's_room___level_1.gd
-res://scripts/Hazards/wind_area_2d.gd
-res://scripts/Characters/may.gd
+res://test-stuff/scenes/MainMenu.tscn
+res://test-stuff/scenes/credit_screen.gd
+res://pause_menu.gd
+res://test-stuff/pause_menu.tscn

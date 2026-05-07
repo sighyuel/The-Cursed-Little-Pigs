@@ -41,6 +41,7 @@ offset_right = 773.0
 offset_bottom = 396.0
 scale = Vector2(2, 2)
 text = "Progammer by:  eariza3, awesomeking279, mr.taxevader, siulsighyuel, kom0"
+editable = false
 
 [node name="Artist" type="TextEdit" parent="Credit movement" unique_id=360561047]
 layout_mode = 0
@@ -50,6 +51,7 @@ offset_right = 294.27155
 offset_bottom = 546.95624
 scale = Vector2(2, 2)
 text = "Art by: kinokiita, mr.taxevader"
+editable = false
 
 [node name="Level desginer" type="TextEdit" parent="Credit movement" unique_id=1193245774]
 layout_mode = 0
@@ -59,6 +61,7 @@ offset_right = 1099.0
 offset_bottom = 542.0
 scale = Vector2(2, 2)
 text = "Level designer by: mr.taxevader, siulsighyuel"
+editable = false
 
 [node name="Music" type="TextEdit" parent="Credit movement" unique_id=1079682085]
 layout_mode = 0
@@ -68,13 +71,14 @@ offset_right = 256.0
 offset_bottom = 687.0
 scale = Vector2(2, 2)
 text = "Music by: nekan0v1_"
+editable = false
 
 [node name="Button" type="Button" parent="Credit movement" unique_id=1194728364]
 layout_mode = 0
 offset_left = 643.0
 offset_top = 711.0
-offset_right = 809.0
-offset_bottom = 802.0
+offset_right = 943.0
+offset_bottom = 761.0
 scale = Vector2(2, 2)
 text = "Back to menu"
 
