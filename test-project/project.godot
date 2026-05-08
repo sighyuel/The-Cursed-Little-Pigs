@@ -28,6 +28,7 @@ GlobalSignals="*uid://dgk20kfm7c7ox"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [file_customization]

@@ -24,9 +24,9 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 555.0
+offset_left = 425.0
 offset_top = 250.0
-offset_right = 755.0
+offset_right = 625.0
 offset_bottom = 290.0
 scale = Vector2(2, 2)
 text = "Start
@@ -34,9 +34,9 @@ text = "Start
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 555.0
+offset_left = 425.0
 offset_top = 375.0
-offset_right = 755.0
+offset_right = 625.0
 offset_bottom = 415.0
 scale = Vector2(2, 2)
 text = "Options 
@@ -44,21 +44,26 @@ text = "Options
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
-offset_left = 555.0
+offset_left = 425.0
 offset_top = 500.0
-offset_right = 755.0
+offset_right = 625.0
 offset_bottom = 540.0
 scale = Vector2(2, 2)
 text = "Quit
 "
 
 [node name="Title" type="TextEdit" parent="Button_manager" unique_id=1553584227]
+modulate = Color(0.9999998, 0.025798082, 0.9997937, 1)
+self_modulate = Color(0.32076052, 0.789919, 0.44210795, 1)
 layout_mode = 0
-offset_left = 380.0
+offset_left = 200.0
 offset_top = 70.0
-offset_right = 655.0
+offset_right = 475.0
 offset_bottom = 115.0
 scale = Vector2(3, 3)
+theme_override_colors/search_result_color = Color(0.7937543, 0.15674928, 0.8165489, 1)
+theme_override_colors/selection_color = Color(0.84003025, 0.30295998, 0.81005204, 1)
+theme_override_colors/font_color = Color(0.9152378, 0.293786, 0.77157307, 1)
 text = "               Cursed Little Pigs"
 editable = false
 context_menu_enabled = false
@@ -73,9 +78,9 @@ tab_input_mode = false
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 555.0
+offset_left = 425.0
 offset_top = 625.0
-offset_right = 755.0
+offset_right = 625.0
 offset_bottom = 665.0
 scale = Vector2(2, 2)
 text = "Credits
@@ -93,10 +98,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 367.0
-offset_top = 55.0
-offset_right = 1219.0
-offset_bottom = 870.0
+offset_left = 150.0
+offset_top = 25.0
+offset_right = 1150.0
+offset_bottom = 695.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -112,10 +117,10 @@ text = "                  Options"
 
 [node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 717.0
-offset_right = 415.5
-offset_bottom = 754.0
+offset_left = 300.0
+offset_top = 550.0
+offset_right = 511.5
+offset_bottom = 581.0
 scale = Vector2(2, 2)
 text = "Back 
 
@@ -124,10 +129,10 @@ text = "Back
 
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 590.0
-offset_right = 816.0
-offset_bottom = 648.0
+offset_left = 100.0
+offset_top = 450.0
+offset_right = 860.0
+offset_bottom = 508.0
 theme_override_styles/slider = SubResource("StyleBoxLine_ouxw6")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_6lnw2")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6lnw2")
@@ -139,10 +144,11 @@ audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
 layout_mode = 0
-offset_left = 41.0
-offset_top = 275.0
-offset_right = 174.0
-offset_bottom = 347.0
+offset_left = 50.0
+offset_top = 250.0
+offset_right = 180.0
+offset_bottom = 320.0
+scale = Vector2(2, 2)
 text = "FullScreen
 "
 script = ExtResource("4_mq833")
