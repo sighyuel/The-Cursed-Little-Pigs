@@ -82,12 +82,21 @@ text = "Credits
 
 "
 
+[node name="Level Select" type="Button" parent="Button_manager" unique_id=650822141]
+layout_mode = 0
+offset_left = 996.0
+offset_top = 405.0
+offset_right = 1121.0
+offset_bottom = 453.0
+text = "Level Select"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
 stream = ExtResource("2_ji2f2")
 autoplay = true
 bus = &"Music"
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -110,18 +119,6 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
 text = "                  Options"
 
-[node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
-layout_mode = 0
-offset_left = 204.0
-offset_top = 717.0
-offset_right = 415.5
-offset_bottom = 754.0
-scale = Vector2(2, 2)
-text = "Back 
-
-
-"
-
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
 layout_mode = 0
 offset_left = 56.0
@@ -138,6 +135,7 @@ script = ExtResource("3_8usxe")
 audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
+visible = false
 layout_mode = 0
 offset_left = 41.0
 offset_top = 275.0
@@ -147,10 +145,48 @@ text = "FullScreen
 "
 script = ExtResource("4_mq833")
 
+[node name="Panel" type="Panel" parent="." unique_id=130597322]
+visible = false
+offset_left = 368.0
+offset_top = 55.0
+offset_right = 1219.0
+offset_bottom = 870.0
+
+[node name="Back" type="Button" parent="Panel" unique_id=1509320610]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 717.0
+offset_right = 414.5
+offset_bottom = 754.0
+scale = Vector2(2, 2)
+text = "Back 
+
+
+"
+
+[node name="Dale" type="Button" parent="Panel" unique_id=507953754]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 169.0
+offset_right = 529.0
+offset_bottom = 288.0
+text = "Dale's Room"
+
+[node name="May" type="Button" parent="Panel" unique_id=2052630692]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 357.0
+offset_right = 530.0
+offset_bottom = 474.0
+text = "May's Room"
+
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Button_manager/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Button_manager/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]
 [connection signal="toggled" from="OptionsBox/FullScreenControl" to="OptionsBox/FullScreenControl" method="_on_toggled"]
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Panel/Dale" to="." method="_on_dale_pressed"]
+[connection signal="pressed" from="Panel/May" to="." method="_on_may_pressed"]

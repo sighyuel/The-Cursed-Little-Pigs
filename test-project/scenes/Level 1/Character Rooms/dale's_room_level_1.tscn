@@ -716,7 +716,7 @@ script = ExtResource("1_q55u6")
 position = Vector2(546, 33)
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_7y7bp")]
-position = Vector2(596, 974)
+position = Vector2(259, -14)
 JUMP_VELOCITY = 400.0
 
 [node name="Perry" parent="Characters" unique_id=771990693 instance=ExtResource("3_4sfaq")]

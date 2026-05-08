@@ -6,3 +6,5 @@ res://scripts/Level Objects/collectible_key.gd
 res://scripts/dale's_room_level_1.gd
 res://scripts/Level Objects/moving_platform.gd
 res://scenes/Level Object Scenes/moving_platform.tscn
+res://test-stuff/scripts/MainMenu.gd
+res://test-stuff/scenes/MainMenu.tscn

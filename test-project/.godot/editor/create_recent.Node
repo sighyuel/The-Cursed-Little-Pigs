@@ -1,3 +1,6 @@
+Button
+Panel
+Label
 AnimatableBody2D
 AnimationPlayer
 CollisionShape2D
@@ -7,7 +10,5 @@ Sprite2D
 Node2D
 TileMapLayer
 WindArea2d
-Button
 ColorRect
 CanvasLayer
-Camera2D
