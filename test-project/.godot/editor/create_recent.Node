@@ -1,7 +1,10 @@
+Node
+CPUParticles2D
+Camera2D
+Label
 Button
 ColorRect
 CanvasLayer
 CollisionShape2D
 WindArea2d
 Node2D
-Camera2D
