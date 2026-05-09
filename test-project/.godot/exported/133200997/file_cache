@@ -1,32 +1,42 @@
-res://scenes/Character Scenes/dale.tscn::d013da4cdc1abff1baaa31b3331fda47::1777582323::res://.godot/exported/133200997/export-262f9d75147ac5344d4b2adb265e4dbe-dale.scn
-res://scenes/Character Scenes/may.tscn::1d5666bc2fa83be49ec7c256868587e2::1777582323::res://.godot/exported/133200997/export-df183fbfef1c4222865e80980cf6f479-may.scn
-res://scenes/Character Scenes/perry.tscn::921c7768345f1890d6806bc144c18428::1777582323::res://.godot/exported/133200997/export-87b9087b535d75af9d105ab2b178c14d-perry.scn
-res://scenes/Class Scenes/character_class.tscn::1f5294da20cf1c21b830255d8f56f78e::1777588716::res://.godot/exported/133200997/export-f5f64a0d697dc2e85d07b464402841ba-character_class.scn
+res://scenes/Character Scenes/dale.tscn::69c1b6aca8f7c64e7043796d07cab9ee::1778258214::res://.godot/exported/133200997/export-262f9d75147ac5344d4b2adb265e4dbe-dale.scn
+res://scenes/Character Scenes/may.tscn::cc8f21eb3fff1e098d9d266ad5776e2a::1778258214::res://.godot/exported/133200997/export-df183fbfef1c4222865e80980cf6f479-may.scn
+res://scenes/Character Scenes/perry.tscn::7de85808b299df74f8541712adcc9147::1778258214::res://.godot/exported/133200997/export-87b9087b535d75af9d105ab2b178c14d-perry.scn
+res://scenes/Class Scenes/character_class.tscn::1f5294da20cf1c21b830255d8f56f78e::1778191574::res://.godot/exported/133200997/export-f5f64a0d697dc2e85d07b464402841ba-character_class.scn
 res://scenes/Component Scenes/camera_component.tscn::610e11813b3c99b2735cd5d9b8dd0320::1776873283::res://.godot/exported/133200997/export-942871f94ea0da496b43557332c3c483-camera_component.scn
 res://scenes/Component Scenes/health_component.tscn::c7a2811f0c218882e6fb0d680e379244::1776362751::res://.godot/exported/133200997/export-29e3cb2dc4060f9e0deff5a3c720999c-health_component.scn
 res://scenes/Component Scenes/hitbox_component.tscn::7114f7108d473cf63f2d4a2c2da375f0::1776362751::res://.godot/exported/133200997/export-dcf414dfe0ffe61f6282690b3968de21-hitbox_component.scn
 res://scenes/Component Scenes/killzone.tscn::cc322760106a2ed69c5da83c14c72334::1776873283::res://.godot/exported/133200997/export-476423cf2dc64ca56220fbfbc9b74719-killzone.scn
 res://scenes/Component Scenes/ladder_detect_ray.tscn::752bb52baea1bb6520853374696ebc0e::1776383510::res://.godot/exported/133200997/export-c8af88a1d3e927b4d9e0c0e0176501e4-ladder_detect_ray.scn
-res://scenes/Hazards/wind_area_2d.tscn::2e85a762159aacc97ab3b15512765ed9::1776873283::res://.godot/exported/133200997/export-a841e032ce2c72d85cc3c16c83b32380-wind_area_2d.scn
-res://scenes/Level Object Scenes/breakable_platform.tscn::bafc798468c406c600460b44196d38ef::1776443829::res://.godot/exported/133200997/export-2512530a33ebab5ccba7a4f1dd44af10-breakable_platform.scn
-res://scenes/Level Object Scenes/circle saw.tscn::8f4415474e6f3ea8c6e3a524f46a8a07::1776714393::res://.godot/exported/133200997/export-323d05148063fc2a0bf74dba504ae89a-circle saw.scn
+res://scenes/Hazards/wind_area_2d.tscn::f2cef364a24d0e48d94fef13f51c6cfd::1778258214::res://.godot/exported/133200997/export-a841e032ce2c72d85cc3c16c83b32380-wind_area_2d.scn
+res://scenes/Level Object Scenes/breakable_platform.tscn::6dd33012487d14257831de956be39617::1778186229::res://.godot/exported/133200997/export-2512530a33ebab5ccba7a4f1dd44af10-breakable_platform.scn
+res://scenes/Level Object Scenes/circle saw.tscn::cb37a478b20cba4578cf9a61cd9a4c0c::1778186229::res://.godot/exported/133200997/export-323d05148063fc2a0bf74dba504ae89a-circle saw.scn
 res://scenes/Level Object Scenes/Collectible-Key.tscn::fb99d9887ca49edccd6be77895d21a19::1776713566::res://.godot/exported/133200997/export-4af241947778a488201a197c73ce74d9-Collectible-Key.scn
 res://scenes/Level Object Scenes/ladder.tscn::9e89b2278ae0067b0d566a928368bede::1776713566::res://.godot/exported/133200997/export-0fe712c598902f4639960a0003cb58c5-ladder.scn
 res://scenes/Level Object Scenes/ladder_top.tscn::8ae034d2db505bf9dd3bf5c2402e2e4b::1776713574::res://.godot/exported/133200997/export-02765252313fb25f813d60cb6cb8897b-ladder_top.scn
 res://scenes/Level Object Scenes/platform.tscn::205822526f124bafaa2c19b632e5f0bf::1776873283::res://.godot/exported/133200997/export-e30c504ab752a3134f5c33358214713c-platform.scn
-res://scenes/Level Object Scenes/spikes.tscn::31b16f3c031b621032548cefcaadb1b3::1777317447::res://.godot/exported/133200997/export-51d4490a0fed2603067ea61c3bf55fd2-spikes.scn
-res://test-stuff/levels/test-level.tscn::ba4cb374c1c02fb3df2941adfd2a51d9::1777582323::res://.godot/exported/133200997/export-748684d90cadf7c8a7d79f20b73346a5-test-level.scn
+res://test-stuff/levels/test-level.tscn::ae884ea88d4ac93bfa9ed2d4327c8ffa::1778258214::res://.godot/exported/133200997/export-748684d90cadf7c8a7d79f20b73346a5-test-level.scn
 res://test-stuff/Mock lvls/mock_lvl_1.tscn::fe163fbc3da41e15cb7171586bb43db2::1777317447::res://.godot/exported/133200997/export-7265e391984b957ef58b64d2cf41193f-mock_lvl_1.scn
 res://test-stuff/Mock lvls/mock_lvl_2.tscn::252ce97fbe21eca7bb7d75a869c4e4de::1777317447::res://.godot/exported/133200997/export-f8af935f37bbf81442e07eb2794210d5-mock_lvl_2.scn
 res://test-stuff/scenes/ladder_detect.tscn::314e28f92d8a4d7849af2d51018b0367::1776713574::res://.godot/exported/133200997/export-805e995b74be705b0b9735caaab5a8e1-ladder_detect.scn
-res://test-stuff/scenes/pogo.tscn::7566de88977b958c9fba52e603c4bedd::1776452145::res://.godot/exported/133200997/export-80498ab2b168508bba7f27af76a57276-pogo.scn
+res://test-stuff/scenes/pogo.tscn::b45b04d6cd57e4a2d8e01ebbe708be83::1778186597::res://.godot/exported/133200997/export-80498ab2b168508bba7f27af76a57276-pogo.scn
 res://test-stuff/Temp Assests/cracked_floor_wall.tscn::54d7d01521753f57570164472339a1fa::1776873283::res://.godot/exported/133200997/export-bf2ee9382c2b0de5af3e0d81c215c0ea-cracked_floor_wall.scn
 res://test-stuff/Temp Assests/key.tscn::4ad5b9df3117179deb0f0c72da5f3274::1776873283::res://.godot/exported/133200997/export-52166cf0c07b72a42778837563f3c292-key.scn
-res://scenes/Animation Scenes/animation_char_switch.tscn::b95562700be1663419b9fe75a1b8e8fc::1777582323::res://.godot/exported/133200997/export-69aa9e84fefdc3ea6546f3d6b14e7e2c-animation_char_switch.scn
+res://scenes/Animation Scenes/animation_char_switch.tscn::11fdd9480a43e99b3767abc67e5911c4::1777929406::res://.godot/exported/133200997/export-69aa9e84fefdc3ea6546f3d6b14e7e2c-animation_char_switch.scn
 res://scenes/Level Object Scenes/DoorArea2D.tscn::1c7bd300814fc0101b61c02357cc0dd7::1777322492::res://.godot/exported/133200997/export-d4ac4aa9480210624086be455d4e9932-DoorArea2D.scn
 res://test-stuff/levels/metroidvania-test-level/middle_section.tscn::d82b451a3c689ddd525bfa92d111c614::1777317447::res://.godot/exported/133200997/export-fa257965c1e0e895b5471e32c2c847e9-middle_section.scn
 res://test-stuff/levels/metroidvania-test-level/right_section.tscn::fa6fcc59845dc3df7fa912102080782e::1777317447::res://.godot/exported/133200997/export-99b96bb3087da2b6ba4e149aa557362a-right_section.scn
-res://test-stuff/levels/Mini-Moments/perry-dale-moment.tscn::9163aa613ba07c2fae6e6e6cf685d2b3::1777646151::res://.godot/exported/133200997/export-b50834898db7891e9ff6cd4859e1c200-perry-dale-moment.scn
+res://test-stuff/levels/Mini-Moments/perry-dale-moment.tscn::bdc362a402568aebc993c4816e7e2a3d::1778258214::res://.godot/exported/133200997/export-b50834898db7891e9ff6cd4859e1c200-perry-dale-moment.scn
 res://test-stuff/levels/camera_level_testing.tscn::6e1e445206294ca76fb7ec5ddbd9db44::1777322492::res://.godot/exported/133200997/export-df855be4f5dec86847684160d66b2a03-camera_level_testing.scn
 res://test-stuff/scenes/camera_test.tscn::d0444c51a5de7720c28f1560c54eabdd::1777322492::res://.godot/exported/133200997/export-791d4d4dd16ce9607129c64f2c221e01-camera_test.scn
 res://test-stuff/tile-map-layers/grass-tilemaplayer.tscn::c429a970c994173c5b74553f3fb4ed7a::1777317447::res://.godot/exported/133200997/export-30c52288f535e0fd25b9127ebb208ace-grass-tilemaplayer.scn
+res://assets/Sounds/sounds.tscn::330221cc24a6d15ee30b4f6e4935a23e::1778186229::res://.godot/exported/133200997/export-52df6cfbf0ddf35ababd2da9475d8adc-sounds.scn
+res://scenes/Hazards/circle saw.tscn::6c1f5fb7500df9fc2b7714ba6251851b::1778190125::res://.godot/exported/133200997/export-84927d25addb8574b1a799479f82f7ab-circle saw.scn
+res://scenes/Hazards/PatrolEnemy.tscn::522687140b4c451201f8e0ea0c2df111::1778186256::res://.godot/exported/133200997/export-c7dea484d1c5083d9ef8e1fec2ba2d00-PatrolEnemy.scn
+res://scenes/Hazards/spikes.tscn::31b16f3c031b621032548cefcaadb1b3::1778258214::res://.godot/exported/133200997/export-83cc4267043ae81b770d8c961e024cac-spikes.scn
+res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn::400e62272bd8bce134fc69c7d90b2aca::1778258219::res://.godot/exported/133200997/export-205cf7ffb16db1800dfd5694637f3129-dale's_room_level_1.scn
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn::6514deb0b466fb29d5efb3b2ad1d3136::1778258219::res://.godot/exported/133200997/export-55b915f44604f65a6f5802320e21466f-may's_room_level_1.scn
+res://scenes/Level Object Scenes/moving_platform.tscn::7d9a99498fa86b133ce4ffbcde909f23::1778258219::res://.godot/exported/133200997/export-deb70c2a7d4845c9167b1a775b66f726-moving_platform.scn
+res://test-stuff/scenes/credit_screen.tscn::35b4287ae21d6c08170196a2291f7a51::1778258214::res://.godot/exported/133200997/export-865c81d82cd2d2051257f469f73573a0-credit_screen.scn
+res://test-stuff/scenes/MainMenu.tscn::fde7f593db18c189e1106d5673cb1aa0::1778258219::res://.godot/exported/133200997/export-6d6abf84125be85c406898f63b61cd20-MainMenu.scn
+res://test-stuff/pause_menu.tscn::3d9309e5d7351823405657f1d342b30b::1778258214::res://.godot/exported/133200997/export-3d88c25db5c9b1e58d6f6262747fa865-pause_menu.scn
+res://default_bus_layout.tres::dae176ea27a4b842615dd91e01323b02::1778186256::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
