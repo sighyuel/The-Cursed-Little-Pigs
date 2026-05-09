@@ -35,7 +35,6 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://assets/": "purple",
-"res://levels/": "yellow",
 "res://picture of john godot/": "teal",
 "res://scenes/": "blue",
 "res://scripts/": "green",

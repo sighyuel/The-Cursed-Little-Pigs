@@ -4,6 +4,7 @@ const SPEED = 100.0
 var directions = 1.0
 
 
+
 func _process(delta: float) -> void:
 	position.x += directions * SPEED * delta
 

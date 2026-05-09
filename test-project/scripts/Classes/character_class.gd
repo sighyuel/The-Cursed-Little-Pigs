@@ -36,8 +36,8 @@ var move_dir = 0.0
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
-var max_height = 6
-var max_sprite_height = 115
+var max_height = 25
+var max_sprite_height = 380
 var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
