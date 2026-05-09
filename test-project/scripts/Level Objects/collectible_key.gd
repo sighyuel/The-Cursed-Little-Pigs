@@ -1,11 +1,13 @@
 extends Area2D
 
 var _coin_count: int
+@onready var crystal_sound = $Sounds/CrystalCollect
 
 func _ready() -> void:
 	GlobalSignals.connect("coin_collect",_coin_collect)
 
 func _coin_collect() -> void:
+	crystal_sound.play()
 	_coin_count += 1
 
 func _coin_complete() -> void:

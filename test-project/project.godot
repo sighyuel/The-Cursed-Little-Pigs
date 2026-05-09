@@ -27,7 +27,7 @@ GlobalSignals="*uid://dgk20kfm7c7ox"
 [display]
 
 window/size/viewport_width=640
-window/size/viewport_height=480
+window/size/viewport_height=360
 window/stretch/mode="viewport"
 
 [file_customization]
@@ -93,4 +93,5 @@ debug_reset={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

@@ -3410,7 +3410,7 @@ position = Vector2(-323, 134)
 
 [node name="CollectibleKey2" parent="Collectibles" unique_id=1446221064 instance=ExtResource("7_mhhr2")]
 unique_name_in_owner = true
-position = Vector2(107, -136)
+position = Vector2(-156, -282)
 
 [node name="CollectibleKey3" parent="Collectibles" unique_id=771255022 instance=ExtResource("7_mhhr2")]
 unique_name_in_owner = true
@@ -3437,7 +3437,7 @@ health = 0
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
 
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
-position = Vector2(-199, -251)
+position = Vector2(-211, -123)
 
 [node name="GameButton" type="Control" parent="." unique_id=1173526227]
 layout_mode = 3
