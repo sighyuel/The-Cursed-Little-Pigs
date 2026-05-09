@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bc4skhq64ih0m" path="res://assets/Sounds/ground_smash.mp3" id="2_eosqk"]
 [ext_resource type="AudioStream" uid="uid://extkaybwtxhv" path="res://assets/Sounds/dale_slam_down.wav" id="3_1sad3"]
 [ext_resource type="AudioStream" uid="uid://c4phg4j07ss63" path="res://assets/Sounds/crystal_collect.wav" id="4_lgx2k"]
+[ext_resource type="AudioStream" uid="uid://bvlxtjn73j6xf" path="res://assets/Sounds/wolf-screaming.mp3" id="5_7fqw6"]
 
 [node name="Sounds" type="Node" unique_id=2000688459]
 
@@ -18,3 +19,8 @@ stream = ExtResource("3_1sad3")
 
 [node name="CrystalCollect" type="AudioStreamPlayer" parent="." unique_id=1444478778]
 stream = ExtResource("4_lgx2k")
+
+[node name="WolfScreaming" type="AudioStreamPlayer" parent="." unique_id=961833255]
+stream = ExtResource("5_7fqw6")
+volume_db = -0.665
+pitch_scale = 0.85

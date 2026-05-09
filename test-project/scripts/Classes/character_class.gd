@@ -129,6 +129,7 @@ func _perry_stretch():
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .5
+		tree_mode_activated = true
 		#acceleration -= 1
 
 
@@ -136,7 +137,6 @@ func _perry_stretch():
 		charCol.scale.y = max_height
 		mesh.scale.y = max_sprite_height
 		$Ladder.scale.y = max_ladder_height
-		tree_mode_activated = true
 
 #resets perry back to original height
 func _perry_reset():
