@@ -8,6 +8,7 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	velocity += wind_velocity * 0.4 
+	velocity += platform_speed * 0.4
 	move_and_slide()
 	rect.visible = false
 	perry_camera.enabled = false

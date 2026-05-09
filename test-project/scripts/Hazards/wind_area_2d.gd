@@ -14,7 +14,6 @@ func _ready() -> void:
 
 func _object_entered(object: Node2D) -> void:
 	if "wind_velocity" in object:
-		print("enter")
 		object.wind_velocity += speed
 		if speed.y < 0.0:
 			object.velocity.y = speed.y

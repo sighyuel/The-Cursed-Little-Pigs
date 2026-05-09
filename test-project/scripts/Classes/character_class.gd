@@ -41,6 +41,8 @@ var max_sprite_height = 380
 var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
+#platform variable that moves our characters
+var platform_speed: Vector2 = Vector2.ZERO
 #controls how fast may glides down
 var glide_fall : int = 100
 #controls how high perry's ladder can go

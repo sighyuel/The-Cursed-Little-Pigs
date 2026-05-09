@@ -9,7 +9,7 @@ size = Vector2(62, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcl3j"]
 size = Vector2(80, 21)
 
-[node name="moving_platform" type="AnimatableBody2D" unique_id=118820530]
+[node name="moving_platform" type="StaticBody2D" unique_id=1059057616]
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_aurfv")
