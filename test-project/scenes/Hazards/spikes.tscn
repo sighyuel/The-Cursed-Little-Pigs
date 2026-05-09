@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhmgc5r1ncy50"]
 
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="1_sdtdx"]
+[ext_resource type="Texture2D" uid="uid://f4hxpfru1yue" path="res://assets/Tile Sets/TCLP Lvl Sprites.png" id="2_85bu3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1skdl"]
 texture = ExtResource("1_sdtdx")
@@ -20,12 +21,21 @@ texture = ExtResource("1_sdtdx")
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_784nm"]
+texture = ExtResource("2_85bu3")
+margins = Vector2i(3, 0)
+texture_region_size = Vector2i(32, 32)
+4:4/0 = 0
+5:4/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_u6624"]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 2
 physics_layer_1/collision_layer = 4
 physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_1skdl")
+sources/3 = SubResource("TileSetAtlasSource_784nm")
 
 [node name="Spikes" type="TileMapLayer" unique_id=639613534]
 texture_filter = 1

@@ -1,2 +1,9 @@
+res://test-stuff/pause_menu.tscn
+res://pause_menu.gd
+res://test-stuff/scenes/MainMenu.tscn
 res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn
-res://scripts/Classes/character_class.gd
+res://scenes/Character Scenes/dale.tscn
+res://scenes/Hazards/spikes.tscn
+res://scenes/Character Scenes/may.tscn
+res://scenes/Character Scenes/perry.tscn
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn

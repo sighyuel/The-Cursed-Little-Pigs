@@ -15,12 +15,12 @@ func _ready() -> void:
 func _input(event:InputEvent) -> void:
 	if Input.is_action_just_pressed("Pause"):
 		if get_tree().paused:
-			visible = false 
-			get_tree().paused = false
+			visible = true
+			get_tree().paused = true
 		else:
 			visible = false
 			get_tree().paused = false
 
 func _on_resume_pressed() -> void:
-	visible = false 
-	get_tree().paused = false
+	visible = true
+	get_tree().paused = true

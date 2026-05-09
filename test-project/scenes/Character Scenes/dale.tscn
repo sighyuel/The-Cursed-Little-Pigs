@@ -66,7 +66,6 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
-zoom = Vector2(1.7, 1.7)
 position_smoothing_enabled = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_kiko6")]
