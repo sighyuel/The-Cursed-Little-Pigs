@@ -1,10 +1,21 @@
 extends character
 
 @onready var dale_camera = $Camera2D
-
-
+@onready var dust_particle = $DustParticles
+@onready var jump_particles = $JumpParticles
 var original_pos
 
+func walking_feedback() -> void:
+	#region walking_feedback
+	if move_dir == 0:
+		dust_particle.emitting = false
+	
+	if move_dir == 1:
+		dust_particle.emitting = true
+	
+	if move_dir == -1:
+		dust_particle.emitting = true
+	#endregion
 
 func _ready():
 	original_pos = get_position()
@@ -14,6 +25,7 @@ func _physics_process(delta: float) -> void:
 	
 	rect.visible = false
 	dale_camera.enabled = false
+	walking_feedback()
 	
 	if is_jumping:
 		jump_sound.play()
@@ -24,8 +36,13 @@ func _physics_process(delta: float) -> void:
 		global_position = original_pos
 		health = 10
 	
+	if is_on_floor():
+		jump_particles.emitting = false
+	
 	if not is_on_floor():
 		velocity.y += _getgravity(velocity) * delta
+		dust_particle.emitting = false
+		jump_particles.emitting = true
 	
 	if Global_Variables.active == 1:
 		if _on_ladder:

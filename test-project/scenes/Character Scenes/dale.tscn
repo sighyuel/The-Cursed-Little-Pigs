@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="4_kneoj"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="5_q8mqc"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_kiko6"]
+[ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_rwti3"]
+[ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
 
@@ -69,3 +71,11 @@ visible = false
 position_smoothing_enabled = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_kiko6")]
+
+[node name="DustParticles" parent="." unique_id=1174025608 instance=ExtResource("7_rwti3")]
+position = Vector2(0, 3)
+scale_amount_min = 10.99
+scale_amount_max = 32.96
+
+[node name="JumpParticles" parent="." unique_id=503132651 instance=ExtResource("8_tvhot")]
+emitting = false

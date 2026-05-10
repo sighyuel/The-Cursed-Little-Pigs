@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var time = 1
-@onready var timer = $Timer
+@onready var timer = $BreakTimer
 @onready var ground_smash = $Sounds/GroundSmash
 @onready var dale_slam_down = $Sounds/DaleSlamDown
 @onready var smoke_particle = $Smoke
@@ -21,8 +21,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		set_process(true)
 		timer.start(0.3)
 
-func _on_timer_timeout() -> void:
+
+func _on_break_timer_timeout() -> void:
 	queue_free()
-	smoke_particle.emitting = false
-	
-	
+	smoke_particle.emitting = false # Replace with function body.

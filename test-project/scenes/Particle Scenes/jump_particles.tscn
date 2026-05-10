@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1c482q5jrp4w"]
+
+[ext_resource type="Texture2D" uid="uid://b58ggpoaiij3b" path="res://assets/Tile Sets/smoke_plat.png" id="1_mm7jj"]
+
+[node name="JumpParticles" type="CPUParticles2D" unique_id=503132651]
+amount = 9
+texture = ExtResource("1_mm7jj")
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+gravity = Vector2(0, 250)
+linear_accel_max = 7.69
+damping_max = 41.208
+scale_amount_min = 0.0
+scale_amount_max = 11.99
