@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var time = 1
-@onready var timer : Timer
+@onready var timer = $Timer
 @onready var ground_smash = $Sounds/GroundSmash
 @onready var dale_slam_down = $Sounds/DaleSlamDown
 @onready var smoke_particle = $Smoke
@@ -19,7 +19,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		smoke_particle.emitting = true
 		stone_particle.emitting = true
 		set_process(true)
-		$Timer.start(0.3)
+		timer.start(0.3)
 
 func _on_timer_timeout() -> void:
 	queue_free()
