@@ -130,7 +130,7 @@ func _perry_stretch():
 		mesh.scale.y += 5
 		charCol.scale.y += .3
 		rect.position.y = -15
-		$Ladder.scale.y += .5
+		$Ladder.scale.y += .6
 		#acceleration -= 1
 
 
@@ -145,8 +145,8 @@ func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
 		mesh.scale.y = 21
 		charCol.scale.y = 1
-		acceleration = 3
-		JUMP_VELOCITY = 400.0
+		acceleration = 5
+		JUMP_VELOCITY = 500.0
 		global_position.y -= tree_reset_height
 		rect.position.y = -10
 		$Ladder.scale.y = 1
