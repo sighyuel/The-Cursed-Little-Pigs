@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_713vo"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_ll5m6"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_rukwq"]
+[ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_alu5n"]
+[ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_p18jy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ii0t2"]
 
@@ -66,8 +68,15 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_2kyhc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=40045717]
-position = Vector2(-1, -72)
-zoom = Vector2(1.3, 1.3)
 position_smoothing_enabled = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_rukwq")]
+
+[node name="DustParticles" parent="." unique_id=1174025608 instance=ExtResource("7_alu5n")]
+scale_amount_max = 6.5
+
+[node name="JumpParticles" parent="." unique_id=503132651 instance=ExtResource("8_p18jy")]
+position = Vector2(0, 6.705)
+emitting = false
+emission_rect_extents = Vector2(10.945, 3.83)
+scale_amount_max = 22.98

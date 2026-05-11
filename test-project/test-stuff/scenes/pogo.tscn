@@ -29,4 +29,7 @@ scale = Vector2(21, 199.99998)
 mesh = SubResource("BoxMesh_ekvec")
 texture = SubResource("GradientTexture1D_go4l1")
 
+[node name="PogoTimer" type="Timer" parent="." unique_id=997213919]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="PogoTimer" to="." method="_on_pogo_timer_timeout"]

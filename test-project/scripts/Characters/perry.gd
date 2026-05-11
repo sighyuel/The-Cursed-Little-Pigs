@@ -1,17 +1,44 @@
 extends character
 
 @onready var perry_camera = $Camera2D
+@onready var dust_particle = $DustParticles
+@onready var jump_particle = $JumpParticles
 var original_pos
 
 func _ready():
 	original_pos = get_global_position()
+	
+
+func walking_feedback() -> void:
+	#region walking_feedback
+	if move_dir == 0:
+		dust_particle.emitting = false
+	
+	if move_dir == 1:
+		dust_particle.emitting = true
+	
+	if move_dir == -1:
+		dust_particle.emitting = true
+	
+	if not is_on_floor():
+		jump_particle.emitting = true
+	
+	if is_on_floor():
+		jump_particle.emitting = false
+	
+	if tree_mode_activated:
+		jump_particle.emitting = false
+		dust_particle.emitting = false
+	#endregion
 
 func _physics_process(delta: float) -> void:
+	print(move_dir)
 	velocity += wind_velocity * 0.4 
 	velocity += platform_speed * 0.4
 	move_and_slide()
 	rect.visible = false
 	perry_camera.enabled = false
+	walking_feedback()
 	
 	if health == 0.0:
 		global_position = original_pos

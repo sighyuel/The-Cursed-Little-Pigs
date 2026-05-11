@@ -131,6 +131,7 @@ func _perry_stretch():
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .6
+		tree_mode_activated = true
 		#acceleration -= 1
 
 
@@ -138,7 +139,6 @@ func _perry_stretch():
 		charCol.scale.y = max_height
 		mesh.scale.y = max_sprite_height
 		$Ladder.scale.y = max_ladder_height
-		tree_mode_activated = true
 
 #resets perry back to original height
 func _perry_reset():
@@ -168,6 +168,7 @@ func _dale_slam():
 #may's abilities
 func _may_glide(delta):
 	if Input.is_action_pressed("Y") and not is_on_floor():
+		may_is_flying = true 
 		velocity.y += gravity * delta
 		if velocity.y >= glide_fall:
 			velocity.y = glide_fall

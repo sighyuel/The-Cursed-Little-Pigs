@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_8usxe"]
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
 
+[sub_resource type="ImageTexture" id="ImageTexture_hwiu5"]
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
 color = Color(1, 1, 1, 1)
 thickness = 6
@@ -24,59 +26,41 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 555.0
-offset_top = 250.0
-offset_right = 755.0
-offset_bottom = 290.0
+offset_left = 97.0
+offset_top = 103.0
+offset_right = 297.0
+offset_bottom = 143.0
 scale = Vector2(2, 2)
 text = "Start
 "
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 555.0
-offset_top = 375.0
-offset_right = 755.0
-offset_bottom = 415.0
+offset_left = 99.0
+offset_top = 190.0
+offset_right = 299.0
+offset_bottom = 230.0
 scale = Vector2(2, 2)
 text = "Options 
 "
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
-offset_left = 555.0
-offset_top = 500.0
-offset_right = 755.0
-offset_bottom = 540.0
+offset_left = 99.0
+offset_top = 272.0
+offset_right = 299.0
+offset_bottom = 312.0
 scale = Vector2(2, 2)
 text = "Quit
 "
-
-[node name="Title" type="TextEdit" parent="Button_manager" unique_id=1553584227]
-layout_mode = 0
-offset_left = 380.0
-offset_top = 70.0
-offset_right = 655.0
-offset_bottom = 115.0
-scale = Vector2(3, 3)
-text = "               Cursed Little Pigs"
-editable = false
-context_menu_enabled = false
-emoji_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-middle_mouse_paste_enabled = false
-empty_selection_clipboard_enabled = false
-tab_input_mode = false
+icon = SubResource("ImageTexture_hwiu5")
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 555.0
-offset_top = 625.0
-offset_right = 755.0
-offset_bottom = 665.0
+offset_left = 510.0
+offset_top = 163.0
+offset_right = 573.0
+offset_bottom = 194.0
 scale = Vector2(2, 2)
 text = "Credits
 
@@ -84,11 +68,20 @@ text = "Credits
 
 [node name="Level Select" type="Button" parent="Button_manager" unique_id=650822141]
 layout_mode = 0
-offset_left = 996.0
-offset_top = 405.0
-offset_right = 1121.0
-offset_bottom = 453.0
+offset_left = 509.0
+offset_top = 240.0
+offset_right = 634.0
+offset_bottom = 288.0
 text = "Level Select"
+
+[node name="Label" type="Label" parent="Button_manager" unique_id=1793056534]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 32.0
+offset_right = 497.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 48
+text = "Cursed Little Pigs"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
 stream = ExtResource("2_ji2f2")
@@ -96,35 +89,25 @@ autoplay = true
 bus = &"Music"
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 367.0
-offset_top = 55.0
-offset_right = 1219.0
-offset_bottom = 870.0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 641.0
+offset_bottom = 359.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="OptionsBox" unique_id=1907951004]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 100.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 60
-text = "                  Options"
-
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 590.0
-offset_right = 816.0
-offset_bottom = 648.0
+offset_left = 43.0
+offset_top = 191.0
+offset_right = 403.0
+offset_bottom = 249.0
 theme_override_styles/slider = SubResource("StyleBoxLine_ouxw6")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_6lnw2")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6lnw2")
@@ -135,49 +118,57 @@ script = ExtResource("3_8usxe")
 audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
-visible = false
 layout_mode = 0
-offset_left = 41.0
-offset_top = 275.0
-offset_right = 174.0
-offset_bottom = 347.0
+offset_left = 32.0
+offset_top = 148.0
+offset_right = 140.0
+offset_bottom = 179.0
 text = "FullScreen
 "
 script = ExtResource("4_mq833")
 
-[node name="Panel" type="Panel" parent="." unique_id=130597322]
-visible = false
-offset_left = 368.0
-offset_top = 55.0
-offset_right = 1219.0
-offset_bottom = 870.0
-
-[node name="Back" type="Button" parent="Panel" unique_id=1509320610]
+[node name="Options Text" type="Label" parent="OptionsBox" unique_id=248011579]
 layout_mode = 0
-offset_left = 203.0
-offset_top = 717.0
-offset_right = 414.5
-offset_bottom = 754.0
+offset_left = 210.0
+offset_top = 2.0
+offset_right = 393.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 267.0
+offset_right = 321.5
+offset_bottom = 304.0
 scale = Vector2(2, 2)
 text = "Back 
 
 
 "
 
+[node name="Panel" type="Panel" parent="." unique_id=130597322]
+visible = false
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 641.0
+offset_bottom = 478.0
+
 [node name="Dale" type="Button" parent="Panel" unique_id=507953754]
 layout_mode = 0
-offset_left = 315.0
-offset_top = 169.0
-offset_right = 529.0
-offset_bottom = 288.0
+offset_left = 195.0
+offset_top = 86.0
+offset_right = 409.0
+offset_bottom = 205.0
 text = "Dale's Room"
 
 [node name="May" type="Button" parent="Panel" unique_id=2052630692]
 layout_mode = 0
-offset_left = 314.0
-offset_top = 357.0
-offset_right = 530.0
-offset_bottom = 474.0
+offset_left = 196.0
+offset_top = 211.0
+offset_right = 412.0
+offset_bottom = 328.0
 text = "May's Room"
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
@@ -187,6 +178,6 @@ text = "May's Room"
 [connection signal="pressed" from="Button_manager/Level Select" to="." method="_on_level_select_pressed"]
 [connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]
 [connection signal="toggled" from="OptionsBox/FullScreenControl" to="OptionsBox/FullScreenControl" method="_on_toggled"]
-[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Panel/Dale" to="." method="_on_dale_pressed"]
 [connection signal="pressed" from="Panel/May" to="." method="_on_may_pressed"]

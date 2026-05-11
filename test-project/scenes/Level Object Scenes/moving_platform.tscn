@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://clojnvkulhn1i"]
+[gd_scene format=3 uid="uid://cpfb38cw2nkqd"]
 
-[ext_resource type="Script" uid="uid://cbvp1j5bsl5j8" path="res://scripts/Level Objects/moving_platform.gd" id="1_aurfv"]
-[ext_resource type="Texture2D" uid="uid://7ld2jm4acuol" path="res://assets/Tile Sets/moving_platform.png" id="2_ig2ou"]
+[ext_resource type="Script" path="res://scripts/Level Objects/moving_platform.gd" id="1_aurfv"]
+[ext_resource type="Texture2D" path="res://assets/Tile Sets/moving_platform.png" id="2_ig2ou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xhcq"]
 size = Vector2(62, 7)

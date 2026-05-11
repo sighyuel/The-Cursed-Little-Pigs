@@ -3389,17 +3389,17 @@ tile_set = SubResource("TileSet_ejjwl")
 
 [node name="single_use_platform" parent="Breakable Platforms" unique_id=1495796103 instance=ExtResource("3_j7nd3")]
 unique_name_in_owner = true
-position = Vector2(-1, -215.00002)
-scale = Vector2(5.835, 5.835)
+position = Vector2(0, -230.99998)
+scale = Vector2(3.71, 3.915)
 
 [node name="single_use_platform3" parent="Breakable Platforms" unique_id=1499847883 instance=ExtResource("3_j7nd3")]
 unique_name_in_owner = true
-position = Vector2(-325.00003, -83)
+position = Vector2(-345, -89)
 scale = Vector2(6.14, 6.14)
 
 [node name="single_use_platform4" parent="Breakable Platforms" unique_id=1166803311 instance=ExtResource("3_j7nd3")]
 unique_name_in_owner = true
-position = Vector2(-325.00003, 28)
+position = Vector2(-346, 27)
 scale = Vector2(6.205, 6.205)
 
 [node name="Collectibles" type="Node2D" parent="." unique_id=475702364]
@@ -3410,7 +3410,7 @@ position = Vector2(-323, 134)
 
 [node name="CollectibleKey2" parent="Collectibles" unique_id=1446221064 instance=ExtResource("7_mhhr2")]
 unique_name_in_owner = true
-position = Vector2(107, -136)
+position = Vector2(-156, -282)
 
 [node name="CollectibleKey3" parent="Collectibles" unique_id=771255022 instance=ExtResource("7_mhhr2")]
 unique_name_in_owner = true
@@ -3437,7 +3437,7 @@ health = 0
 [node name="Kill Zones" type="Node2D" parent="." unique_id=1813017139]
 
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
-position = Vector2(-199, -251)
+position = Vector2(-211, -123)
 
 [node name="GameButton" type="Control" parent="." unique_id=1173526227]
 layout_mode = 3

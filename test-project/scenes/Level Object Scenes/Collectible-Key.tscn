@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://caygxpvg85prd"]
 
 [ext_resource type="Script" uid="uid://d2wvn0621homr" path="res://scripts/Level Objects/collectible_key.gd" id="1_egvaj"]
+[ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="2_ga26y"]
+[ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="3_kjxss"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ga26y"]
 
@@ -13,62 +15,8 @@ colors = PackedColorArray(0, 0, 0, 1, 0.8537441, 0.85374373, 7.70092e-07, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_2i6wm"]
 gradient = SubResource("Gradient_xsue1")
 
-[sub_resource type="Animation" id="Animation_egvaj"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance2D:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-2.3841858e-07, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MeshInstance2D:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(2.3841858e-06, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_ga26y"]
-resource_name = "up_down"
-loop_mode = 1
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance2D:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2),
-"points": PackedFloat32Array(-2.3841858e-07, -0.25, 0, 0.25, 0, 0, -0.085, -3.973643e-08, 0, 0, 0, -0.07000001, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.46666667, 0.93)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MeshInstance2D:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2),
-"points": PackedFloat32Array(2.3841858e-06, -0.25, 0, 0.25, 0, -11.4, -0.16515252, 6.3999996, 0, 0, 0, -0.4536257, 1, 0, 0),
-"times": PackedFloat32Array(0, 0.46666667, 0.93)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjxss"]
-_data = {
-&"RESET": SubResource("Animation_egvaj"),
-&"up_down": SubResource("Animation_ga26y")
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsue1"]
+size = Vector2(20, 3)
 
 [node name="CollectibleKey" type="Area2D" unique_id=1180161614 groups=["key"]]
 collision_layer = 0
@@ -84,7 +32,18 @@ scale = Vector2(20.022678, 20.000004)
 mesh = SubResource("SphereMesh_kjxss")
 texture = SubResource("GradientTexture1D_2i6wm")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=710892356]
-libraries/ = SubResource("AnimationLibrary_kjxss")
+[node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("2_ga26y")]
+
+[node name="WindArea2d" type="Area2D" parent="." unique_id=1656568104]
+script = ExtResource("3_kjxss")
+speed = Vector2(0, 1)
+metadata/_custom_type_script = "uid://cdb8ej2s0pki6"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindArea2d" unique_id=1642926008]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_xsue1")
+
+[node name="Timer_crystal" type="Timer" parent="." unique_id=555024065]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer_crystal" to="." method="_on_timer_crystal_timeout"]
