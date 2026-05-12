@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfbynoao0yg34"]
 
 [ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMenu.gd" id="1_hwiu5"]
+[ext_resource type="Script" uid="uid://ceegwfrl177cv" path="res://test-stuff/scenes/start.gd" id="2_8usxe"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_ji2f2"]
 [ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_8usxe"]
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
@@ -31,6 +32,7 @@ offset_bottom = 290.0
 scale = Vector2(2, 2)
 text = "Start
 "
+script = ExtResource("2_8usxe")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0

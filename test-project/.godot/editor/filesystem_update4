@@ -1,5 +1,3 @@
 res://test-stuff/scenes/MainMenu.tscn
-res://test-stuff/scenes/credit_screen.tscn
-res://test-stuff/levels/test-level.tscn
-res://pause_menu.gd
-res://test-stuff/pause_menu.tscn
+res://test-stuff/scenes/start.gd
+res://test-stuff/scenes/back.gd
