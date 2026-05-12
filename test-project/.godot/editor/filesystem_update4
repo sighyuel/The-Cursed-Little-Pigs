@@ -1,15 +1,5 @@
-res://scenes/Level Object Scenes/breakable_platform.tscn
-res://scripts/Level Objects/collectible_key.gd
-res://scripts/Breakable-Platform/break_detection.gd
-res://scenes/Level Object Scenes/Collectible-Key.tscn
-res://test-stuff/scenes/pogo.tscn
-res://test-stuff/scripts/pogo.gd
-res://scenes/Character Scenes/dale.tscn
-res://scripts/Characters/dale.gd
-res://scenes/Character Scenes/may.tscn
-res://scripts/Characters/may.gd
-res://scenes/Class Scenes/character_class.tscn
-res://scripts/Classes/character_class.gd
 res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn
-res://scenes/Character Scenes/perry.tscn
-res://scripts/Characters/perry.gd
+res://test-stuff/levels/test-level.tscn
+res://test-stuff/levels/test_level.gd
+res://scenes/Level Object Scenes/Collectible-Key.tscn
+res://test-stuff/scripts/fade_out.gd
