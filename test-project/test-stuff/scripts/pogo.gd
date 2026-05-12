@@ -8,7 +8,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is character:
 		set_process(true)
-		timer.start(1.5)
+		timer.start(0.1)
 
 func _on_pogo_timer_timeout() -> void:
 	if not is_inside_tree():

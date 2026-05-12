@@ -36,17 +36,16 @@ var move_dir = 0.0
 var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
-var max_height = 25
-var max_sprite_height = 380
+@onready var max_height = 35
+@onready var max_sprite_height = 380
 var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
 #platform variable that moves our characters
-var platform_speed: Vector2 = Vector2.ZERO
 #controls how fast may glides down
-var glide_fall : int = 100
+@onready var glide_fall : int = 100
 #controls how high perry's ladder can go
-var max_ladder_height : int = 10
+@onready var max_ladder_height : int = 35
 var is_jumping = false
 #region ladder variables
 #Ladder variables
@@ -127,10 +126,12 @@ func death():
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
+		print($Camera2D.zoom)
 		mesh.scale.y += 5
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .6
+		$Camera2D.zoom -= Vector2(.006, .006)
 		tree_mode_activated = true
 		#acceleration -= 1
 
@@ -150,6 +151,7 @@ func _perry_reset():
 		global_position.y -= tree_reset_height
 		rect.position.y = -10
 		$Ladder.scale.y = 1
+		$Camera2D.zoom = Vector2(1,1)
 		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities

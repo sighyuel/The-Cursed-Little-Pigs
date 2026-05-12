@@ -1,21 +1,16 @@
 res://scenes/Level 1/Character Rooms/perry's_room_level_1.tscn
-res://scenes/Character Scenes/perry.tscn
-res://scenes/Character Scenes/may.tscn
-res://scenes/Character Scenes/dale.tscn
-res://scripts/Classes/character_class.gd
-res://scripts/perry's_room_level_1.gd
-res://scripts/Hazards/wind_area_2d.gd
-res://pause_menu.gd
-res://assets/Sounds/sounds.tscn
-res://scenes/Hazards/spikes.tscn
-res://scenes/Level Object Scenes/breakable_platform.tscn
-res://scenes/Level Object Scenes/Collectible-Key.tscn
-res://scenes/Level Object Scenes/moving_platform.tscn
-res://scripts/Breakable-Platform/break_detection.gd
-res://scripts/Characters/dale.gd
-res://scripts/Characters/may.gd
-res://scripts/Characters/perry.gd
-res://scripts/Level Objects/collectible_key.gd
-res://scripts/Level Objects/moving_platform.gd
 res://test-stuff/scenes/pogo.tscn
 res://test-stuff/scripts/pogo.gd
+res://scenes/Character Scenes/perry.tscn
+res://scripts/Classes/character_class.gd
+res://scenes/Level Object Scenes/moving_platform.tscn
+res://scripts/perry's_room_level_1.gd
+res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn
+res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd
+res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn
+res://scripts/dale's_room_level_1.gd
+res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd
+res://scripts/Characters/perry.gd
+res://scenes/Character Scenes/dale.tscn
+res://scenes/Character Scenes/may.tscn

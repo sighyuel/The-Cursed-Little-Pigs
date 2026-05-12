@@ -77,6 +77,7 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_wjqgi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
+offset = Vector2(0, -75)
 position_smoothing_enabled = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("7_3m2jw")]
