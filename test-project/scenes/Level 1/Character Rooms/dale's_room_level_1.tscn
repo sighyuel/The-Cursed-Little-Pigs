@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://dg6d2d5u4r53c"]
 
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="1_5dxv5"]
-[ext_resource type="Script" path="res://scripts/dale's_room_level_1.gd" id="1_q55u6"]
+[ext_resource type="Script" uid="uid://dpdu8qiveii45" path="res://scripts/dale's_room_level_1.gd" id="1_q55u6"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="2_7y7bp"]
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="3_4sfaq"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="4_s761u"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfb38cw2nkqd" path="res://scenes/Level Object Scenes/moving_platform.tscn" id="8_6kk03"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="9_6kk03"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="9_bjr28"]
+[ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="13_rshwn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5dxv5"]
 texture = ExtResource("4_vot2m")
@@ -1037,3 +1038,19 @@ scale = Vector2(2.907, 1.53)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Objects/moving_platform" unique_id=1327818122]
 libraries/ = SubResource("AnimationLibrary_jouvp")
+
+[node name="Control" type="Control" parent="." unique_id=603098812]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=349698676]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 85.0
+offset_right = 566.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 32
+text = "Dale's Level"
+script = ExtResource("13_rshwn")

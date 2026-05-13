@@ -40,6 +40,10 @@ folder_colors={
 "res://test-stuff/": "red"
 }
 
+[gui]
+
+theme/custom_font="uid://4cmtk0gqxyfi"
+
 [input]
 
 "Right Bumper"={
