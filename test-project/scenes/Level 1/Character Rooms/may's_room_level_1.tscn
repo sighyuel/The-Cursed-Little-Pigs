@@ -1114,6 +1114,7 @@ tile_map_data = PackedByteArray()
 [node name="Hazards Phase 2" type="Node2D" parent="." unique_id=1815192711]
 
 [node name="WindArea2d" type="Area2D" parent="Hazards Phase 2" unique_id=1979392951]
+visible = false
 position = Vector2(1271, 480)
 collision_layer = 0
 collision_mask = 0

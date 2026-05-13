@@ -1,13 +1,13 @@
+AnimatableBody2D
+AnimationPlayer
 CollisionShape2D
 Area2D
 TileMapLayer
 Node2D
-AnimationPlayer
 StaticBody2D
 Button
 Panel
 Label
-AnimatableBody2D
 Sprite2D
 WindArea2d
 ColorRect
