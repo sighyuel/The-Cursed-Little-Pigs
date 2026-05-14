@@ -4,7 +4,7 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	GlobalSignals.connect("quit_level",_quit_level)
+	#GlobalSignals.connect("quit_level",_quit_level)
 	visible = false
 	get_tree().paused = false
 	
@@ -27,14 +27,13 @@ func _input(_event: InputEvent) -> void:
 			$Resume.grab_focus()
 
 func _on_resume_pressed() -> void:
+	
 	visible = false 
 	get_tree().paused = false
 
 
-func _on_back_to_menu_pressed() -> void:
+func _on_quit_game_pressed() -> void:
 	$"Back to Menu".set_focus_mode(1)
-	get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")
+	get_tree().quit()
 	GlobalSignals.quit_level.emit()
 	
-func _quit_level() -> void:
-	pass

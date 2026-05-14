@@ -3440,4 +3440,10 @@ health = 0
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
 position = Vector2(-199, -251)
 
-[node name="PauseMenu" parent="." unique_id=1148108138 instance=ExtResource("14_htqwx")]
+[node name="Control" type="Control" parent="." unique_id=1441593200]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseMenu" parent="Control" unique_id=1148108138 instance=ExtResource("14_htqwx")]
