@@ -1,1 +1,7 @@
 res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn
+res://scenes/Character Scenes/dale.tscn
+res://scripts/Characters/dale.gd
+res://scenes/Character Scenes/may.tscn
+res://scripts/Characters/may.gd
+res://scenes/Character Scenes/perry.tscn
+res://scripts/Characters/perry.gd
