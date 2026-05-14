@@ -7,17 +7,17 @@ process_mode = 3
 script = ExtResource("1_6qr4u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=943685816]
-offset_left = -550.0
-offset_top = -400.0
-offset_right = 250.0
-offset_bottom = 400.0
+offset_left = 39.0
+offset_top = 29.0
+offset_right = 1275.0
+offset_bottom = 706.0
 color = Color(0, 0, 0, 0.60784316)
 
 [node name="Resume" type="Button" parent="." unique_id=142343997]
-offset_left = -500.0
-offset_top = -350.0
-offset_right = -368.0
-offset_bottom = -295.0
+offset_left = 156.0
+offset_top = 47.0
+offset_right = 288.0
+offset_bottom = 100.0
 scale = Vector2(4, 4)
 theme_override_font_sizes/font_size = 32
 text = "Resume
