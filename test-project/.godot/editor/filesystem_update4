@@ -1,0 +1,5 @@
+res://test-stuff/scenes/MainMenu.tscn
+res://test-stuff/scenes/credit_screen.tscn
+res://test-stuff/pause_menu.tscn
+res://pause_menu.gd
+res://test-stuff/back_to_menu.gd
