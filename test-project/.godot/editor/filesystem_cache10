@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778623681
+::res://::1778788455
 bad piggies.ogg::AudioStreamOggVorbis::3798898908143067724::1778191973::1778192327::1::::<><><>0<>0<>096ab9cbac1f2540d5d68b6f9c064c10<>res://.godot/imported/bad piggies.ogg-341b796dee30410d0c1d54a56e59c6ac.oggvorbisstr::
 default_bus_layout.tres::AudioBusLayout::283932351617170111::1778191973::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1778191973::0::1::::<><><>0<>0<><>::
@@ -95,15 +95,17 @@ perry-dale-moment.tscn::PackedScene::594617641401253187::1778258581::0::1::::<><
 ::res://test-stuff/Mock lvls/::1778191973
 mock_lvl_1.tscn::PackedScene::2363895181612525439::1778191973::0::1::::<><><>0<>0<><>::uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://6bwddoydqo06::::res://scenes/Level Object Scenes/DoorArea2D.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn
 mock_lvl_2.tscn::PackedScene::6862166914251647857::1778191973::0::1::::<><><>0<>0<><>::uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://crkyppn7ssn0::::res://test-stuff/Temp Assests/cracked_floor_wall.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn
-::res://test-stuff/scenes/::1778266199
+::res://test-stuff/scenes/::1778624005
 audio_control.gd::GDScript::3063550400390162114::1778191973::0::1::::<>HSlider<><>0<>0<><>::
+back.gd::GDScript::4170086761319313431::1778623945::0::1::::<>Button<><>0<>0<><>::
 camera_test.tscn::PackedScene::8625334330546984111::1778191973::0::1::::<><><>0<>0<><>::uid://cg5o1stnvvslp::::res://test-stuff/scripts/camera_test.gd
 credit_screen.gd::GDScript::3738143316007598947::1778193738::0::1::::<>Node2D<><>0<>0<><>::
 credit_screen.tscn::PackedScene::5624523492800313040::1778266199::0::1::::<><><>0<>0<><>::uid://bti1w6pkxogv8::::res://test-stuff/scenes/credit_screen.gd<>uid://buehksl5glbia::::res://bad piggies.ogg
 full_screen_control.gd::GDScript::5468534627942929336::1778191973::0::1::::<>CheckBox<><>0<>0<><>::
 ladder_detect.tscn::PackedScene::5005335327070733699::1777088707::0::1::::<><><>0<>0<><>::
-MainMenu.tscn::PackedScene::5127331122474940157::1778266194::0::1::::<><><>0<>0<><>::uid://ckt0unhkn0v73::::res://test-stuff/scripts/MainMenu.gd<>uid://buehksl5glbia::::res://bad piggies.ogg<>uid://bjwahy8260e4a::::res://test-stuff/scenes/audio_control.gd<>uid://cj5874d10co0o::::res://test-stuff/scenes/full_screen_control.gd
+MainMenu.tscn::PackedScene::5127331122474940157::1778624005::0::1::::<><><>0<>0<><>::uid://ckt0unhkn0v73::::res://test-stuff/scripts/MainMenu.gd<>uid://ceegwfrl177cv::::res://test-stuff/scenes/start.gd<>uid://buehksl5glbia::::res://bad piggies.ogg<>uid://bjwahy8260e4a::::res://test-stuff/scenes/audio_control.gd<>uid://cj5874d10co0o::::res://test-stuff/scenes/full_screen_control.gd
 pogo.tscn::PackedScene::802192544674267113::1778258581::0::1::::<><><>0<>0<><>::uid://c8ndm0x2dmt4t::::res://test-stuff/scripts/pogo.gd
+start.gd::GDScript::5062258131791332249::1778623982::0::1::::<>Button<><>0<>0<><>::
 ::res://test-stuff/scripts/::1778258581
 camera_test.gd::GDScript::5256803205767604133::1778191973::0::1::::<>Camera2D<><>0<>0<><>::
 hurtbox.gd::GDScript::1264283535866759560::1776376614::0::1::::Attack<>RefCounted<><>0<>0<><>::
