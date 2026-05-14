@@ -17,6 +17,25 @@ thickness = 6
 [node name="Node2D" type="Node2D" unique_id=2099744671]
 script = ExtResource("1_hwiu5")
 
+[node name="Title" type="TextEdit" parent="." unique_id=1553584227]
+modulate = Color(0.9999998, 0.025798082, 0.9997937, 1)
+self_modulate = Color(0.32076052, 0.789919, 0.44210795, 1)
+offset_left = 200.0
+offset_top = 10.0
+offset_right = 475.0
+offset_bottom = 55.0
+theme_override_colors/search_result_color = Color(0.7937543, 0.15674928, 0.8165489, 1)
+theme_override_colors/selection_color = Color(0.84003025, 0.30295998, 0.81005204, 1)
+theme_override_colors/font_color = Color(0.9152378, 0.293786, 0.77157307, 1)
+text = "               Cursed Little Pigs"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
 [node name="Button_manager" type="Control" parent="." unique_id=1985874251]
 layout_mode = 3
 anchors_preset = 0
@@ -55,29 +74,6 @@ focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Credits")
 text = "Quit
 "
-
-[node name="Title" type="TextEdit" parent="Button_manager" unique_id=1553584227]
-modulate = Color(0.9999998, 0.025798082, 0.9997937, 1)
-self_modulate = Color(0.32076052, 0.789919, 0.44210795, 1)
-layout_mode = 0
-offset_left = 200.0
-offset_top = 10.0
-offset_right = 475.0
-offset_bottom = 55.0
-theme_override_colors/search_result_color = Color(0.7937543, 0.15674928, 0.8165489, 1)
-theme_override_colors/selection_color = Color(0.84003025, 0.30295998, 0.81005204, 1)
-theme_override_colors/font_color = Color(0.9152378, 0.293786, 0.77157307, 1)
-text = "               Cursed Little Pigs"
-editable = false
-context_menu_enabled = false
-emoji_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-middle_mouse_paste_enabled = false
-empty_selection_clipboard_enabled = false
-tab_input_mode = false
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
