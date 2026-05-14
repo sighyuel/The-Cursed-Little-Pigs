@@ -4,6 +4,7 @@ extends Node2D
 @onready var options_box: Panel = $OptionsBox
 
 func _ready():
+	$Button_manager.grab_click_focus()
 	button_manager.visible = true
 	options_box.visible = false
 
@@ -12,6 +13,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
+	$OptionsBox.grab_focus()
 	print("Settings pressed")
 	button_manager.visible = false
 	options_box.visible = true
