@@ -33,7 +33,4 @@ func _on_resume_pressed() -> void:
 
 
 func _on_quit_game_pressed() -> void:
-	$"Back to Menu".set_focus_mode(1)
 	get_tree().quit()
-	GlobalSignals.quit_level.emit()
-	
