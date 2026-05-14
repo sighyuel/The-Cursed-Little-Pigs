@@ -2,7 +2,9 @@ extends CanvasLayer
 
 
 
+
 func _ready() -> void:
+	GlobalSignals.connect("quit_level",_quit_level)
 	visible = false
 	get_tree().paused = false
 	
@@ -15,7 +17,6 @@ func _ready() -> void:
 
 
 func _input(_event: InputEvent) -> void:
-	print("pause")
 	if Input.is_action_just_pressed("Pause"):
 		if get_tree().paused:
 			visible = false 
@@ -23,6 +24,7 @@ func _input(_event: InputEvent) -> void:
 		else:
 			visible = true
 			get_tree().paused = true
+			$Resume.grab_focus()
 
 func _on_resume_pressed() -> void:
 	visible = false 
@@ -30,5 +32,9 @@ func _on_resume_pressed() -> void:
 
 
 func _on_back_to_menu_pressed() -> void:
+	$"Back to Menu".set_focus_mode(1)
 	get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")
+	GlobalSignals.quit_level.emit()
 	
+func _quit_level() -> void:
+	pass

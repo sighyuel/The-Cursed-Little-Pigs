@@ -8,28 +8,36 @@ process_mode = 3
 script = ExtResource("1_6qr4u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=943685816]
-offset_left = 39.0
-offset_top = 29.0
-offset_right = 1275.0
-offset_bottom = 706.0
+offset_right = 640.0
+offset_bottom = 360.0
 color = Color(0, 0, 0, 0.60784316)
 
 [node name="Resume" type="Button" parent="." unique_id=142343997]
-offset_left = 400.0
-offset_top = 100.0
-offset_right = 532.0
-offset_bottom = 153.0
-scale = Vector2(4, 4)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+focus_neighbor_bottom = NodePath("../Back to Menu")
 theme_override_font_sizes/font_size = 32
 text = "Resume
 "
 
 [node name="Back to Menu" type="Button" parent="." unique_id=1660010783]
-offset_left = 400.0
-offset_top = 400.0
-offset_right = 532.0
-offset_bottom = 453.0
-scale = Vector2(4, 4)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -70.0
+offset_top = -160.0
+offset_right = 80.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_neighbor_top = NodePath("../Resume")
 text = "Back to Menu"
 script = ExtResource("2_211pv")
 

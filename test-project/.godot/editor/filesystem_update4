@@ -5,3 +5,4 @@ res://pause_menu.gd
 res://test-stuff/back_to_menu.gd
 res://test-stuff/scripts/pause_menu.gd
 res://test-stuff/scripts/MainMenu.gd
+res://scripts/Global Scripts/global-signals.gd
