@@ -54,6 +54,7 @@ var _on_ladder : bool = false
 var _ladder_x_pos : float
 var _ladder_snap_weight : float = 10.0
 @export var ladder_speed : float = -20.0
+var min_camera_zoom : Vector2 = Vector2(0.4,0.4)
 #endregion
 
 func _ready():
@@ -134,6 +135,8 @@ func _perry_stretch():
 		$Camera2D.zoom -= Vector2(.006, .006)
 		tree_mode_activated = true
 		#acceleration -= 1
+		if $Camera2D.zoom < min_camera_zoom:
+			$Camera2D.zoom = min_camera_zoom
 
 
 	if charCol.scale.y >= max_height and mesh.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
@@ -161,6 +164,7 @@ func _dale_slam():
 		mesh.scale.x += 2
 		dale_ground_pounding = true
 		dale_slam_down.play()
+		$Camera2D.trigger_shake()
 	else:
 		dale_ground_pounding = false
 		mesh.scale.x = 42

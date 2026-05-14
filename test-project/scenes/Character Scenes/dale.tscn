@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="4_kneoj"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="5_q8mqc"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_kiko6"]
+[ext_resource type="Script" uid="uid://cyoy54itlaf8n" path="res://scripts/Characters/DaleCameraShake.gd" id="6_tvhot"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_rwti3"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
 
@@ -71,6 +72,9 @@ visible = false
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
 offset = Vector2(0, -75)
 position_smoothing_enabled = true
+script = ExtResource("6_tvhot")
+max_shake = 20.0
+shake_fade = 7.5
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_kiko6")]
 
