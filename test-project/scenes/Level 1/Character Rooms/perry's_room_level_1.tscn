@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://cowgy84wics3l"]
+[gd_scene format=4 uid="uid://2epiceir8juo"]
 
 [ext_resource type="Texture2D" uid="uid://f4hxpfru1yue" path="res://assets/Tile Sets/TCLP Lvl Sprites.png" id="1_88ydc"]
-[ext_resource type="Script" uid="uid://bf8olg7d0j3rp" path="res://scripts/perry's_room_level_1.gd" id="1_pal0a"]
+[ext_resource type="Script" path="res://scripts/perry's_room_level_1.gd" id="1_pal0a"]
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="2_u84xl"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="3_87yb3"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="4_pal0a"]
@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="7_k5c3y"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="8_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_5sk1g"]
-[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
-[ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
+[ext_resource type="PackedScene" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -329,6 +329,7 @@ tile_set = SubResource("TileSet_k5c3y")
 [node name="PatrolEnemy" parent="Phase2" unique_id=2049345928 instance=ExtResource("5_y2v12")]
 visible = false
 position = Vector2(522, -680)
+monitoring = false
 
 [node name="TileMapLayer" type="Node2D" parent="." unique_id=564260653]
 

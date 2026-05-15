@@ -20,5 +20,6 @@ func _coin_collect():
 	Phase2BP.visible = true
 	Phase2TML.enabled = true
 	Phase2PE.visible = true
+	Phase2PE.monitoring = true
 	Phase2TP.set_collision_mask_value(2, true)
 	Phase1TML.enabled = false
