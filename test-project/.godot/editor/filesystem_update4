@@ -7,3 +7,5 @@ res://test-stuff/scripts/pause_menu.gd
 res://test-stuff/scripts/MainMenu.gd
 res://scripts/Global Scripts/global-signals.gd
 res://test-stuff/levels/test-level.tscn
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn
+res://test-stuff/scenes/pause_menu.tscn

@@ -89,6 +89,7 @@ text = "Credits
 stream = ExtResource("2_ji2f2")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
 anchors_preset = 8

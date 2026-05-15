@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dewxnwnjohhwk"]
 
 [ext_resource type="Script" uid="uid://cpovpr8fclj8j" path="res://test-stuff/scripts/pause_menu.gd" id="1_6qr4u"]
-[ext_resource type="Script" uid="uid://ceyor5uw0dn8y" path="res://test-stuff/back_to_menu.gd" id="2_211pv"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1148108138]
 process_mode = 3
@@ -12,7 +11,8 @@ offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0, 0, 0, 0.60784316)
 
-[node name="Resume" type="Button" parent="." unique_id=142343997]
+[node name="Resume" type="Button" parent="ColorRect" unique_id=142343997]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -25,7 +25,8 @@ theme_override_font_sizes/font_size = 32
 text = "Resume
 "
 
-[node name="Quit Game" type="Button" parent="." unique_id=1660010783]
+[node name="Quit Game" type="Button" parent="ColorRect" unique_id=1660010783]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -38,9 +39,8 @@ offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
 focus_neighbor_top = NodePath("../Resume")
-text = "Quit Game
+text = "Back to Menu
 "
-script = ExtResource("2_211pv")
 
-[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="ColorRect/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ColorRect/Quit Game" to="." method="_on_quit_game_pressed"]

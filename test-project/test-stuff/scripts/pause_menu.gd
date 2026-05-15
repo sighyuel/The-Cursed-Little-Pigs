@@ -24,7 +24,7 @@ func _input(_event: InputEvent) -> void:
 		else:
 			visible = true
 			get_tree().paused = true
-			$Resume.grab_focus()
+			$ColorRect/Resume.grab_focus()
 
 func _on_resume_pressed() -> void:
 	
@@ -33,4 +33,4 @@ func _on_resume_pressed() -> void:
 
 
 func _on_quit_game_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")

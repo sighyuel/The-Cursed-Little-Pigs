@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="4_0o0qt"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="5_s0os6"]
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="6_hknmq"]
-[ext_resource type="PackedScene" uid="uid://bcb2xewaflgml" path="res://scenes/Hazards/circle saw.tscn" id="7_ul6ce"]
+[ext_resource type="PackedScene" uid="uid://dih4h8d1x03gc" path="res://scenes/Hazards/circle saw.tscn" id="7_ul6ce"]
 [ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="8_dmf30"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_gh8nl"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="10_f1od7"]
