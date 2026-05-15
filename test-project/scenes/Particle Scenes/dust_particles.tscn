@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dodgmr4v6f253"]
+
+[ext_resource type="Texture2D" uid="uid://b58ggpoaiij3b" path="res://assets/Tile Sets/smoke_plat.png" id="1_lfxne"]
+
+[node name="DustParticles" type="CPUParticles2D" unique_id=1174025608]
+emitting = false
+texture = ExtResource("1_lfxne")
+lifetime = 0.44
+explosiveness = 0.35
+emission_shape = 2
+emission_sphere_radius = 5.92
+gravity = Vector2(0, 100)
+scale_amount_min = 0.0
+scale_amount_max = 11.99

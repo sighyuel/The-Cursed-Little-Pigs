@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="4_56pri"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_fd7e2"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="7_3m2jw"]
+[ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="8_8tqdd"]
+[ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="9_68f5o"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wjqgi"]
 
@@ -19,6 +21,7 @@ size = Vector2(16, 16)
 collision_layer = 2
 collision_mask = 8
 slide_on_ceiling = false
+platform_on_leave = 2
 script = ExtResource("1_na5ya")
 health = 10
 piggy = "Perry"
@@ -75,7 +78,15 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_wjqgi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
-zoom = Vector2(1.7, 1.7)
+offset = Vector2(0, -75)
 position_smoothing_enabled = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("7_3m2jw")]
+
+[node name="DustParticles" parent="." unique_id=1174025608 instance=ExtResource("8_8tqdd")]
+scale_amount_max = 6.5
+
+[node name="JumpParticles" parent="." unique_id=503132651 instance=ExtResource("9_68f5o")]
+position = Vector2(0, 6.89)
+emitting = false
+emission_rect_extents = Vector2(10.225, 3)

@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c8ndm0x2dmt4t" path="res://test-stuff/scripts/pogo.gd" id="1_smoeh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekvec"]
-size = Vector2(21, 199)
-
 [sub_resource type="BoxMesh" id="BoxMesh_ekvec"]
 
 [sub_resource type="Gradient" id="Gradient_smoeh"]
@@ -14,14 +11,13 @@ colors = PackedColorArray(0, 0, 0, 1, 0.95414287, 0, 0.03718428, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_go4l1"]
 gradient = SubResource("Gradient_smoeh")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekvec"]
+size = Vector2(21, 199)
+
 [node name="Pogo" type="Area2D" unique_id=1144140681]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_smoeh")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1642011174]
-position = Vector2(0.5, -89.5)
-shape = SubResource("RectangleShape2D_ekvec")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1611983361]
 position = Vector2(0.5, -90)
@@ -29,4 +25,11 @@ scale = Vector2(21, 199.99998)
 mesh = SubResource("BoxMesh_ekvec")
 texture = SubResource("GradientTexture1D_go4l1")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1642011174]
+position = Vector2(0.5, -89.5)
+shape = SubResource("RectangleShape2D_ekvec")
+
+[node name="PogoTimer" type="Timer" parent="." unique_id=997213919]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="PogoTimer" to="." method="_on_pogo_timer_timeout"]

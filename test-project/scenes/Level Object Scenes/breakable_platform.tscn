@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://byk6fpot64dxq"]
 
 [ext_resource type="Script" uid="uid://clt8qgdnifwo" path="res://scripts/Breakable-Platform/break_detection.gd" id="1_tnq1m"]
-[ext_resource type="Texture2D" uid="uid://cvqepobq25kq6" path="res://assets/Objects for Levels/elementWood047.png" id="2_gqysx"]
+[ext_resource type="Texture2D" uid="uid://f4hxpfru1yue" path="res://assets/Tile Sets/TCLP Lvl Sprites.png" id="2_is3ll"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="3_is3ll"]
+[ext_resource type="Texture2D" uid="uid://b58ggpoaiij3b" path="res://assets/Tile Sets/smoke_plat.png" id="4_3tyy6"]
+[ext_resource type="Texture2D" uid="uid://pmd2kcvc4aa4" path="res://assets/Tile Sets/Ground_Particles.png" id="5_bifyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbmds"]
-size = Vector2(12, 4)
+size = Vector2(18, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bxj4j"]
-size = Vector2(12, 0.5)
+size = Vector2(18, 0.5)
 
 [node name="single_use_platform" type="StaticBody2D" unique_id=1495796103]
 collision_layer = 8
@@ -20,8 +22,10 @@ shape = SubResource("RectangleShape2D_tbmds")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=592644834]
 position = Vector2(1.1920929e-07, 0)
-scale = Vector2(0.05454546, 0.078571424)
-texture = ExtResource("2_gqysx")
+scale = Vector2(0.19148934, 0.26666668)
+texture = ExtResource("2_is3ll")
+region_enabled = true
+region_rect = Rect2(226.05827, 144.83829, 98.942, 17.411789)
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("3_is3ll")]
 
@@ -34,7 +38,41 @@ collision_mask = 2
 position = Vector2(0, -3.22)
 shape = SubResource("RectangleShape2D_bxj4j")
 
-[node name="Timer" type="Timer" parent="." unique_id=432126755]
+[node name="Smoke" type="CPUParticles2D" parent="." unique_id=130011385]
+texture_filter = 1
+emitting = false
+amount = 12
+texture = ExtResource("4_3tyy6")
+explosiveness = 0.8
+randomness = 0.29
+emission_shape = 2
+emission_sphere_radius = 11.55
+direction = Vector2(-1, -65.19)
+spread = 38.57
+gravity = Vector2(0, 300)
+initial_velocity_max = 49.45
+angle_min = -324.4
+angle_max = -197.8
+scale_amount_min = 0.0
+scale_amount_max = 6.5
+color = Color(0.67058825, 0.6862745, 0.7254902, 1)
+hue_variation_min = -0.55
+hue_variation_max = 0.83
+
+[node name="Stone" type="CPUParticles2D" parent="." unique_id=1627988817]
+emitting = false
+amount = 14
+texture = ExtResource("5_bifyb")
+preprocess = 1.18
+explosiveness = 0.62
+randomness = 0.07
+emission_shape = 2
+emission_sphere_radius = 11.8
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+hue_variation_min = -0.3
+
+[node name="BreakTimer" type="Timer" parent="." unique_id=1575078759]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="BreakTimer" to="." method="_on_break_timer_timeout"]
