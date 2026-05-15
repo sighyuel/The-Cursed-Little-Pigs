@@ -87,6 +87,7 @@ shake_fade = 7.5
 position = Vector2(0, 3)
 scale_amount_min = 10.99
 scale_amount_max = 32.96
+color = Color(18.892157, 18.892157, 18.892157, 1)
 
 [node name="JumpParticles" parent="." unique_id=503132651 instance=ExtResource("8_tvhot")]
 emitting = false

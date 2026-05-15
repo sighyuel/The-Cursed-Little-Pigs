@@ -12,9 +12,11 @@ func walking_feedback() -> void:
 	
 	if move_dir == 1:
 		dust_particle.emitting = true
+		dust_particle.position.x = -20
 	
 	if move_dir == -1:
 		dust_particle.emitting = true
+		dust_particle.position.x = 20
 	#endregion
 
 func _ready():

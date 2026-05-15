@@ -16,9 +16,11 @@ func walking_feedback() -> void:
 	
 	if move_dir == 1:
 		dust_particle.emitting = true
+		dust_particle.position.x = -10
 	
 	if move_dir == -1:
 		dust_particle.emitting = true
+		dust_particle.position.x = 10
 	
 	if not is_on_floor():
 		jump_particle.emitting = true
