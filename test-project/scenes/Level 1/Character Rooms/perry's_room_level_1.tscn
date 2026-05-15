@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://2epiceir8juo"]
 
 [ext_resource type="Texture2D" uid="uid://f4hxpfru1yue" path="res://assets/Tile Sets/TCLP Lvl Sprites.png" id="1_88ydc"]
-[ext_resource type="Script" path="res://scripts/perry's_room_level_1.gd" id="1_pal0a"]
+[ext_resource type="Script" uid="uid://bf8olg7d0j3rp" path="res://scripts/perry's_room_level_1.gd" id="1_pal0a"]
 [ext_resource type="PackedScene" uid="uid://dhco13nrbojub" path="res://scenes/Character Scenes/perry.tscn" id="2_u84xl"]
 [ext_resource type="PackedScene" uid="uid://c8c0bdpifhdkg" path="res://scenes/Character Scenes/may.tscn" id="3_87yb3"]
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="4_pal0a"]
@@ -331,6 +331,11 @@ visible = false
 position = Vector2(522, -680)
 monitoring = false
 
+[node name="Pogo" parent="Phase2" unique_id=1144140681 instance=ExtResource("7_k5c3y")]
+visible = false
+position = Vector2(3, 831)
+scale = Vector2(-315.84, 1)
+
 [node name="TileMapLayer" type="Node2D" parent="." unique_id=564260653]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="TileMapLayer" unique_id=1192538087]
@@ -401,7 +406,7 @@ position = Vector2(276, -1795)
 [node name="Spikes" parent="Hazards" unique_id=639613534 instance=ExtResource("6_ljhq3")]
 tile_map_data = PackedByteArray("AAAEAOr/AAAAAAAAAAAFAOr/AAAAAAAAAAAIAOr/AAAAAAAAAAAJAOr/AAAAAAAAAAA=")
 
-[node name="Pogo" parent="Hazards" unique_id=1144140681 instance=ExtResource("7_k5c3y")]
+[node name="Pogo" parent="Hazards" unique_id=486703591 instance=ExtResource("7_k5c3y")]
 position = Vector2(-184, -1093)
 scale = Vector2(1, 0.52)
 

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://0xlv7jvy1exw"]
+[gd_scene format=4 uid="uid://dg6d2d5u4r53c"]
 
 [ext_resource type="PackedScene" uid="uid://bc6p2763amolp" path="res://scenes/Character Scenes/dale.tscn" id="1_5dxv5"]
 [ext_resource type="Script" uid="uid://dpdu8qiveii45" path="res://scripts/dale's_room_level_1.gd" id="1_q55u6"]
@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cpfb38cw2nkqd" path="res://scenes/Level Object Scenes/moving_platform.tscn" id="8_6kk03"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="9_6kk03"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="9_bjr28"]
-[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
-[ext_resource type="Script" uid="uid://b8ts3bp4hqo34" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
+[ext_resource type="PackedScene" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
 texture = ExtResource("4_vot2m")
@@ -357,6 +357,14 @@ z_index = 1
 position = Vector2(302.475, 1231.15)
 tile_map_data = PackedByteArray("AAAEACEAAAAAAAAAAAAFACEAAAAAAAAAAAAGACEAAAAAAAAAAAAHACEAAAAAAAAAAAAIACEAAAAAAAAAAAAJACEAAAAAAAAAAAAKACEAAAAAAAAAAAALACEAAAAAAAAAAAAMACEAAAAAAAAAAAANACEAAAAAAAAAAAAOACEAAAAAAAAAAAAPACEAAAAAAAAAAAAQACEAAAAAAAAAAAA=")
 
+[node name="Pogo5" parent="Hazards" unique_id=1453932557 instance=ExtResource("6_mhsti")]
+position = Vector2(1781, 119)
+
+[node name="Pogo6" parent="Hazards" unique_id=2071356160 instance=ExtResource("6_mhsti")]
+visible = false
+position = Vector2(969, 3735)
+scale = Vector2(378.91, 1)
+
 [node name="Level Objects" type="Node2D" parent="." unique_id=1703724514]
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("9_6kk03")]
@@ -365,7 +373,7 @@ position = Vector2(1601, 2556)
 [node name="CPUParticles2D" parent="Level Objects" unique_id=879730158 instance=ExtResource("10_jouvp")]
 position = Vector2(393, 694)
 amount = 16
-lifetime = 1.9000000000000001
+lifetime = 1.9
 emission_rect_extents = Vector2(27.305, 171.68)
 gravity = Vector2(600, 0)
 scale_amount_max = 61.43
