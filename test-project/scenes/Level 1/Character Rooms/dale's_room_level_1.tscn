@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfb38cw2nkqd" path="res://scenes/Level Object Scenes/moving_platform.tscn" id="8_6kk03"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="9_6kk03"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="9_bjr28"]
+[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
 [ext_resource type="Script" uid="uid://b8ts3bp4hqo34" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
@@ -360,6 +361,14 @@ tile_map_data = PackedByteArray("AAAEACEAAAAAAAAAAAAFACEAAAAAAAAAAAAGACEAAAAAAAA
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("9_6kk03")]
 position = Vector2(1601, 2556)
+
+[node name="CPUParticles2D" parent="Level Objects" unique_id=879730158 instance=ExtResource("10_jouvp")]
+position = Vector2(393, 694)
+amount = 16
+lifetime = 1.9000000000000001
+emission_rect_extents = Vector2(27.305, 171.68)
+gravity = Vector2(600, 0)
+scale_amount_max = 61.43
 
 [node name="WindArea2d" type="Area2D" parent="Level Objects" unique_id=1151067201]
 collision_layer = 0

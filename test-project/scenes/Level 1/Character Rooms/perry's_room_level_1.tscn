@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="7_k5c3y"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="8_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_5sk1g"]
+[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
 [ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
@@ -362,6 +363,12 @@ speed = Vector2(0, -20)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Objects/WindArea2D" unique_id=1378101255]
 position = Vector2(-10.125, -6.5)
 shape = SubResource("RectangleShape2D_mgsx6")
+
+[node name="CPUParticles2D" parent="Level Objects/WindArea2D" unique_id=879730158 instance=ExtResource("9_642ld")]
+position = Vector2(-11, 187.99998)
+scale = Vector2(3.875, 2.85)
+gravity = Vector2(0, -600.535)
+scale_amount_max = 33.95
 
 [node name="moving_platform" parent="Level Objects" unique_id=1059057616 instance=ExtResource("6_87yb3")]
 position = Vector2(628, -1716.9999)

@@ -1,3 +1,5 @@
+CPUParticles2D
+Sprite2D
 AudioStreamPlayer
 Control
 Button
@@ -8,9 +10,5 @@ AnimationPlayer
 CollisionShape2D
 StaticBody2D
 Area2D
-Sprite2D
 Node2D
 TileMapLayer
-WindArea2d
-ColorRect
-CanvasLayer

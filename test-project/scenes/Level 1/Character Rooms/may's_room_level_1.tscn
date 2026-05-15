@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_gh8nl"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="10_f1od7"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="11_b7or8"]
+[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="12_d0xow"]
 [ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="12_f7c6v"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="13_6uoqi"]
 [ext_resource type="Script" uid="uid://dgg2m48o8pdbi" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
@@ -1113,8 +1114,12 @@ tile_map_data = PackedByteArray()
 
 [node name="Hazards Phase 2" type="Node2D" parent="." unique_id=1815192711]
 
+[node name="CPUParticles2D" parent="Hazards Phase 2" unique_id=879730158 instance=ExtResource("12_d0xow")]
+position = Vector2(1312, 507)
+emitting = false
+gravity = Vector2(0, -700.06)
+
 [node name="WindArea2d" type="Area2D" parent="Hazards Phase 2" unique_id=1979392951]
-visible = false
 position = Vector2(1271, 480)
 collision_layer = 0
 collision_mask = 0
@@ -1138,6 +1143,13 @@ position = Vector2(1178, 203)
 position = Vector2(-1050.56, 67)
 scale = Vector2(5.74, 5.74)
 
+[node name="CPUParticles2D" parent="Level Objects" unique_id=681745542 instance=ExtResource("12_d0xow")]
+position = Vector2(-539.52, -177)
+rotation = 1.5707964
+scale = Vector2(8.755, 6.025)
+gravity = Vector2(-900, 0)
+scale_amount_max = 77.92
+
 [node name="WindArea2D" parent="Level Objects" unique_id=723245552 instance=ExtResource("10_f1od7")]
 position = Vector2(-972, -45)
 speed = Vector2(-40, 0)
@@ -1146,6 +1158,14 @@ speed = Vector2(-40, 0)
 position = Vector2(231, -155.5)
 shape = SubResource("RectangleShape2D_ls0kl")
 debug_color = Color(5.5350365e-06, 0.64262354, 0.31987774, 0.41960785)
+
+[node name="CPUParticles2D2" parent="Level Objects" unique_id=1391872366 instance=ExtResource("12_d0xow")]
+position = Vector2(437, 302)
+scale = Vector2(1.79, 1)
+amount = 13
+lifetime = 4.529999999999999
+spread = 52.91
+gravity = Vector2(0, -600)
 
 [node name="WindArea2d" type="Area2D" parent="Level Objects" unique_id=380547299]
 position = Vector2(-1178, -203)
@@ -1161,7 +1181,7 @@ shape = SubResource("RectangleShape2D_bgxgs")
 debug_color = Color(0, 0.6431373, 0.32156864, 0.41960785)
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("13_6uoqi")]
-position = Vector2(805, 86)
+position = Vector2(719, 34)
 
 [node name="Teleporter" type="Area2D" parent="Level Objects" unique_id=253013132]
 position = Vector2(-1221, -27)
