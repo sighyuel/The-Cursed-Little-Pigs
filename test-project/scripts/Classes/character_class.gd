@@ -61,7 +61,6 @@ func _ready():
 	#room change logic
 #region camera functions
 func _camera_transition():
-	
 	camera.enabled = true
 #endregion
 
@@ -170,4 +169,6 @@ func _may_glide(delta):
 		velocity.y += gravity * delta
 		if velocity.y >= glide_fall:
 			velocity.y = glide_fall
+	else:
+		may_is_flying = false
 #endregion

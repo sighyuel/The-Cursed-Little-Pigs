@@ -5,3 +5,6 @@ res://scenes/Character Scenes/may.tscn
 res://scripts/Characters/may.gd
 res://scenes/Character Scenes/perry.tscn
 res://scripts/Characters/perry.gd
+res://scenes/Class Scenes/character_class.tscn
+res://scripts/Classes/character_class.gd
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn
