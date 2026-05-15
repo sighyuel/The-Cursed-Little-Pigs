@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bti1w6pkxogv8" path="res://test-stuff/scenes/credit_screen.gd" id="1_we1kd"]
 [ext_resource type="Script" uid="uid://b0oayp8fgv07l" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
+[ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="2_et2vd"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_psj60"]
 
 [node name="Credit Screen" type="Node2D" unique_id=301742647]
@@ -66,7 +67,10 @@ editable = false
 offset_top = 300.0
 offset_right = 300.0
 offset_bottom = 350.0
-text = "Back to menu"
+scale = Vector2(0.5, 0.5)
+text = "
+"
+icon = ExtResource("2_et2vd")
 script = ExtResource("2_5qwgu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=476681653]

@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMenu.gd" id="1_hwiu5"]
 [ext_resource type="Script" uid="uid://ceegwfrl177cv" path="res://test-stuff/scenes/start.gd" id="2_8usxe"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_ji2f2"]
+[ext_resource type="Texture2D" uid="uid://ccmwcckbs6qwy" path="res://test-stuff/tclp_start.png" id="2_v7d8h"]
 [ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_8usxe"]
+[ext_resource type="Texture2D" uid="uid://db2anjstrjkv3" path="res://test-stuff/tclp_credits.png" id="3_mq833"]
+[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://test-stuff/tclp_quit.png" id="3_v7d8h"]
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
+[ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
 color = Color(1, 1, 1, 1)
@@ -44,20 +48,24 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 200.0
+offset_left = 225.0
 offset_top = 75.0
-offset_right = 400.0
-offset_bottom = 115.0
+offset_right = 1011.0
+offset_bottom = 311.0
+scale = Vector2(0.2, 0.2)
 focus_neighbor_bottom = NodePath("../Options")
-text = "Start
+text = "
+
 "
+icon = ExtResource("2_v7d8h")
+flat = true
 script = ExtResource("2_8usxe")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 200.0
+offset_left = 225.0
 offset_top = 150.0
-offset_right = 400.0
+offset_right = 425.0
 offset_bottom = 190.0
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Quit")
@@ -67,23 +75,30 @@ text = "Options
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
 offset_left = 250.0
-offset_top = 225.0
-offset_right = 450.0
-offset_bottom = 265.0
+offset_top = 215.0
+offset_right = 619.0
+offset_bottom = 375.0
+scale = Vector2(0.3, 0.3)
 focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Credits")
-text = "Quit
+text = "
+
 "
+icon = ExtResource("3_v7d8h")
+flat = true
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 300.0
-offset_right = 450.0
-offset_bottom = 340.0
-text = "Credits
+offset_left = 225.0
+offset_top = 289.0
+offset_right = 1358.0
+offset_bottom = 533.0
+scale = Vector2(0.2, 0.2)
+text = "
+
 
 "
+icon = ExtResource("3_mq833")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
 stream = ExtResource("2_ji2f2")
@@ -116,14 +131,13 @@ text = "                  Options"
 
 [node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 306.0
-offset_right = 441.5
-offset_bottom = 337.0
-text = "Back 
-
-
-"
+offset_left = 229.0
+offset_top = 280.0
+offset_right = 568.0
+offset_bottom = 391.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_ahe0o")
+flat = true
 
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
 layout_mode = 0

@@ -1,4 +1,4 @@
-res://test-stuff/scenes/back.gd
-res://test-stuff/scripts/pause_menu.gd
+res://test-stuff/scenes/credit_screen.tscn
+res://test-stuff/scenes/credit_screen.gd
 res://test-stuff/scenes/MainMenu.tscn
-res://test-stuff/scripts/MainMenu.gd
+res://test-stuff/scenes/pause_menu.tscn
