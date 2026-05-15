@@ -1165,6 +1165,8 @@ position = Vector2(805, 86)
 
 [node name="Teleporter" type="Area2D" parent="Level Objects" unique_id=253013132]
 position = Vector2(-1221, -27)
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("14_pkgsr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Objects/Teleporter" unique_id=665136266]

@@ -10,7 +10,7 @@ func _ready():
 	options_box.visible = false
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://test-stuff/levels/test-level.tscn")
+	get_tree().change_scene_to_file("res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn")
 
 
 func _on_options_pressed() -> void:
