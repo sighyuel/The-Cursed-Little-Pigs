@@ -20,14 +20,21 @@ script = ExtResource("1_hwiu5")
 [node name="Title" type="TextEdit" parent="." unique_id=1553584227]
 modulate = Color(0.9999998, 0.025798082, 0.9997937, 1)
 self_modulate = Color(0.32076052, 0.789919, 0.44210795, 1)
-offset_left = 200.0
-offset_top = 10.0
-offset_right = 475.0
-offset_bottom = 55.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 243.0
+offset_top = 8.0
+offset_right = 404.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/search_result_color = Color(0.7937543, 0.15674928, 0.8165489, 1)
 theme_override_colors/selection_color = Color(0.84003025, 0.30295998, 0.81005204, 1)
 theme_override_colors/font_color = Color(0.9152378, 0.293786, 0.77157307, 1)
-text = "               Cursed Little Pigs"
+text = "Cursed Little Pigs"
 editable = false
 context_menu_enabled = false
 emoji_menu_enabled = false
@@ -44,10 +51,10 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 75.0
-offset_right = 400.0
-offset_bottom = 115.0
+offset_left = 224.0
+offset_top = 100.0
+offset_right = 424.0
+offset_bottom = 140.0
 focus_neighbor_bottom = NodePath("../Options")
 text = "Start
 "
@@ -55,10 +62,10 @@ script = ExtResource("2_8usxe")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 150.0
-offset_right = 400.0
-offset_bottom = 190.0
+offset_left = 225.0
+offset_top = 147.0
+offset_right = 425.0
+offset_bottom = 187.0
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Quit")
 text = "Options 
@@ -66,10 +73,10 @@ text = "Options
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 225.0
-offset_right = 450.0
-offset_bottom = 265.0
+offset_left = 224.0
+offset_top = 194.0
+offset_right = 424.0
+offset_bottom = 234.0
 focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Credits")
 text = "Quit
@@ -77,10 +84,10 @@ text = "Quit
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 300.0
-offset_right = 450.0
-offset_bottom = 340.0
+offset_left = 225.0
+offset_top = 240.0
+offset_right = 425.0
+offset_bottom = 280.0
 text = "Credits
 
 "
@@ -92,6 +99,7 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -112,14 +120,15 @@ anchor_right = 1.0
 offset_bottom = 100.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 60
-text = "                  Options"
+text = "Options"
+horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
 layout_mode = 0
-offset_left = 230.0
-offset_top = 306.0
-offset_right = 441.5
-offset_bottom = 337.0
+offset_left = 207.0
+offset_top = 307.0
+offset_right = 418.5
+offset_bottom = 338.0
 text = "Back 
 
 
