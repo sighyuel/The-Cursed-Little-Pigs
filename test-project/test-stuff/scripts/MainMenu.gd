@@ -2,9 +2,10 @@ extends Node2D
 
 @onready var button_manager: Control = $Button_manager
 @onready var options_box: Panel = $OptionsBox
-@onready var level_select: Panel = $Panel
 
 func _ready():
+	#GlobalSignals.connect("quit_level",_quit_level)
+	$Button_manager/Start.grab_focus()
 	button_manager.visible = true
 	options_box.visible = false
 
@@ -13,6 +14,8 @@ func _on_start_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
+	$OptionsBox/Back.grab_focus()
+	print("Settings pressed") 
 	button_manager.visible = false
 	options_box.visible = true
 
@@ -26,15 +29,6 @@ func _on_back_pressed() -> void:
 func _on_credits_pressed() -> void:
 	get_tree().change_scene_to_file("res://test-stuff/scenes/credit_screen.tscn")
 
-
-func _on_level_select_pressed() -> void:
-	button_manager.visible = false
-	level_select.visible = true
-
-
-func _on_dale_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn")
-
-
-func _on_may_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn")
+#func _quit_level() -> void:
+	#print("quit")
+	#$AudioStreamPlayer.play(0.0)

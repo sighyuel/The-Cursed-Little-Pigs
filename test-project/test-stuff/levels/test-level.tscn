@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="7_mhhr2"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
 [ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
-[ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/pause_menu.tscn" id="14_htqwx"]
+[ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="14_htqwx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -3440,4 +3440,10 @@ health = 0
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
 position = Vector2(-199, -251)
 
-[node name="PauseMenu" parent="." unique_id=1148108138 instance=ExtResource("14_htqwx")]
+[node name="Control" type="Control" parent="." unique_id=1441593200]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseMenu" parent="Control" unique_id=1148108138 instance=ExtResource("14_htqwx")]
