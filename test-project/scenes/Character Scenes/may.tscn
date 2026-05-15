@@ -70,10 +70,11 @@ shape = SubResource("RectangleShape2D_2kyhc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=40045717]
 offset = Vector2(0, -75)
+limit_enabled = false
 position_smoothing_enabled = true
 drag_vertical_enabled = true
 drag_top_margin = 0.41
-drag_bottom_margin = 0.69
+drag_bottom_margin = 0.18
 editor_draw_drag_margin = true
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_rukwq")]
