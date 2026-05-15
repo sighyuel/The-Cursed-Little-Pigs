@@ -28,7 +28,7 @@ piggy = "Dale"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")
 JUMP_VELOCITY = 400.0
-acceleration = 2.0
+acceleration = 3.0
 ladder_speed = -150.515
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
@@ -71,7 +71,12 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
 offset = Vector2(0, -75)
+limit_enabled = false
+limit_left = -4767
+limit_right = 2500000
 position_smoothing_enabled = true
+drag_top_margin = 0.0
+drag_bottom_margin = 0.57
 script = ExtResource("6_tvhot")
 max_shake = 20.0
 shake_fade = 7.5

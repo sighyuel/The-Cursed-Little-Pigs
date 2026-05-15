@@ -311,9 +311,8 @@ tile_set = SubResource("TileSet_jouvp")
 [node name="Characters" type="Node2D" parent="." unique_id=712391642]
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("1_5dxv5")]
-position = Vector2(1332, 135)
+position = Vector2(1347, 109)
 JUMP_VELOCITY = 410.0
-acceleration = 4.0
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_7y7bp")]
 position = Vector2(629, 75)

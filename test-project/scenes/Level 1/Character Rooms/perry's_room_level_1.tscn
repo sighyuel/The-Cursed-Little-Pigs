@@ -345,11 +345,11 @@ tile_set = SubResource("TileSet_g7rqu")
 position = Vector2(-437, -17)
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("3_87yb3")]
-position = Vector2(-280, -2781)
+position = Vector2(-254, 38)
 JUMP_VELOCITY = 500.0
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("4_pal0a")]
-position = Vector2(-336, -2765)
+position = Vector2(-344, -20)
 acceleration = 8.0
 
 [node name="Level Objects" type="Node2D" parent="." unique_id=630541944]
