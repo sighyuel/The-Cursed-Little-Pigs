@@ -8,7 +8,11 @@ func _ready():
 	$Button_manager/Start.grab_focus()
 	button_manager.visible = true
 	options_box.visible = false
-
+	process_mode = Node.PROCESS_MODE_INHERIT
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	process_mode = Node.PROCESS_MODE_ALWAYS
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://test-stuff/levels/test-level.tscn")
 
