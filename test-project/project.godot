@@ -17,7 +17,11 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Cursed_Little_Pigs_Alpha"
 run/main_scene="uid://cfbynoao0yg34"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0.810688, 0.8715967, 0.9913301, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://dmq3ydlfn7goh"
 config/icon="res://picture of john godot/icon.svg"
+boot_splash/minimum_display_time=1500
 
 [autoload]
 

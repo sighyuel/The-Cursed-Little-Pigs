@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
 [ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
+[ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="14_lulln"]
+[ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="16_almst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -311,6 +313,70 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljhq3"]
 size = Vector2(58.75, 69)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrekg"]
+atlas = ExtResource("14_lulln")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eupdf"]
+atlas = ExtResource("14_lulln")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ty6k"]
+atlas = ExtResource("14_lulln")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2orwa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrekg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eupdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ty6k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8pl3"]
+texture = ExtResource("16_almst")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0.449646, 0.35971832, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, -8, -0.62950706, 0, -8, -8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbsnr"]
+texture = ExtResource("1_88ydc")
+margins = Vector2i(3, 0)
+texture_region_size = Vector2i(32, 29)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_repao"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 2
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_x8pl3")
+sources/3 = SubResource("TileSetAtlasSource_fbsnr")
+
 [node name="perry\'s_room_level_1" type="Node2D" unique_id=963937975]
 script = ExtResource("1_pal0a")
 
@@ -395,6 +461,11 @@ script = ExtResource("11_k5c3y")
 position = Vector2(-657.375, 48.5)
 shape = SubResource("RectangleShape2D_ljhq3")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Objects/Teleporter" unique_id=1812861154]
+position = Vector2(-656, 47.999996)
+scale = Vector2(2.312501, 2.2499998)
+sprite_frames = SubResource("SpriteFrames_2orwa")
+
 [node name="Hazards" type="Node2D" parent="." unique_id=1055649095]
 
 [node name="PatrolEnemy" parent="Hazards" unique_id=812782412 instance=ExtResource("5_y2v12")]
@@ -404,7 +475,8 @@ position = Vector2(502, -328)
 position = Vector2(276, -1795)
 
 [node name="Spikes" parent="Hazards" unique_id=639613534 instance=ExtResource("6_ljhq3")]
-tile_map_data = PackedByteArray("AAAEAOr/AAAAAAAAAAAFAOr/AAAAAAAAAAAIAOr/AAAAAAAAAAAJAOr/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEAOr/AwAEAAQAAAAFAOr/AwAEAAQAAAAIAOr/AwAEAAQAAAAJAOr/AwAEAAQAAAA=")
+tile_set = SubResource("TileSet_repao")
 
 [node name="Pogo" parent="Hazards" unique_id=486703591 instance=ExtResource("7_k5c3y")]
 position = Vector2(-184, -1093)

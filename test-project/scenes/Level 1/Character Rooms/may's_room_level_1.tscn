@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="12_f7c6v"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="13_6uoqi"]
 [ext_resource type="Script" uid="uid://dgg2m48o8pdbi" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
+[ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
+[ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
 texture = ExtResource("3_0o0qt")
@@ -158,6 +160,36 @@ size = Vector2(574, 403)
 size = Vector2(87, 480.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0xow"]
+size = Vector2(83, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hknmq"]
+atlas = ExtResource("16_s0os6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul6ce"]
+atlas = ExtResource("16_s0os6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmf30"]
+atlas = ExtResource("16_s0os6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gh8nl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hknmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul6ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmf30")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="May\'s Room - Level 1" type="Node2D" unique_id=520772052]
 script = ExtResource("1_bt1rw")
@@ -206,10 +238,12 @@ position = Vector2(1488, 513)
 scale = Vector2(1, 0.62)
 
 [node name="Pogo2" parent="Hazards Phase 1" unique_id=764347527 instance=ExtResource("11_b7or8")]
-position = Vector2(1604, 237)
+position = Vector2(1604, 76.885)
+rotation = -3.1415927
 
 [node name="Pogo3" parent="Hazards Phase 1" unique_id=952019392 instance=ExtResource("11_b7or8")]
-position = Vector2(1368, 237)
+position = Vector2(1368, 73)
+rotation = -3.1415927
 
 [node name="Pogo4" parent="Hazards Phase 1" unique_id=712433079 instance=ExtResource("11_b7or8")]
 position = Vector2(408, 190)
@@ -297,12 +331,35 @@ collision_mask = 2
 script = ExtResource("14_pkgsr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Objects/Teleporter" unique_id=665136266]
-position = Vector2(8, 41)
+position = Vector2(-2.5, 6.5)
 shape = SubResource("RectangleShape2D_d0xow")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Objects/Teleporter" unique_id=1890111057]
+position = Vector2(-0.9999981, 6.500004)
+scale = Vector2(2.625, 2.7812502)
+sprite_frames = SubResource("SpriteFrames_gh8nl")
+frame = 2
+frame_progress = 0.89695185
 
 [node name="Pogo" parent="." unique_id=27506277 instance=ExtResource("11_b7or8")]
 visible = false
 position = Vector2(1146, 1367)
 scale = Vector2(252.94, 0.27)
+
+[node name="Control" type="Control" parent="." unique_id=1621617204]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=807521569]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 167.0
+offset_right = 310.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 24
+text = "May's Room"
+script = ExtResource("16_0o0qt")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

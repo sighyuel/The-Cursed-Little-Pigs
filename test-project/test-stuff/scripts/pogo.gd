@@ -5,10 +5,10 @@ extends Area2D
 
 func _ready() -> void:
 	set_process(false)
-
-func _process(delta: float) -> void:
 	animated_fire.play("fire_full")
-	animated_fire.animation_looped()
+
+
+
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is character:

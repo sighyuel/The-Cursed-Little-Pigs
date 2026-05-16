@@ -5,3 +5,5 @@ res://scenes/Character Scenes/may.tscn
 res://scripts/Characters/may.gd
 res://test-stuff/scripts/pogo.gd
 res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn
+res://test-stuff/scenes/MainMenu.tscn
+res://test-stuff/scripts/MainMenu.gd

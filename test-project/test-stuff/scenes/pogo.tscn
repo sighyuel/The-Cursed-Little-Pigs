@@ -154,7 +154,7 @@ position = Vector2(0.99999905, -89)
 scale = Vector2(1.1875, 2.0625)
 sprite_frames = SubResource("SpriteFrames_oelf8")
 animation = &"fire_full"
-frame_progress = 0.50399745
+frame_progress = 0.41376773
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=67146360]
 position = Vector2(0.7400166, -97)

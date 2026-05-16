@@ -8,10 +8,14 @@ func _ready():
 	$Button_manager/Start.grab_focus()
 	button_manager.visible = true
 	options_box.visible = false
+	await fade_in()
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn")
 
+func fade_in() -> void:
+	var t = get_tree().create_tween()
+	t.tween_property(self,"modulate:a",1.0,5.0).from(0.0).set_ease(Tween.EASE_IN_OUT)
 
 func _on_options_pressed() -> void:
 	$OptionsBox/Back.grab_focus()

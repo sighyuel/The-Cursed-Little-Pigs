@@ -490,8 +490,8 @@ position = Vector2(1482.5, 103.5)
 shape = SubResource("RectangleShape2D_jouvp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Objects/Teleporter" unique_id=1641832363]
-position = Vector2(1482, 98)
-scale = Vector2(1.79, 1.79)
+position = Vector2(1483.5001, 86.31999)
+scale = Vector2(2.468749, 2.5199997)
 sprite_frames = SubResource("SpriteFrames_126cn")
 frame_progress = 0.9005582
 
