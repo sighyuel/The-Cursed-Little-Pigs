@@ -27,6 +27,8 @@ func walking_feedback() -> void:
 #endregion
 
 func _physics_process(delta: float) -> void:
+	print("wind_velocity.y:", wind_velocity.y)
+	#velocity.y += 14.5 if wind_velocity.y == 0 else 0.0
 	velocity += wind_velocity * 0.8
 	move_and_slide()
 	rect.visible = false

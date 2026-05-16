@@ -1,2 +1,5 @@
 res://scenes/Character Scenes/dale.tscn
 res://addons/phantom_camera/themes/theme.tres
+res://scripts/Characters/may.gd
+res://scenes/Level 1/Character Rooms/perry's_room_level_1.tscn
+res://scripts/Hazards/wind_area_2d.gd
