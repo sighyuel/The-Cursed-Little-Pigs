@@ -12,8 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cpfb38cw2nkqd" path="res://scenes/Level Object Scenes/moving_platform.tscn" id="8_6kk03"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="9_6kk03"]
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="9_bjr28"]
-[ext_resource type="PackedScene" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
-[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
+[ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="9_tv2mr"]
+[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
+[ext_resource type="Script" uid="uid://b8ts3bp4hqo34" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
+[ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="15_62dag"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
 texture = ExtResource("4_vot2m")
@@ -248,11 +250,81 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_jouvp")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_62dag"]
+texture = ExtResource("9_tv2mr")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0.449646, 0.35971832, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, -8, -0.62950706, 0, -8, -8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d4us3"]
+texture = ExtResource("4_vot2m")
+margins = Vector2i(3, 0)
+texture_region_size = Vector2i(32, 29)
+4:4/0 = 0
+5:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_itvtr"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 2
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_62dag")
+sources/3 = SubResource("TileSetAtlasSource_d4us3")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s761u"]
 size = Vector2(1385, 365.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jouvp"]
 size = Vector2(59, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4us3"]
+atlas = ExtResource("15_62dag")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itvtr"]
+atlas = ExtResource("15_62dag")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hca3b"]
+atlas = ExtResource("15_62dag")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6ol8"]
+atlas = ExtResource("15_62dag")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_126cn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4us3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itvtr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hca3b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6ol8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_rshwn"]
 length = 0.001
@@ -338,15 +410,15 @@ position = Vector2(1305, 1610)
 
 [node name="Pogo" parent="Hazards" unique_id=1144140681 instance=ExtResource("6_mhsti")]
 position = Vector2(790, 864)
-scale = Vector2(1, 0.175)
+scale = Vector2(0.585, 0.15)
 
 [node name="Pogo2" parent="Hazards" unique_id=1539245527 instance=ExtResource("6_mhsti")]
 position = Vector2(1037, 861)
 scale = Vector2(1, 0.44)
 
 [node name="Pogo3" parent="Hazards" unique_id=2060073725 instance=ExtResource("6_mhsti")]
-position = Vector2(1750, 850)
-scale = Vector2(1, 1.655)
+position = Vector2(1739.7, 850)
+scale = Vector2(1.905, 1.565)
 
 [node name="Pogo4" parent="Hazards" unique_id=696149042 instance=ExtResource("6_mhsti")]
 position = Vector2(1075, 2669)
@@ -355,7 +427,8 @@ scale = Vector2(1.53, 0.71)
 [node name="Spikes" parent="Hazards" unique_id=639613534 instance=ExtResource("9_bjr28")]
 z_index = 1
 position = Vector2(302.475, 1231.15)
-tile_map_data = PackedByteArray("AAAEACEAAAAAAAAAAAAFACEAAAAAAAAAAAAGACEAAAAAAAAAAAAHACEAAAAAAAAAAAAIACEAAAAAAAAAAAAJACEAAAAAAAAAAAAKACEAAAAAAAAAAAALACEAAAAAAAAAAAAMACEAAAAAAAAAAAANACEAAAAAAAAAAAAOACEAAAAAAAAAAAAPACEAAAAAAAAAAAAQACEAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEACEAAwAEAAQAAAAFACEAAwAEAAQAAAAGACEAAwAEAAQAAAAHACEAAwAEAAQAAAAIACEAAwAEAAQAAAAJACEAAwAEAAQAAAAKACEAAwAEAAQAAAALACEAAwAEAAQAAAAMACEAAwAEAAQAAAANACEAAwAEAAQAAAAOACEAAwAEAAQAAAAPACEAAwAEAAQAAAAQACEAAwAEAAQAAAA=")
+tile_set = SubResource("TileSet_itvtr")
 
 [node name="Pogo5" parent="Hazards" unique_id=1453932557 instance=ExtResource("6_mhsti")]
 position = Vector2(1781, 119)
@@ -415,6 +488,12 @@ script = ExtResource("13_rshwn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level Objects/Teleporter" unique_id=1376627057]
 position = Vector2(1482.5, 103.5)
 shape = SubResource("RectangleShape2D_jouvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level Objects/Teleporter" unique_id=1641832363]
+position = Vector2(1482, 98)
+scale = Vector2(1.79, 1.79)
+sprite_frames = SubResource("SpriteFrames_126cn")
+frame_progress = 0.9005582
 
 [node name="moving_platform" parent="Level Objects" unique_id=1059057616 instance=ExtResource("8_6kk03")]
 position = Vector2(1300, 2000)

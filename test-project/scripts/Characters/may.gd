@@ -35,7 +35,6 @@ func walking_feedback() -> void:
 
 func may_camera_feedback():
 	var t = get_tree().create_tween()
-	t.set_loops()
 	#t.tween_property(movement_sprite,"position", end_pos, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	t.tween_property(may_camera,"position",second_cam_pos,1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
@@ -79,9 +78,5 @@ func _physics_process(delta: float) -> void:
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
 		
-		if may_is_flying == true:
-			may_camera_feedback()
-		else:
-			may_camera.position = Vector2(0,0)
 		
 		_camera_transition()

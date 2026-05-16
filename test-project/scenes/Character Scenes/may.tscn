@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_6me4a"]
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_713vo"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_ll5m6"]
-[ext_resource type="Script" path="res://scripts/Characters/DaleCameraShake.gd" id="6_p18jy"]
+[ext_resource type="Script" uid="uid://cyoy54itlaf8n" path="res://scripts/Characters/DaleCameraShake.gd" id="6_p18jy"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_rukwq"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_alu5n"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_p18jy"]

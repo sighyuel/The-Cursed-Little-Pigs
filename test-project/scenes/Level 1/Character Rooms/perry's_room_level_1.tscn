@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="7_k5c3y"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="8_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_5sk1g"]
-[ext_resource type="PackedScene" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
-[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
+[ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
+[ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -411,7 +411,8 @@ position = Vector2(-184, -1093)
 scale = Vector2(1, 0.52)
 
 [node name="Pogo2" parent="Hazards" unique_id=496834641 instance=ExtResource("7_k5c3y")]
-position = Vector2(-387, -1307)
+position = Vector2(-385, -1433)
+rotation = 3.1415927
 scale = Vector2(1, 0.7)
 
 [node name="Pogo4" parent="Hazards" unique_id=222301413 instance=ExtResource("7_k5c3y")]
