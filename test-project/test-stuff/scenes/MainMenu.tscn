@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://cfbynoao0yg34"]
 
 [ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMenu.gd" id="1_hwiu5"]
+[ext_resource type="Script" uid="uid://ceegwfrl177cv" path="res://test-stuff/scenes/start.gd" id="2_8usxe"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_ji2f2"]
 [ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_8usxe"]
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_hwiu5"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
 color = Color(1, 1, 1, 1)
@@ -18,6 +17,32 @@ thickness = 6
 [node name="Node2D" type="Node2D" unique_id=2099744671]
 script = ExtResource("1_hwiu5")
 
+[node name="Title" type="TextEdit" parent="." unique_id=1553584227]
+modulate = Color(0.9999998, 0.025798082, 0.9997937, 1)
+self_modulate = Color(0.32076052, 0.789919, 0.44210795, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 243.0
+offset_top = 8.0
+offset_right = 404.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/search_result_color = Color(0.7937543, 0.15674928, 0.8165489, 1)
+theme_override_colors/selection_color = Color(0.84003025, 0.30295998, 0.81005204, 1)
+theme_override_colors/font_color = Color(0.9152378, 0.293786, 0.77157307, 1)
+text = "Cursed Little Pigs"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
 [node name="Button_manager" type="Control" parent="." unique_id=1985874251]
 layout_mode = 3
 anchors_preset = 0
@@ -26,88 +51,95 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 103.0
-offset_right = 297.0
-offset_bottom = 143.0
-scale = Vector2(2, 2)
+offset_left = 224.0
+offset_top = 100.0
+offset_right = 424.0
+offset_bottom = 140.0
+focus_neighbor_bottom = NodePath("../Options")
 text = "Start
 "
+script = ExtResource("2_8usxe")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 99.0
-offset_top = 190.0
-offset_right = 299.0
-offset_bottom = 230.0
-scale = Vector2(2, 2)
+offset_left = 225.0
+offset_top = 147.0
+offset_right = 425.0
+offset_bottom = 187.0
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Quit")
 text = "Options 
 "
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
-offset_left = 99.0
-offset_top = 272.0
-offset_right = 299.0
-offset_bottom = 312.0
-scale = Vector2(2, 2)
+offset_left = 224.0
+offset_top = 194.0
+offset_right = 424.0
+offset_bottom = 234.0
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Credits")
 text = "Quit
 "
-icon = SubResource("ImageTexture_hwiu5")
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 510.0
-offset_top = 163.0
-offset_right = 573.0
-offset_bottom = 194.0
-scale = Vector2(2, 2)
+offset_left = 225.0
+offset_top = 240.0
+offset_right = 425.0
+offset_bottom = 280.0
 text = "Credits
 
 "
-
-[node name="Level Select" type="Button" parent="Button_manager" unique_id=650822141]
-layout_mode = 0
-offset_left = 509.0
-offset_top = 240.0
-offset_right = 634.0
-offset_bottom = 288.0
-text = "Level Select"
-
-[node name="Label" type="Label" parent="Button_manager" unique_id=1793056534]
-layout_mode = 0
-offset_left = 98.0
-offset_top = 32.0
-offset_right = 497.0
-offset_bottom = 99.0
-theme_override_font_sizes/font_size = 48
-text = "Cursed Little Pigs"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
 stream = ExtResource("2_ji2f2")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 1.0
-offset_top = 4.0
-offset_right = 641.0
+offset_top = 2.0
+offset_right = 628.0
 offset_bottom = 359.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
+[node name="Label" type="Label" parent="OptionsBox" unique_id=1907951004]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 307.0
+offset_right = 418.5
+offset_bottom = 338.0
+text = "Back 
+
+
+"
+
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 191.0
-offset_right = 403.0
-offset_bottom = 249.0
+offset_left = 19.0
+offset_top = 223.0
+offset_right = 582.0
+offset_bottom = 281.0
 theme_override_styles/slider = SubResource("StyleBoxLine_ouxw6")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_6lnw2")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6lnw2")
@@ -119,65 +151,19 @@ audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 148.0
-offset_right = 140.0
-offset_bottom = 179.0
+offset_left = 15.0
+offset_top = 28.0
+offset_right = 145.0
+offset_bottom = 98.0
+scale = Vector2(2, 2)
 text = "FullScreen
 "
 script = ExtResource("4_mq833")
-
-[node name="Options Text" type="Label" parent="OptionsBox" unique_id=248011579]
-layout_mode = 0
-offset_left = 210.0
-offset_top = 2.0
-offset_right = 393.0
-offset_bottom = 69.0
-theme_override_font_sizes/font_size = 48
-text = "Options"
-
-[node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
-layout_mode = 0
-offset_left = 110.0
-offset_top = 267.0
-offset_right = 321.5
-offset_bottom = 304.0
-scale = Vector2(2, 2)
-text = "Back 
-
-
-"
-
-[node name="Panel" type="Panel" parent="." unique_id=130597322]
-visible = false
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 641.0
-offset_bottom = 478.0
-
-[node name="Dale" type="Button" parent="Panel" unique_id=507953754]
-layout_mode = 0
-offset_left = 195.0
-offset_top = 86.0
-offset_right = 409.0
-offset_bottom = 205.0
-text = "Dale's Room"
-
-[node name="May" type="Button" parent="Panel" unique_id=2052630692]
-layout_mode = 0
-offset_left = 196.0
-offset_top = 211.0
-offset_right = 412.0
-offset_bottom = 328.0
-text = "May's Room"
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Button_manager/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Button_manager/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]
 [connection signal="toggled" from="OptionsBox/FullScreenControl" to="OptionsBox/FullScreenControl" method="_on_toggled"]
-[connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Panel/Dale" to="." method="_on_dale_pressed"]
-[connection signal="pressed" from="Panel/May" to="." method="_on_may_pressed"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmetcyxen21hs"]
 
 [ext_resource type="Script" uid="uid://bti1w6pkxogv8" path="res://test-stuff/scenes/credit_screen.gd" id="1_we1kd"]
+[ext_resource type="Script" uid="uid://b0oayp8fgv07l" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_psj60"]
 
 [node name="Credit Screen" type="Node2D" unique_id=301742647]
@@ -15,75 +16,61 @@ offset_bottom = 40.0
 [node name="Title" type="TextEdit" parent="Credit movement" unique_id=926427043]
 modulate = Color(0.9369487, 0.50937665, 0.8365897, 1)
 layout_mode = 0
-offset_left = 390.0
-offset_top = 18.0
-offset_right = 645.0
-offset_bottom = 69.00061
-scale = Vector2(3, 3)
-text = "             Cursed little pigs"
+offset_left = 250.0
+offset_right = 400.0
+offset_bottom = 50.0
+text = "Cursed little pigs"
 editable = false
 
 [node name="Main credits" type="TextEdit" parent="Credit movement" unique_id=1102665684]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 203.0
-offset_right = 801.0
-offset_bottom = 250.0
-scale = Vector2(2, 2)
+offset_top = 50.0
+offset_right = 637.0
+offset_bottom = 97.0
 text = "Made by mr.taxevader, siulsighyuel, kom0, eariza3, kinokiita, awesomeking279"
 editable = false
 
 [node name="Progammer" type="TextEdit" parent="Credit movement" unique_id=858486659]
 layout_mode = 0
-offset_left = 157.0
-offset_top = 354.0
-offset_right = 773.0
-offset_bottom = 396.0
-scale = Vector2(2, 2)
+offset_top = 100.0
+offset_right = 616.0
+offset_bottom = 145.0
 text = "Progammer by:  eariza3, awesomeking279, mr.taxevader, siulsighyuel, kom0"
 editable = false
 
 [node name="Artist" type="TextEdit" parent="Credit movement" unique_id=360561047]
 layout_mode = 0
-offset_left = 42.0
-offset_top = 498.0
-offset_right = 294.27155
-offset_bottom = 546.95624
-scale = Vector2(2, 2)
+offset_top = 150.0
+offset_right = 250.0
+offset_bottom = 195.0
 text = "Art by: kinokiita, mr.taxevader"
 editable = false
 
 [node name="Level desginer" type="TextEdit" parent="Credit movement" unique_id=1193245774]
 layout_mode = 0
-offset_left = 744.0
-offset_top = 499.0
-offset_right = 1099.0
-offset_bottom = 542.0
-scale = Vector2(2, 2)
+offset_top = 200.0
+offset_right = 355.0
+offset_bottom = 245.0
 text = "Level designer by: mr.taxevader, siulsighyuel"
 editable = false
 
 [node name="Music" type="TextEdit" parent="Credit movement" unique_id=1079682085]
 layout_mode = 0
-offset_left = 76.0
-offset_top = 639.0
-offset_right = 256.0
-offset_bottom = 687.0
-scale = Vector2(2, 2)
+offset_top = 250.0
+offset_right = 180.0
+offset_bottom = 298.0
 text = "Music by: nekan0v1_"
 editable = false
 
-[node name="Button" type="Button" parent="Credit movement" unique_id=1194728364]
-layout_mode = 0
-offset_left = 643.0
-offset_top = 711.0
-offset_right = 943.0
-offset_bottom = 761.0
-scale = Vector2(2, 2)
+[node name="Button" type="Button" parent="." unique_id=1194728364]
+offset_top = 300.0
+offset_right = 300.0
+offset_bottom = 350.0
 text = "Back to menu"
+script = ExtResource("2_5qwgu")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=476681653]
 stream = ExtResource("2_psj60")
 autoplay = true
 
-[connection signal="pressed" from="Credit movement/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

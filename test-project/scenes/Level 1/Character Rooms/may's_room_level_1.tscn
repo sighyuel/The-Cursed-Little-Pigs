@@ -11,8 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_gh8nl"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="10_f1od7"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="11_b7or8"]
+[ext_resource type="PackedScene" path="res://scenes/Particle Scenes/wind_particles.tscn" id="12_d0xow"]
 [ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="12_f7c6v"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="13_6uoqi"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pp3lx"]
 texture = ExtResource("3_d0xow")
@@ -1052,6 +1054,8 @@ size = Vector2(574, 403)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgxgs"]
 size = Vector2(87, 480.375)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0xow"]
+
 [node name="May\'s Room - Level 1" type="Node2D" unique_id=520772052]
 script = ExtResource("1_bt1rw")
 
@@ -1064,15 +1068,19 @@ tile_set = SubResource("TileSet_l2cc0")
 [node name="Characters" type="Node2D" parent="." unique_id=1170822404]
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("4_0o0qt")]
-position = Vector2(32, 205)
+position = Vector2(59, 162)
+platform_on_leave = 0
 JUMP_VELOCITY = 400.0
 ladder_speed = -400.0
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("5_s0os6")]
 position = Vector2(99.89, 184.6)
+platform_on_leave = 0
+acceleration = 2.0
 
 [node name="Perry" parent="Characters" unique_id=771990693 instance=ExtResource("6_hknmq")]
 position = Vector2(42, 210)
+platform_on_leave = 0
 health = 100
 ladder_speed = 1000.0
 
@@ -1110,6 +1118,11 @@ tile_map_data = PackedByteArray()
 
 [node name="Hazards Phase 2" type="Node2D" parent="." unique_id=1815192711]
 
+[node name="CPUParticles2D" parent="Hazards Phase 2" unique_id=879730158 instance=ExtResource("12_d0xow")]
+position = Vector2(1312, 507)
+emitting = false
+gravity = Vector2(0, -700.06)
+
 [node name="WindArea2d" type="Area2D" parent="Hazards Phase 2" unique_id=1979392951]
 position = Vector2(1271, 480)
 collision_layer = 0
@@ -1134,6 +1147,13 @@ position = Vector2(1178, 203)
 position = Vector2(-1050.56, 67)
 scale = Vector2(5.74, 5.74)
 
+[node name="CPUParticles2D" parent="Level Objects" unique_id=681745542 instance=ExtResource("12_d0xow")]
+position = Vector2(-539.52, -177)
+rotation = 1.5707964
+scale = Vector2(8.755, 6.025)
+gravity = Vector2(-900, 0)
+scale_amount_max = 77.92
+
 [node name="WindArea2D" parent="Level Objects" unique_id=723245552 instance=ExtResource("10_f1od7")]
 position = Vector2(-972, -45)
 speed = Vector2(-40, 0)
@@ -1142,6 +1162,14 @@ speed = Vector2(-40, 0)
 position = Vector2(231, -155.5)
 shape = SubResource("RectangleShape2D_ls0kl")
 debug_color = Color(5.5350365e-06, 0.64262354, 0.31987774, 0.41960785)
+
+[node name="CPUParticles2D2" parent="Level Objects" unique_id=1391872366 instance=ExtResource("12_d0xow")]
+position = Vector2(437, 302)
+scale = Vector2(1.79, 1)
+amount = 13
+lifetime = 4.529999999999999
+spread = 52.91
+gravity = Vector2(0, -600)
 
 [node name="WindArea2d" type="Area2D" parent="Level Objects" unique_id=380547299]
 position = Vector2(-1178, -203)
@@ -1157,4 +1185,21 @@ shape = SubResource("RectangleShape2D_bgxgs")
 debug_color = Color(0, 0.6431373, 0.32156864, 0.41960785)
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("13_6uoqi")]
-position = Vector2(805, 86)
+position = Vector2(719, 34)
+
+[node name="Teleporter" type="Area2D" parent="Level Objects" unique_id=253013132]
+position = Vector2(-1221, -27)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("14_pkgsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level Objects/Teleporter" unique_id=665136266]
+position = Vector2(8, 41)
+shape = SubResource("RectangleShape2D_d0xow")
+
+[node name="Pogo" parent="." unique_id=27506277 instance=ExtResource("11_b7or8")]
+visible = false
+position = Vector2(1146, 1367)
+scale = Vector2(252.94, 0.27)
+
+[connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

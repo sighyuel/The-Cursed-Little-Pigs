@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_6me4a"]
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="3_713vo"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_ll5m6"]
+[ext_resource type="Script" path="res://scripts/Characters/DaleCameraShake.gd" id="6_p18jy"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_rukwq"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_alu5n"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_p18jy"]
@@ -20,6 +21,7 @@ size = Vector2(14, 42)
 [node name="May" type="CharacterBody2D" unique_id=1187849158 node_paths=PackedStringArray("collision", "charMesh")]
 collision_layer = 2
 collision_mask = 8
+platform_on_leave = 2
 script = ExtResource("1_2kyhc")
 health = 10
 piggy = "May"
@@ -68,7 +70,15 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_2kyhc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=40045717]
+offset = Vector2(0, -75)
+limit_enabled = false
 position_smoothing_enabled = true
+drag_vertical_enabled = true
+drag_top_margin = 0.41
+drag_bottom_margin = 0.18
+editor_draw_drag_margin = true
+script = ExtResource("6_p18jy")
+max_shake = 0.1
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_rukwq")]
 

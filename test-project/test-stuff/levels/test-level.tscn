@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="7_mhhr2"]
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="10_7x2h6"]
 [ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="13_h4r5i"]
-[ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="14_htqwx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5klk1"]
 texture = ExtResource("1_iul4n")
@@ -3440,37 +3439,10 @@ health = 0
 [node name="PatrolEnemy" parent="." unique_id=812782412 instance=ExtResource("13_h4r5i")]
 position = Vector2(-211, -123)
 
-[node name="GameButton" type="Control" parent="." unique_id=1173526227]
+[node name="Control" type="Control" parent="." unique_id=1441593200]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="GameButton" unique_id=1852479973]
-layout_mode = 0
-offset_left = 389.76782
-offset_top = 192.0
-offset_right = 675.0
-offset_bottom = 270.0
-text = "Quit Game
-
-"
-
-[node name="Control" type="Control" parent="." unique_id=1928957117]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Control" unique_id=1190847915]
-layout_mode = 0
-offset_left = -348.0
-offset_top = -361.0
-offset_right = -194.0
-offset_bottom = -316.0
-theme_override_font_sizes/font_size = 32
-text = "Test Level"
-horizontal_alignment = 1
-script = ExtResource("14_htqwx")
-
-[connection signal="pressed" from="GameButton/Button" to="." method="_on_button_pressed"]
+[node name="PauseMenu" parent="Control" unique_id=1148108138]
