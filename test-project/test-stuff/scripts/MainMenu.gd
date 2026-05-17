@@ -10,6 +10,11 @@ func _ready():
 	options_box.visible = false
 	await fade_in()
 
+	process_mode = Node.PROCESS_MODE_INHERIT
+	process_mode = Node.PROCESS_MODE_PAUSABLE
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	process_mode = Node.PROCESS_MODE_ALWAYS
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn")
 

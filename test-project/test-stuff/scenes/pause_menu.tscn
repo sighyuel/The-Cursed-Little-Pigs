@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dewxnwnjohhwk"]
 
 [ext_resource type="Script" uid="uid://cpovpr8fclj8j" path="res://test-stuff/scripts/pause_menu.gd" id="1_6qr4u"]
+[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://test-stuff/tclp_quit.png" id="2_3jovx"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1148108138]
 process_mode = 3
@@ -32,15 +33,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -70.0
-offset_top = -160.0
-offset_right = 80.0
-offset_bottom = -60.0
+offset_left = -88.0
+offset_top = -105.0
+offset_right = 281.0
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 focus_neighbor_top = NodePath("../Resume")
-text = "Back to Menu
+text = "
+
 "
+icon = ExtResource("2_3jovx")
 
 [connection signal="pressed" from="ColorRect/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="ColorRect/Quit Game" to="." method="_on_quit_game_pressed"]
