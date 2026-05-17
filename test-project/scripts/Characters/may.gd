@@ -41,7 +41,6 @@ func may_camera_feedback():
 	t.tween_property(may_camera,"position",first_cam_pos,1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 func _physics_process(delta: float) -> void:
-	print(may_is_flying)
 	velocity += wind_velocity * 0.8
 	move_and_slide()
 	rect.visible = false

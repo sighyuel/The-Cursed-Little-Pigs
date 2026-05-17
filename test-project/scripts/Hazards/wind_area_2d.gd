@@ -5,6 +5,8 @@ class_name WindArea2d
 var save_speed: Vector2
 
 
+func _physics_process(delta: float) -> void:
+	print("speed:", speed)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	body_entered.connect(_object_entered)
@@ -25,5 +27,5 @@ func _object_exited(object: Node2D) -> void:
 		print("dale left")
 		speed = save_speed
 	if "wind_velocity" in object:
-		object.wind_velocity -= speed
+		object.wind_velocity = Vector2(0.0, 0.0)
 		object.velocity.x = 0.0
