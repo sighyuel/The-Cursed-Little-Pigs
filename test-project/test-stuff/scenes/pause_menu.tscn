@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dewxnwnjohhwk"]
 
 [ext_resource type="Script" uid="uid://cpovpr8fclj8j" path="res://test-stuff/scripts/pause_menu.gd" id="1_6qr4u"]
-[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://test-stuff/tclp_quit.png" id="2_3jovx"]
+[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://assets/Menu Text/tclp_quit.png" id="2_3jovx"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1148108138]
 process_mode = 3

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db2anjstrjkv3"
-path="res://.godot/imported/tclp_credits.png-27724cb2975fe209ba358e46b1dcacf6.ctex"
+uid="uid://bekheckxd0hwq"
+path="res://.godot/imported/tclp_settings.png-418501fb6ab43eb12ff9a15cf451aa21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test-stuff/tclp_credits.png"
-dest_files=["res://.godot/imported/tclp_credits.png-27724cb2975fe209ba358e46b1dcacf6.ctex"]
+source_file="res://assets/Menu Text/tclp_settings.png"
+dest_files=["res://.godot/imported/tclp_settings.png-418501fb6ab43eb12ff9a15cf451aa21.ctex"]
 
 [params]
 

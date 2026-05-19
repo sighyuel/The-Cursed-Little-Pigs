@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccmwcckbs6qwy"
-path="res://.godot/imported/tclp_start.png-6059a67e53bae7a54644cbb1ff1e8832.ctex"
+uid="uid://c4uon3fmwqpko"
+path="res://.godot/imported/tclp_logo.png-4723ae1dceab443bbe29e20301f32a86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test-stuff/tclp_start.png"
-dest_files=["res://.godot/imported/tclp_start.png-6059a67e53bae7a54644cbb1ff1e8832.ctex"]
+source_file="res://assets/logo/tclp_logo.png"
+dest_files=["res://.godot/imported/tclp_logo.png-4723ae1dceab443bbe29e20301f32a86.ctex"]
 
 [params]
 

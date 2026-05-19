@@ -1,3 +1,5 @@
+TextureRect
+Container
 AnimatedSprite2D
 Label
 Control
@@ -11,4 +13,3 @@ Panel
 AnimatableBody2D
 AnimationPlayer
 CollisionShape2D
-StaticBody2D
