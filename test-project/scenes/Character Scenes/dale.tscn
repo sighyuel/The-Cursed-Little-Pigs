@@ -71,6 +71,7 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
 offset = Vector2(0, -75)
+zoom = Vector2(0.6, 0.6)
 limit_enabled = false
 limit_left = -4767
 limit_right = 2500000

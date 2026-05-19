@@ -1,8 +1,8 @@
+Label
+Control
 TextureRect
 Container
 AnimatedSprite2D
-Label
-Control
 TileMapLayer
 PointLight2D
 Sprite2D
@@ -12,4 +12,3 @@ Button
 Panel
 AnimatableBody2D
 AnimationPlayer
-CollisionShape2D

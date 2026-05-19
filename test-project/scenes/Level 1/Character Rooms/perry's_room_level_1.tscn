@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="14_lulln"]
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="16_almst"]
+[ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="17_almst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -506,5 +507,20 @@ scale = Vector2(1, 0.7)
 [node name="Pogo3" parent="Hazards" unique_id=786067399 instance=ExtResource("7_k5c3y")]
 position = Vector2(-387, -1093)
 scale = Vector2(1, 0.56)
+
+[node name="Control" type="Control" parent="." unique_id=1276568881]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1596663750]
+layout_mode = 0
+offset_left = -170.0
+offset_top = 13.0
+offset_right = -130.0
+offset_bottom = 33.0
+text = "Perry's Room"
+script = ExtResource("17_almst")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

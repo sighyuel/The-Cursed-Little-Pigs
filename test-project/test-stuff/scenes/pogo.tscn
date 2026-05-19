@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cii17n6ihekju" path="res://assets/Tile Sets/Flame_Pillar.png" id="2_go4l1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ekvec"]
-size = Vector2(21, 199)
+size = Vector2(15, 178)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6j03h"]
 atlas = ExtResource("2_go4l1")
@@ -144,7 +144,7 @@ collision_mask = 2
 script = ExtResource("1_smoeh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1642011174]
-position = Vector2(0.5, -89.5)
+position = Vector2(0.5, -79)
 shape = SubResource("RectangleShape2D_ekvec")
 
 [node name="PogoTimer" type="Timer" parent="." unique_id=997213919]
@@ -154,7 +154,7 @@ position = Vector2(0.99999905, -89)
 scale = Vector2(1.1875, 2.0625)
 sprite_frames = SubResource("SpriteFrames_oelf8")
 animation = &"fire_full"
-frame_progress = 0.41376773
+frame_progress = 0.421327
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=67146360]
 position = Vector2(0.7400166, -97)
