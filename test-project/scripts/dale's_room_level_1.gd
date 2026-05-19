@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var Phase2G =  $"Tile Map Layers Phase 2/Ground Phase 2"
 @onready var Phase2TP = $"Level Objects/Teleporter"
+@onready var tp_anim = $"Level Objects/Teleporter/AnimatedSprite2D"
 
 
 func _ready() -> void:
@@ -16,3 +17,4 @@ func _process(delta: float) -> void:
 func _coin_collect() -> void:
 	Phase2G.enabled = true
 	Phase2TP.set_collision_mask_value(2, true)
+	tp_anim.play("default")

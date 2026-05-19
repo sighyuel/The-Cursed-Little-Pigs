@@ -4,6 +4,7 @@ extends Node2D
 @onready var Phase2PE = $"Hazards Phase 2/PatrolEnemy"
 @onready var Phase2Particles = $"Hazards Phase 2/CPUParticles2D"
 @onready var TP = $"Level Objects/Teleporter"
+@onready var tp_anim = $"Level Objects/Teleporter/AnimatedSprite2D"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,3 +27,4 @@ func _coin_collect() -> void:
 	Phase2Particles.emitting = true
 	
 	TP.set_collision_mask_value(2, true)
+	tp_anim.play("new_animation")

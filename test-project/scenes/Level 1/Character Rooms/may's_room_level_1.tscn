@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://dgg2m48o8pdbi" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
+[ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
 texture = ExtResource("3_0o0qt")
@@ -174,6 +175,22 @@ region = Rect2(32, 0, 32, 32)
 atlas = ExtResource("16_s0os6")
 region = Rect2(64, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh8nl"]
+atlas = ExtResource("17_hknmq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1od7"]
+atlas = ExtResource("17_hknmq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7or8"]
+atlas = ExtResource("17_hknmq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7c6v"]
+atlas = ExtResource("17_hknmq")
+region = Rect2(96, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_gh8nl"]
 animations = [{
 "frames": [{
@@ -188,6 +205,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh8nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1od7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7or8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7c6v")
+}],
+"loop": false,
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -337,8 +371,7 @@ shape = SubResource("RectangleShape2D_d0xow")
 position = Vector2(-0.9999981, 6.500004)
 scale = Vector2(2.625, 2.7812502)
 sprite_frames = SubResource("SpriteFrames_gh8nl")
-frame = 2
-frame_progress = 0.89695185
+animation = &"new_animation"
 
 [node name="Pogo" parent="." unique_id=27506277 instance=ExtResource("11_b7or8")]
 visible = false
