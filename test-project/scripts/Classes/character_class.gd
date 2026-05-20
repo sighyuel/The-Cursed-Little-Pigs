@@ -126,16 +126,15 @@ func death():
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		print($Camera2D.zoom)
 		mesh.scale.y += 5
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .6
-		$Camera2D.zoom -= Vector2(.006, .006)
+		#$Camera2D.zoom -= Vector2(.006, .006)
 		tree_mode_activated = true
 		#acceleration -= 1
-		if $Camera2D.zoom < min_camera_zoom:
-			$Camera2D.zoom = min_camera_zoom
+		#if $Camera2D.zoom < min_camera_zoom:
+			#$Camera2D.zoom = min_camera_zoom
 
 
 	if charCol.scale.y >= max_height and mesh.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
@@ -153,7 +152,7 @@ func _perry_reset():
 		global_position.y -= tree_reset_height
 		rect.position.y = -10
 		$Ladder.scale.y = 1
-		$Camera2D.zoom = Vector2(1,1)
+		#$Camera2D.zoom = Vector2(1,1)
 		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities
@@ -163,7 +162,7 @@ func _dale_slam():
 		mesh.scale.x += 2
 		dale_ground_pounding = true
 		dale_slam_down.play()
-		$Camera2D.trigger_shake()
+		#$Camera2D.trigger_shake()
 	else:
 		dale_ground_pounding = false
 		mesh.scale.x = 42
@@ -175,7 +174,7 @@ func _may_glide(delta):
 	if Input.is_action_pressed("Y") and not is_on_floor():
 		may_is_flying = true 
 		velocity.y += gravity * delta
-		$Camera2D.trigger_shake()
+		#$Camera2D.trigger_shake()
 		if velocity.y >= glide_fall:
 			velocity.y = glide_fall
 	else:
