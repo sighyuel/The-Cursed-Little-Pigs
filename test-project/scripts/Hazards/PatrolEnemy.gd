@@ -15,5 +15,4 @@ func _on_timer_timeout() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is character:
-		print("inside enemy")
 		get_tree().call_deferred("reload_current_scene") # Replace with function body.

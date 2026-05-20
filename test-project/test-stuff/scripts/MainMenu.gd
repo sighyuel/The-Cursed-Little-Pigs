@@ -24,7 +24,6 @@ func fade_in() -> void:
 
 func _on_options_pressed() -> void:
 	$OptionsBox/Back.grab_focus()
-	print("Settings pressed") 
 	button_manager.visible = false
 	options_box.visible = true
 
