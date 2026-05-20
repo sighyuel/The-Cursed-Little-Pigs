@@ -10,7 +10,6 @@ func trigger_shake() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(position_smoothing_speed)
 	var p =  $".."
 #	lerp the offset.y like this: offset.y = lerp(offset.y, [end value], weight (a variable * delta))
 #	for instance using the delta
