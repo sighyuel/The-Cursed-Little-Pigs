@@ -157,8 +157,8 @@ animation = &"fire_full"
 frame_progress = 0.421327
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=67146360]
-position = Vector2(0.7400166, -97)
-scale = Vector2(0.13640873, 171.42857)
+position = Vector2(4.3087025, -123.49999)
+scale = Vector2(0.5177331, 191.26985)
 energy = 1.08
 shadow_enabled = true
 texture = SubResource("GradientTexture1D_oq4h7")

@@ -1,8 +1,8 @@
+AnimatedSprite2D
 Label
 Control
 TextureRect
 Container
-AnimatedSprite2D
 TileMapLayer
 PointLight2D
 Sprite2D

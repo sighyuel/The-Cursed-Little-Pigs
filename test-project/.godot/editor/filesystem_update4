@@ -1,6 +1,5 @@
-res://scripts/Characters/DaleCameraShake.gd
-res://scripts/Characters/perry.gd
+res://scenes/Character Scenes/dale.tscn
+res://scripts/Characters/dale.gd
+res://test-stuff/scenes/pogo.tscn
+res://scenes/Class Scenes/character_class.tscn
 res://scripts/Classes/character_class.gd
-res://scripts/Global Scripts/global_variables.gd
-res://scripts/Hazards/wind_area_2d.gd
-res://test-stuff/scenes/pause_menu.tscn

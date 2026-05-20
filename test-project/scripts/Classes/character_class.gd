@@ -162,7 +162,8 @@ func _dale_slam():
 		mesh.scale.x += 2
 		dale_ground_pounding = true
 		dale_slam_down.play()
-		#$Camera2D.trigger_shake()
+		$AnimatedSprite2D.play("dale_gp")
+		$Camera2D.trigger_shake()
 	else:
 		dale_ground_pounding = false
 		mesh.scale.x = 42

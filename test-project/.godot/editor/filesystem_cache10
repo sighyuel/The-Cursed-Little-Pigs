@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779209285
+::res://::1779298738
 bad piggies.ogg::AudioStreamOggVorbis::3798898908143067724::1778346516::1778346516::1::::<><><>0<>0<>096ab9cbac1f2540d5d68b6f9c064c10<>res://.godot/imported/bad piggies.ogg-341b796dee30410d0c1d54a56e59c6ac.oggvorbisstr::
 default_bus_layout.tres::AudioBusLayout::283932351617170111::1778346516::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1778814246::0::1::::<><><>0<>0<><>::
@@ -151,12 +151,17 @@ button_focus.tres::StyleBoxFlat::1106322926052085743::1778959943::0::1::::<><><>
 button_hover.tres::StyleBoxFlat::2151354179275418664::1778959943::0::1::::<><><>0<>0<><>::
 button_normal.tres::StyleBoxFlat::2549607310371774247::1778959943::0::1::::<><><>0<>0<><>::
 theme.tres::Theme::2909626652912860453::1779208930::0::1::::<><><>0<>0<><>::uid://dve7mgsjik4dg::::res://addons/phantom_camera/fonts/Nunito-Regular.ttf<>uid://5weqvkjsfso3::::res://addons/phantom_camera/themes/button_hover.tres<>uid://bclbwo3xrdat0::::res://addons/phantom_camera/themes/button_normal.tres
-::res://assets/::1779209276
+::res://assets/::1779298500
+::res://assets/Character sprites/::1779300448
+dale_gp.png::CompressedTexture2D::1390003686704639037::1779300448::1779300448::1::::<><><>0<>0<>918df0b668ecc06552b60bb4b6d74ca0<>res://.godot/imported/dale_gp.png-aeb1fca1da190b5b5b6659a48da95520.ctex::
+dale_idle.png::CompressedTexture2D::1751464555452895829::1779298512::1779298513::1::::<><><>0<>0<>776a4ca9ac98aef51450ab22531bc3b8<>res://.godot/imported/dale_idle.png-8f764af33a1e42c42ac4d8064438d23a.ctex::
+dale_jump.png::CompressedTexture2D::3807190575288164326::1779298756::1779298756::1::::<><><>0<>0<>c8569cb859d0df39181b2c4ef934b85f<>res://.godot/imported/dale_jump.png-83b26edee28d9dc28ec908a0ac634ecc.ctex::
+dale_walk.png::CompressedTexture2D::7889860720349930712::1779299065::1779299065::1::::<><><>0<>0<>da08c88b97c1b373901521844f49b6d7<>res://.godot/imported/dale_walk.png-3591c9ccc6e39507c4d4401f0c245e78.ctex::
 ::res://assets/Fonts/::1778811238
 Mocha Choco.otf::FontFile::2040368319156986954::1778811238::1778811238::1::::<><><>0<>0<>9dcf120370d9fafddd82b9a5657d42ad<>res://.godot/imported/Mocha Choco.otf-6189aa569992049a48f93a401d90a1ab.fontdata::
 ::res://assets/logo/::1779209100
 tclp_logo.png::CompressedTexture2D::6850480120142928062::1779209100::1779209100::1::::<><><>0<>0<>2f639a4b3cb09e490e191c53d88c2423<>res://.godot/imported/tclp_logo.png-4723ae1dceab443bbe29e20301f32a86.ctex::
-::res://assets/Menu Text/::1779209378
+::res://assets/Menu Text/::1779209379
 tclp_credits.png::CompressedTexture2D::7285212810800700742::1778995013::1779209285::1::::<><><>0<>0<>da126779efb60b7c49301dccb0d2b993<>res://.godot/imported/tclp_credits.png-c426ba38122e6ad98eb5b52516e4c733.ctex::
 tclp_quit.png::CompressedTexture2D::6757795727105600072::1778995013::1779209285::1::::<><><>0<>0<>a92782b5d2cf489a48ef31294f3799c1<>res://.godot/imported/tclp_quit.png-89995064316b0ca83fa22039c229b6ae.ctex::
 tclp_settings.png::CompressedTexture2D::2688252119455572848::1779209378::1779209379::1::::<><><>0<>0<>dcaf8946cb5f148ef5384db9cf7a5dc0<>res://.godot/imported/tclp_settings.png-418501fb6ab43eb12ff9a15cf451aa21.ctex::
@@ -170,7 +175,8 @@ ground_smash.mp3::AudioStreamMP3::2587776483473641578::1778009098::1778009297::1
 jump_sound.wav::AudioStreamWAV::9153946462548694589::1778007493::1778007824::1::::<><><>0<>0<>53720a77b981ff8a08edf49e6511e644<>res://.godot/imported/jump_sound.wav-1cbc303c69f81452e47164aefcf32113.sample::
 sounds.tscn::PackedScene::7108710330091026299::1778355389::0::1::::<><><>0<>0<><>::uid://d3oifp6iy6y2p::::res://assets/Sounds/jump_sound.wav<>uid://bc4skhq64ih0m::::res://assets/Sounds/ground_smash.mp3<>uid://extkaybwtxhv::::res://assets/Sounds/dale_slam_down.wav<>uid://c4phg4j07ss63::::res://assets/Sounds/crystal_collect.wav<>uid://bvlxtjn73j6xf::::res://assets/Sounds/wolf-screaming.mp3
 wolf-screaming.mp3::AudioStreamMP3::3884525470588610391::1778354627::1778354627::1::::<><><>0<>0<>3fa6316a18689368bcf48d88a6e4d348<>res://.godot/imported/wolf-screaming.mp3-4fec4dd844d33fe8aac8f439bcc45965.mp3str::
-::res://assets/Tile Sets/::1778965610
+::res://assets/Tile Sets/::1779297226
+Dale_Charsheet.png::CompressedTexture2D::2052222148685512767::1779297225::1779297226::1::::<><><>0<>0<>c12e7ba178960b0c090cbe8de7d3ed96<>res://.godot/imported/Dale_Charsheet.png-dbc6da18b31380660131c2d6a618b5b1.ctex::
 Flame_Pillar.png::CompressedTexture2D::5352503656805319742::1778961444::1778961444::1::::<><><>0<>0<>005c3d59e10fb9aaf78347a78a3d941c<>res://.godot/imported/Flame_Pillar.png-562cda1c39d790177cb27b5ab6f49d68.ctex::
 goodly-2x.png::CompressedTexture2D/CompressedTexture2D::6914248120204914492::1776284353::1776284494::1::::<><><>0<>0<>bd616dc9502fe7260acbd99470bf1022<>res://.godot/imported/goodly-2x.png-262f21c95a4f4b2a14494aa3eb78ee1d.ctex::
 Ground_Particles.png::CompressedTexture2D::1077836084314001349::1778358792::1778358793::1::::<><><>0<>0<>f2a29852ef7bdd9d8f4a7e30738e8fd6<>res://.godot/imported/Ground_Particles.png-e34e266bc999e5349cbe4072b66370a9.ctex::
@@ -193,10 +199,10 @@ New Project (1).png::CompressedTexture2D::8036301328460540331::1778964515::17789
 ::res://scenes/::1778449956
 ::res://scenes/Animation Scenes/::1777745614
 animation_char_switch.tscn::PackedScene::3942709246222156376::1777745614::0::1::::<><><>0<>0<><>::
-::res://scenes/Character Scenes/::1778962070
-dale.tscn::PackedScene::2591754782580769629::1778959943::0::1::::<><><>0<>0<><>::uid://duphuklqumh32::::res://scripts/Characters/dale.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://cyoy54itlaf8n::::res://scripts/Characters/DaleCameraShake.gd<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn
-may.tscn::PackedScene::7094721854675017518::1778962070::0::1::::<><><>0<>0<><>::uid://b4pitpfa8v7jx::::res://scripts/Characters/may.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://cyoy54itlaf8n::::res://scripts/Characters/DaleCameraShake.gd<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn
-perry.tscn::PackedScene::7655610672104468525::1778959943::0::1::::<><><>0<>0<><>::uid://udv2dhjdpr3a::::res://scripts/Characters/perry.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://dh8oglowmwkph::::res://scenes/Level Object Scenes/ladder.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn
+::res://scenes/Character Scenes/::1779299996
+dale.tscn::PackedScene::2591754782580769629::1779299996::0::1::::<><><>0<>0<><>::uid://duphuklqumh32::::res://scripts/Characters/dale.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://cyoy54itlaf8n::::res://scripts/Characters/DaleCameraShake.gd<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn<>uid://y7omolf3g510::::res://assets/Character sprites/dale_idle.png<>uid://buih4wwhi5kos::::res://assets/Character sprites/dale_jump.png<>uid://dkn54apyobw0g::::res://assets/Character sprites/dale_walk.png
+may.tscn::PackedScene::7094721854675017518::1779214673::0::1::::<><><>0<>0<><>::uid://b4pitpfa8v7jx::::res://scripts/Characters/may.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://cyoy54itlaf8n::::res://scripts/Characters/DaleCameraShake.gd<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn
+perry.tscn::PackedScene::7655610672104468525::1779214674::0::1::::<><><>0<>0<><>::uid://udv2dhjdpr3a::::res://scripts/Characters/perry.gd<>uid://donq6fcp8ji22::::res://scenes/Component Scenes/health_component.tscn<>uid://db2nswri8t7lw::::res://scenes/Component Scenes/hitbox_component.tscn<>uid://ddavqlnlsktct::::res://scenes/Component Scenes/ladder_detect_ray.tscn<>uid://dh8oglowmwkph::::res://scenes/Level Object Scenes/ladder.tscn<>uid://cdkve2vn8anc2::::res://test-stuff/scenes/ladder_detect.tscn<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://dodgmr4v6f253::::res://scenes/Particle Scenes/dust_particles.tscn<>uid://c1c482q5jrp4w::::res://scenes/Particle Scenes/jump_particles.tscn
 ::res://scenes/Class Scenes/::1778450844
 character_class.tscn::PackedScene::3618252633158836211::1778450844::0::1::::<><><>0<>0<><>::uid://ui4vyukh73sy::::res://scripts/Classes/character_class.gd
 ::res://scenes/Component Scenes/::1777747976
@@ -211,13 +217,13 @@ PatrolEnemy.tscn::PackedScene::6557078305003216722::1778346516::0::1::::<><><>0<
 spikes.tscn::PackedScene::7675725966299635925::1778350744::0::1::::<><><>0<>0<><>::uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png
 wind_area_2d.tscn::PackedScene::5473110872600177338::1778959943::0::1::::<><><>0<>0<><>::uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd
 ::res://scenes/Level 1/::1778346516
-::res://scenes/Level 1/Character Rooms/::1778966935
-dale's_room_level_1.tscn::PackedScene::7644621395559431050::1778965713::0::1::::<><><>0<>0<><>::uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://dpdu8qiveii45::::res://scripts/dale's_room_level_1.gd<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd<>uid://cpfb38cw2nkqd::::res://scenes/Level Object Scenes/moving_platform.tscn<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://b8ts3bp4hqo34::::res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd<>uid://cylkwcbg55nff::::res://assets/Tile Sets/portal.png
+::res://scenes/Level 1/Character Rooms/::1779237887
+dale's_room_level_1.tscn::PackedScene::7644621395559431050::1779237887::0::1::::<><><>0<>0<><>::uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://dpdu8qiveii45::::res://scripts/dale's_room_level_1.gd<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd<>uid://cpfb38cw2nkqd::::res://scenes/Level Object Scenes/moving_platform.tscn<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://b8ts3bp4hqo34::::res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd<>uid://cylkwcbg55nff::::res://assets/Tile Sets/portal.png
 DaleRoomToMayRoom.gd::GDScript::4743018686197482973::1778959943::0::1::::<>Area2D<><>0<>0<><>::
-may's_room_level_1.gd::GDScript::4681220392648371141::1778959943::0::1::::<>Node2D<><>0<>0<><>::
-may's_room_level_1.tscn::PackedScene::7119707700913396318::1778966935::0::1::::<><><>0<>0<><>::uid://b7xvasogt5oqn::::res://scenes/Level 1/Character Rooms/may's_room_level_1.gd<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://dih4h8d1x03gc::::res://scenes/Hazards/circle saw.tscn<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://cj8hlo6pgadi5::::res://scenes/Hazards/wind_area_2d.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dgg2m48o8pdbi::::res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd<>uid://db4x7y7ttretw::::res://test-stuff/scripts/fade_out.gd<>uid://dnp2ox0utdpim::::res://assets/Tile Sets/portalv2.png
+may's_room_level_1.gd::GDScript::4681220392648371141::1779214842::0::1::::<>Node2D<><>0<>0<><>::
+may's_room_level_1.tscn::PackedScene::7119707700913396318::1779214842::0::1::::<><><>0<>0<><>::uid://b7xvasogt5oqn::::res://scenes/Level 1/Character Rooms/may's_room_level_1.gd<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://dih4h8d1x03gc::::res://scenes/Hazards/circle saw.tscn<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://cj8hlo6pgadi5::::res://scenes/Hazards/wind_area_2d.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://cdb8ej2s0pki6::::res://scripts/Hazards/wind_area_2d.gd<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dgg2m48o8pdbi::::res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd<>uid://db4x7y7ttretw::::res://test-stuff/scripts/fade_out.gd<>uid://dnp2ox0utdpim::::res://assets/Tile Sets/portalv2.png<>uid://cylkwcbg55nff::::res://assets/Tile Sets/portal.png
 MayRoomToPerryRoom.gd::GDScript::7594443742599897406::1778959943::0::1::::<>Area2D<><>0<>0<><>::
-perry's_room_level_1.tscn::PackedScene::1904281442099276786::1778965693::0::1::::<><><>0<>0<><>::uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://bf8olg7d0j3rp::::res://scripts/perry's_room_level_1.gd<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://cpfb38cw2nkqd::::res://scenes/Level Object Scenes/moving_platform.tscn<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://cj8hlo6pgadi5::::res://scenes/Hazards/wind_area_2d.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://cngsedr4ggq5d::::res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd<>uid://dnp2ox0utdpim::::res://assets/Tile Sets/portalv2.png<>uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png
+perry's_room_level_1.tscn::PackedScene::1904281442099276786::1779215021::0::1::::<><><>0<>0<><>::uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://bf8olg7d0j3rp::::res://scripts/perry's_room_level_1.gd<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c0okeewunxbf3::::res://scenes/Hazards/PatrolEnemy.tscn<>uid://cpfb38cw2nkqd::::res://scenes/Level Object Scenes/moving_platform.tscn<>uid://caygxpvg85prd::::res://scenes/Level Object Scenes/Collectible-Key.tscn<>uid://dhmgc5r1ncy50::::res://scenes/Hazards/spikes.tscn<>uid://lot82cr82vef::::res://test-stuff/scenes/pogo.tscn<>uid://cj8hlo6pgadi5::::res://scenes/Hazards/wind_area_2d.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn<>uid://c0j6ua1jnes08::::res://scenes/Particle Scenes/wind_particles.tscn<>uid://cngsedr4ggq5d::::res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd<>uid://dnp2ox0utdpim::::res://assets/Tile Sets/portalv2.png<>uid://cylkwcbg55nff::::res://assets/Tile Sets/portal.png<>uid://dwdj0hfapimid::::res://assets/Tile Sets/spikes1.png<>uid://db4x7y7ttretw::::res://test-stuff/scripts/fade_out.gd
 PerryRoomToEndScreen.gd::GDScript::5698782835408023855::1778959943::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scenes/Level Object Scenes/::1778959943
 breakable_platform.tscn::PackedScene::4093488674675118434::1778451257::0::1::::<><><>0<>0<><>::uid://clt8qgdnifwo::::res://scripts/Breakable-Platform/break_detection.gd<>uid://f4hxpfru1yue::::res://assets/Tile Sets/TCLP Lvl Sprites.png<>uid://c8jroke7dv2yh::::res://assets/Sounds/sounds.tscn<>uid://b58ggpoaiij3b::::res://assets/Tile Sets/smoke_plat.png<>uid://pmd2kcvc4aa4::::res://assets/Tile Sets/Ground_Particles.png
@@ -232,29 +238,29 @@ platform.tscn::PackedScene::8181834074606366462::1777001342::0::1::::<><><>0<>0<
 dust_particles.tscn::PackedScene::8148485665449473020::1778449963::0::1::::<><><>0<>0<><>::uid://b58ggpoaiij3b::::res://assets/Tile Sets/smoke_plat.png
 jump_particles.tscn::PackedScene::6603701225695353476::1778449973::0::1::::<><><>0<>0<><>::uid://b58ggpoaiij3b::::res://assets/Tile Sets/smoke_plat.png
 wind_particles.tscn::PackedScene::6548059841368792907::1778959943::0::1::::<><><>0<>0<><>::
-::res://scripts/::1778995013
-dale's_room_level_1.gd::GDScript::8219561963658010680::1778959943::0::1::::<>Node2D<><>0<>0<><>::
-perry's_room_level_1.gd::GDScript::2806359414142863481::1778959943::0::1::::<>Node2D<><>0<>0<><>::
+::res://scripts/::1779215242
+dale's_room_level_1.gd::GDScript::8219561963658010680::1779215242::0::1::::<>Node2D<><>0<>0<><>::
+perry's_room_level_1.gd::GDScript::2806359414142863481::1779215021::0::1::::<>Node2D<><>0<>0<><>::
 ::res://scripts/Breakable-Platform/::1778451217
 break_detection.gd::GDScript::164299246428575102::1778451217::0::1::::<>StaticBody2D<><>0<>0<><>::
-::res://scripts/Characters/::1778995013
-dale.gd::GDScript::8594465867958834895::1778811238::0::1::::<>character<><>0<>0<><>::
-DaleCameraShake.gd::GDScript::6487787221312927379::1778959943::0::1::::<>Camera2D<><>0<>0<><>::
+::res://scripts/Characters/::1779299983
+dale.gd::GDScript::8594465867958834895::1779299983::0::1::::<>character<><>0<>0<><>::
+DaleCameraShake.gd::GDScript::6487787221312927379::1779238130::0::1::::<>Camera2D<><>0<>0<><>::
 may.gd::GDScript::4453383277152497601::1778995013::0::1::::<>character<><>0<>0<><>::
-perry.gd::GDScript::1411293448103574276::1778811238::0::1::::<>character<><>0<>0<><>::
-::res://scripts/Classes/::1778959943
-character_class.gd::GDScript::1422091481176847260::1778959943::0::1::::character<>CharacterBody2D<><>0<>0<><>::
+perry.gd::GDScript::1411293448103574276::1779237887::0::1::::<>character<><>0<>0<><>::
+::res://scripts/Classes/::1779237887
+character_class.gd::GDScript::1422091481176847260::1779237887::0::1::::character<>CharacterBody2D<><>0<>0<><>::
 ::res://scripts/Components/::1777752892
 HealthComponent.gd::GDScript::3178576912258027364::1776288449::0::1::::HealthComponent<>Node2D<><>0<>0<><>::
 HitboxComponent.gd::GDScript::8904715369482711535::1777752892::0::1::::HitboxComponent<>Area2D<><>0<>0<><>::
 killzone.gd::GDScript::2954573087799090807::1777001338::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/Global Scripts/::1778959943
+::res://scripts/Global Scripts/::1779237887
 global-signals.gd::GDScript::7602723427646039619::1778959943::0::1::::<>Node<><>0<>0<><>::
-global_variables.gd::GDScript::7084119949888788837::1777744571::0::1::::<>Node<><>0<>0<><>::
+global_variables.gd::GDScript::7084119949888788837::1779237888::0::1::::<>Node<><>0<>0<><>::
 RoomChangeGlobal.gd::GDScript::5178898662548019158::1778346516::0::1::::<>Node<><>0<>0<><>::
-::res://scripts/Hazards/::1778995013
+::res://scripts/Hazards/::1779237888
 PatrolEnemy.gd::GDScript::7918838560131309765::1778346516::0::1::::<>Area2D<><>0<>0<><>::
-wind_area_2d.gd::GDScript::4987483595262989919::1778995013::0::1::::WindArea2d<>Area2D<><>0<>0<><>::
+wind_area_2d.gd::GDScript::4987483595262989919::1779237888::0::1::::WindArea2d<>Area2D<><>0<>0<><>::
 ::res://scripts/Level Objects/::1778959943
 collectible_key.gd::GDScript::9101076774298835417::1778449122::0::1::::<>Area2D<><>0<>0<><>::
 door_area_2d.gd::GDScript::8287815999849222507::1777143841::0::1::::<>Area2D<><>0<>0<><>::
@@ -274,7 +280,7 @@ perry-dale-moment.tscn::PackedScene::594617641401253187::1778346516::0::1::::<><
 ::res://test-stuff/Mock lvls/::1777141200
 mock_lvl_1.tscn::PackedScene::2363895181612525439::1777141059::0::1::::<><><>0<>0<><>::uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://c5rkwk0npviiu::::res://assets/Tile Sets/goodly-2x.png<>uid://6bwddoydqo06::::res://scenes/Level Object Scenes/DoorArea2D.tscn<>uid://byk6fpot64dxq::::res://scenes/Level Object Scenes/breakable_platform.tscn
 mock_lvl_2.tscn::PackedScene::6862166914251647857::1777141200::0::1::::<><><>0<>0<><>::uid://cpx3arojx6v40::::res://scenes/Component Scenes/camera_component.tscn<>uid://crkyppn7ssn0::::res://test-stuff/Temp Assests/cracked_floor_wall.tscn<>uid://b6e3s7gvw0p7p::::res://test-stuff/Temp Assests/key.tscn<>uid://bc6p2763amolp::::res://scenes/Character Scenes/dale.tscn<>uid://c8c0bdpifhdkg::::res://scenes/Character Scenes/may.tscn<>uid://dhco13nrbojub::::res://scenes/Character Scenes/perry.tscn
-::res://test-stuff/scenes/::1779209285
+::res://test-stuff/scenes/::1779299869
 audio_control.gd::GDScript::3063550400390162114::1778346516::0::1::::<>HSlider<><>0<>0<><>::
 back.gd::GDScript::4170086761319313431::1778995013::0::1::::<>Button<><>0<>0<><>::
 camera_test.tscn::PackedScene::8625334330546984111::1777137297::0::1::::<><><>0<>0<><>::uid://cg5o1stnvvslp::::res://test-stuff/scripts/camera_test.gd
@@ -282,14 +288,14 @@ credit_screen.gd::GDScript::3738143316007598947::1778995013::0::1::::<>Node2D<><
 credit_screen.tscn::PackedScene::5624523492800313040::1778995013::0::1::::<><><>0<>0<><>::uid://bti1w6pkxogv8::::res://test-stuff/scenes/credit_screen.gd<>uid://b0oayp8fgv07l::::res://test-stuff/scenes/back.gd<>uid://cgspah4haw0hj::::res://tclp_back.png<>uid://buehksl5glbia::::res://bad piggies.ogg
 full_screen_control.gd::GDScript::5468534627942929336::1778346516::0::1::::<>CheckBox<><>0<>0<><>::
 ladder_detect.tscn::PackedScene::5005335327070733699::1776535268::0::1::::<><><>0<>0<><>::
-MainMenu.tscn::PackedScene::5127331122474940157::1779209285::0::1::::<><><>0<>0<><>::uid://ckt0unhkn0v73::::res://test-stuff/scripts/MainMenu.gd<>uid://ceegwfrl177cv::::res://test-stuff/scenes/start.gd<>uid://buehksl5glbia::::res://bad piggies.ogg<>uid://ccmwcckbs6qwy::::res://assets/Menu Text/tclp_start.png<>uid://bjwahy8260e4a::::res://test-stuff/scenes/audio_control.gd<>uid://db2anjstrjkv3::::res://assets/Menu Text/tclp_credits.png<>uid://c3jr54812rfo7::::res://assets/Menu Text/tclp_quit.png<>uid://cj5874d10co0o::::res://test-stuff/scenes/full_screen_control.gd<>uid://c4uon3fmwqpko::::res://assets/logo/tclp_logo.png<>uid://cgspah4haw0hj::::res://tclp_back.png
-pause_menu.tscn::PackedScene::7486854618399212170::1779209285::0::1::::<><><>0<>0<><>::uid://cpovpr8fclj8j::::res://test-stuff/scripts/pause_menu.gd<>uid://c3jr54812rfo7::::res://assets/Menu Text/tclp_quit.png
-pogo.tscn::PackedScene::802192544674267113::1778965077::0::1::::<><><>0<>0<><>::uid://c8ndm0x2dmt4t::::res://test-stuff/scripts/pogo.gd<>uid://cii17n6ihekju::::res://assets/Tile Sets/Flame_Pillar.png
+MainMenu.tscn::PackedScene::5127331122474940157::1779209826::0::1::::<><><>0<>0<><>::uid://ckt0unhkn0v73::::res://test-stuff/scripts/MainMenu.gd<>uid://ceegwfrl177cv::::res://test-stuff/scenes/start.gd<>uid://buehksl5glbia::::res://bad piggies.ogg<>uid://ccmwcckbs6qwy::::res://assets/Menu Text/tclp_start.png<>uid://bjwahy8260e4a::::res://test-stuff/scenes/audio_control.gd<>uid://db2anjstrjkv3::::res://assets/Menu Text/tclp_credits.png<>uid://c3jr54812rfo7::::res://assets/Menu Text/tclp_quit.png<>uid://bekheckxd0hwq::::res://assets/Menu Text/tclp_settings.png<>uid://cj5874d10co0o::::res://test-stuff/scenes/full_screen_control.gd<>uid://c4uon3fmwqpko::::res://assets/logo/tclp_logo.png<>uid://cgspah4haw0hj::::res://tclp_back.png
+pause_menu.tscn::PackedScene::7486854618399212170::1779238130::0::1::::<><><>0<>0<><>::uid://cpovpr8fclj8j::::res://test-stuff/scripts/pause_menu.gd<>uid://c3jr54812rfo7::::res://assets/Menu Text/tclp_quit.png
+pogo.tscn::PackedScene::802192544674267113::1779299869::0::1::::<><><>0<>0<><>::uid://c8ndm0x2dmt4t::::res://test-stuff/scripts/pogo.gd<>uid://cii17n6ihekju::::res://assets/Tile Sets/Flame_Pillar.png
 start.gd::GDScript::5062258131791332249::1778959943::0::1::::<>Button<><>0<>0<><>::
-::res://test-stuff/scripts/::1778995013
+::res://test-stuff/scripts/::1779212752
 back_to_menu.gd::GDScript::5104023812060594454::1778959943::0::1::::<>Button<><>0<>0<><>::
 camera_test.gd::GDScript::5256803205767604133::1777137297::0::1::::<>Camera2D<><>0<>0<><>::
-fade_out.gd::GDScript::7290772796707136068::1778811238::0::1::::<>Label<><>0<>0<><>::
+fade_out.gd::GDScript::7290772796707136068::1779212752::0::1::::<>Label<><>0<>0<><>::
 hurtbox.gd::GDScript::1264283535866759560::1776284353::0::1::::Attack<>RefCounted<><>0<>0<><>::
 key.gd::GDScript::3987162103800256826::1777001338::0::1::::<>Area2D<><>0<>0<><>::
 MainMenu.gd::GDScript::5515507315880838600::1778995013::0::1::::<>Node2D<><>0<>0<><>::

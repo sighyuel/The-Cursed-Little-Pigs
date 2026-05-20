@@ -3,11 +3,13 @@ extends character
 @onready var dale_camera = $Camera2D
 @onready var dust_particle = $DustParticles
 @onready var jump_particles = $JumpParticles
+@onready var dale_anim = $AnimatedSprite2D
 var original_pos
 
 func walking_feedback() -> void:
 	#region walking_feedback
 	if move_dir == 0:
+		dale_anim.play("dale_idle")
 		dust_particle.emitting = false
 	
 	if move_dir == 1:
@@ -19,6 +21,11 @@ func walking_feedback() -> void:
 		dust_particle.position.x = 20
 	#endregion
 
+func sprite_anim_abilities() -> void:
+	if dale_ground_pounding and not is_on_floor():
+		dale_anim.scale.x = 1
+
+
 func _ready():
 	original_pos = get_position()
 
@@ -29,8 +36,24 @@ func _physics_process(delta: float) -> void:
 	dale_camera.enabled = false
 	walking_feedback()
 	
-	if is_jumping:
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = speed
+		dale_anim.scale.x = 1
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = speed
+		dale_anim.scale.x = -1
+	else:
+		velocity.x = 0
+	
+	if velocity.x:
+		if is_on_floor():
+			dale_anim.play("dale_walk")
+		else:
+			dale_anim.play("dale_jump")
+	
+	if is_jumping and move_dir == 0:
 		jump_sound.play()
+		dale_anim.play("dale_jump")
 	else:
 		is_jumping = false
 	
