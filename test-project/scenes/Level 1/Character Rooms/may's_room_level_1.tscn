@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
+[ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="19_ul6ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
 texture = ExtResource("3_0o0qt")
@@ -393,5 +394,7 @@ offset_bottom = 196.0
 theme_override_font_sizes/font_size = 24
 text = "May's Room"
 script = ExtResource("16_0o0qt")
+
+[node name="PauseMenu" parent="." unique_id=1148108138 instance=ExtResource("19_ul6ce")]
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

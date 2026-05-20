@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="15_jrekg"]
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="16_almst"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="17_almst"]
+[ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="19_eupdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -552,5 +553,7 @@ offset_right = -130.0
 offset_bottom = 33.0
 text = "Perry's Room"
 script = ExtResource("17_almst")
+
+[node name="PauseMenu" parent="Control/Label" unique_id=1148108138 instance=ExtResource("19_eupdf")]
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
