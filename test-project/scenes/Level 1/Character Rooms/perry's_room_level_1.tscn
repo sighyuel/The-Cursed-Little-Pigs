@@ -507,9 +507,6 @@ animation = &"new_animation"
 [node name="PatrolEnemy" parent="Hazards" unique_id=812782412 instance=ExtResource("5_y2v12")]
 position = Vector2(502, -328)
 
-[node name="PatrolEnemy2" parent="Hazards" unique_id=1442793917 instance=ExtResource("5_y2v12")]
-position = Vector2(276, -1795)
-
 [node name="Spikes" parent="Hazards" unique_id=639613534 instance=ExtResource("6_ljhq3")]
 tile_map_data = PackedByteArray("AAAEAOr/AwAEAAQAAAAFAOr/AwAEAAQAAAAIAOr/AwAEAAQAAAAJAOr/AwAEAAQAAADy/9P/AwAEAAQAADDz/9P/AwAEAAQAADD0/9P/AwAEAAQAADD1/9P/AwAEAAQAADD2/9P/AwAEAAQAADD3/9P/AwAEAAQAADD4/9P/AwAEAAQAADD5/9P/AwAEAAQAADD6/9P/AwAEAAQAADD7/9P/AwAEAAQAADA=")
 tile_set = SubResource("TileSet_repao")

@@ -1,10 +1,5 @@
-res://scripts/Characters/DaleCameraShake.gd
 res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn
 res://addons/phantom_camera/themes/theme.tres
-res://scenes/Character Scenes/dale.tscn
-res://scenes/Character Scenes/may.tscn
-res://scenes/Character Scenes/perry.tscn
-res://scenes/Character Scenes/PerryCamera.gd
-res://scenes/Character Scenes/MayCamera.gd
-res://scripts/Characters/DaleCamera.gd
-res://scripts/Classes/character_class.gd
+res://scenes/Level 1/Character Rooms/perry's_room_level_1.tscn
+res://test-stuff/levels/test-level.tscn
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn
