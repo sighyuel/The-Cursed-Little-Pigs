@@ -388,11 +388,11 @@ position = Vector2(604, 849)
 JUMP_VELOCITY = 410.0
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_7y7bp")]
-position = Vector2(629, 75)
+position = Vector2(745, 812)
 JUMP_VELOCITY = 400.0
 
 [node name="Perry" parent="Characters" unique_id=771990693 instance=ExtResource("3_4sfaq")]
-position = Vector2(218, -42)
+position = Vector2(700, 785)
 
 [node name="Hazards" type="Node2D" parent="." unique_id=256593876]
 
