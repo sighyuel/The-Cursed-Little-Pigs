@@ -9,8 +9,78 @@
 [ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://assets/Menu Text/tclp_quit.png" id="3_v7d8h"]
 [ext_resource type="Texture2D" uid="uid://bekheckxd0hwq" path="res://assets/Menu Text/tclp_settings.png" id="4_dccth"]
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
+[ext_resource type="Script" uid="uid://c8o0dlcd7o3xa" path="res://test-stuff/scenes/bounce_effect.gd" id="5_kh432"]
 [ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
+[ext_resource type="Script" uid="uid://cjd67lselahx8" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_bjgp6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgp6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(18.892157, 18.892157, 18.892157, 0)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1073"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7ff0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c67ay"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
 color = Color(1, 1, 1, 1)
@@ -37,6 +107,7 @@ offset_right = 1016.0
 offset_bottom = 343.0
 scale = Vector2(0.2, 0.2)
 focus_neighbor_bottom = NodePath("../Options")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bjgp6")
 text = "
 
 "
@@ -53,10 +124,12 @@ offset_bottom = 488.76465
 scale = Vector2(0.2, 0.2)
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Credits")
+theme_override_styles/focus = SubResource("StyleBoxFlat_r1073")
 text = "
 "
 icon = ExtResource("4_dccth")
 flat = true
+script = ExtResource("5_kh432")
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
@@ -67,11 +140,13 @@ offset_bottom = 457.0
 scale = Vector2(0.3, 0.3)
 focus_neighbor_top = NodePath("../Credits")
 focus_neighbor_bottom = NodePath("../Credits")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b7ff0")
 text = "
 
 "
 icon = ExtResource("3_v7d8h")
 flat = true
+script = ExtResource("7_bjgp6")
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
@@ -82,12 +157,14 @@ offset_bottom = 472.0
 scale = Vector2(0.2, 0.2)
 focus_neighbor_left = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Quit")
+theme_override_styles/focus = SubResource("StyleBoxFlat_c67ay")
 text = "
 
 
 "
 icon = ExtResource("3_mq833")
 flat = true
+script = ExtResource("5_kh432")
 
 [node name="TextureRect" type="TextureRect" parent="Button_manager" unique_id=672795725]
 layout_mode = 0
@@ -165,9 +242,18 @@ text = "FullScreen
 "
 script = ExtResource("4_mq833")
 
+[connection signal="focus_entered" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_exited"]
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="focus_entered" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_exited"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="tree_entered" from="Button_manager/Options" to="Button_manager/Options" method="_on_tree_entered"]
+[connection signal="focus_entered" from="Button_manager/Quit" to="Button_manager/Quit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button_manager/Quit" to="Button_manager/Quit" method="_on_focus_exited"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="focus_entered" from="Button_manager/Credits" to="Button_manager/Credits" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button_manager/Credits" to="Button_manager/Credits" method="_on_focus_exited"]
 [connection signal="pressed" from="Button_manager/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]

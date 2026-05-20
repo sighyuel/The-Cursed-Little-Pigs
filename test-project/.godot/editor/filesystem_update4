@@ -3,3 +3,9 @@ res://scripts/Characters/dale.gd
 res://test-stuff/scenes/pogo.tscn
 res://scenes/Class Scenes/character_class.tscn
 res://scripts/Classes/character_class.gd
+res://test-stuff/scenes/credit_screen.tscn
+res://test-stuff/scripts/MainMenu.gd
+res://test-stuff/scenes/MainMenu.tscn
+res://test-stuff/scenes/start.gd
+res://test-stuff/scenes/bounce_effect.gd
+res://test-stuff/scenes/quit_bounce_effect.gd

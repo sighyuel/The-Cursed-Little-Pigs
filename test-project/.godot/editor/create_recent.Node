@@ -1,7 +1,7 @@
+TextureRect
+Control
 AnimatedSprite2D
 Label
-Control
-TextureRect
 Container
 TileMapLayer
 PointLight2D
