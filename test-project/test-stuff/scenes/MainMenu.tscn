@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
 [ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
+[ext_resource type="Script" uid="uid://da5td7kh8iuur" path="res://test-stuff/scenes/back_button.gd" id="12_kh432"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ouxw6"]
 color = Color(1, 1, 1, 1)
@@ -105,6 +106,7 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -210,7 +212,7 @@ offset_bottom = 200.0
 text = "Level designer by: mr.taxevader, siulsighyuel"
 editable = false
 
-[node name="TextEdit" type="TextEdit" parent="CreditsBox" unique_id=527764784]
+[node name="Music" type="TextEdit" parent="CreditsBox" unique_id=527764784]
 layout_mode = 0
 offset_top = 200.0
 offset_right = 623.0
@@ -225,7 +227,7 @@ offset_right = 339.0
 offset_bottom = 411.0
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("7_ahe0o")
-flat = true
+script = ExtResource("12_kh432")
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
