@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dhmgc5r1ncy50" path="res://scenes/Hazards/spikes.tscn" id="9_bjr28"]
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="9_tv2mr"]
 [ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="10_jouvp"]
-[ext_resource type="Script" uid="uid://b8ts3bp4hqo34" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd" id="13_rshwn"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="15_62dag"]
+[ext_resource type="Texture2D" uid="uid://xy15pbvyog8e" path="res://assets/Tile Sets/tclp_bg_sky_alt_big.png" id="17_d4us3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
 texture = ExtResource("4_vot2m")
@@ -501,5 +502,13 @@ scale = Vector2(1.65, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Level Objects/moving_platform" unique_id=778226352]
 libraries/ = SubResource("AnimationLibrary_tv2mr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1059698901]
+z_index = -1
+offset_left = -2001.0
+offset_top = -706.0
+offset_right = 4459.0
+offset_bottom = 3426.0
+texture = ExtResource("17_d4us3")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

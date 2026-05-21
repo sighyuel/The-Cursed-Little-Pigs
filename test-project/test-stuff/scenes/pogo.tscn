@@ -131,13 +131,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_ns8tv"]
-offsets = PackedFloat32Array(0, 0.009259259, 0.015432099)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.9917014, 0.904384, 1.540184e-06, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_oq4h7"]
-gradient = SubResource("Gradient_ns8tv")
-
 [node name="Pogo" type="Area2D" unique_id=1144140681]
 collision_layer = 0
 collision_mask = 2
@@ -155,15 +148,6 @@ scale = Vector2(1.1875, 2.0625)
 sprite_frames = SubResource("SpriteFrames_oelf8")
 animation = &"fire_full"
 frame_progress = 0.421327
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=67146360]
-position = Vector2(4.3087025, -123.49999)
-scale = Vector2(0.5177331, 191.26985)
-energy = 1.08
-shadow_enabled = true
-texture = SubResource("GradientTexture1D_oq4h7")
-offset = Vector2(-5.425, 0)
-texture_scale = 1.26
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="PogoTimer" to="." method="_on_pogo_timer_timeout"]

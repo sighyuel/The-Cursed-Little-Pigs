@@ -14,10 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="12_d0xow"]
 [ext_resource type="Script" uid="uid://cdb8ej2s0pki6" path="res://scripts/Hazards/wind_area_2d.gd" id="12_f7c6v"]
 [ext_resource type="PackedScene" uid="uid://caygxpvg85prd" path="res://scenes/Level Object Scenes/Collectible-Key.tscn" id="13_6uoqi"]
-[ext_resource type="Script" uid="uid://dgg2m48o8pdbi" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/MayRoomToPerryRoom.gd" id="14_pkgsr"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
+[ext_resource type="Texture2D" uid="uid://xy15pbvyog8e" path="res://assets/Tile Sets/tclp_bg_sky_alt_big.png" id="19_ul6ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
 texture = ExtResource("3_0o0qt")
@@ -393,5 +394,13 @@ offset_bottom = 196.0
 theme_override_font_sizes/font_size = 24
 text = "May's Room"
 script = ExtResource("16_0o0qt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=833969280]
+z_index = -1
+offset_left = -1038.0
+offset_top = -732.0
+offset_right = 3459.0
+offset_bottom = 1868.0
+texture = ExtResource("19_ul6ce")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

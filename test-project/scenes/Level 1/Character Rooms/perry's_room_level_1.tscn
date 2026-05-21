@@ -13,11 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="8_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_5sk1g"]
 [ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="9_642ld"]
-[ext_resource type="Script" uid="uid://cngsedr4ggq5d" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
+[ext_resource type="Script" path="res://scenes/Level 1/Character Rooms/PerryRoomToEndScreen.gd" id="11_k5c3y"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="14_lulln"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="15_jrekg"]
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="16_almst"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="17_almst"]
+[ext_resource type="Texture2D" uid="uid://xy15pbvyog8e" path="res://assets/Tile Sets/tclp_bg_sky_alt_big.png" id="19_eupdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -552,5 +553,13 @@ offset_right = -130.0
 offset_bottom = 33.0
 text = "Perry's Room"
 script = ExtResource("17_almst")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=763776383]
+z_index = -1
+offset_left = -3346.0
+offset_top = -3820.0
+offset_right = 3975.0
+offset_bottom = 1084.0
+texture = ExtResource("19_eupdf")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

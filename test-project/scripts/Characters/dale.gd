@@ -36,20 +36,7 @@ func _physics_process(delta: float) -> void:
 	dale_camera.enabled = false
 	walking_feedback()
 	
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = speed
-		dale_anim.scale.x = 1
-	elif Input.is_action_pressed("ui_left"):
-		velocity.x = speed
-		dale_anim.scale.x = -1
-	else:
-		velocity.x = 0
 	
-	if velocity.x:
-		if is_on_floor():
-			dale_anim.play("dale_walk")
-		else:
-			dale_anim.play("dale_jump")
 	
 	if is_jumping and move_dir == 0:
 		jump_sound.play()
@@ -81,6 +68,21 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor() and Input.is_action_just_pressed("ui_down"):
 			GlobalSignals.oneway_disabled.emit()
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
+		
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = speed
+			dale_anim.scale.x = 1
+		elif Input.is_action_pressed("ui_left"):
+			velocity.x = speed
+			dale_anim.scale.x = -1
+		else:
+			velocity.x = 0
+	
+		if velocity.x:
+			if is_on_floor():
+				dale_anim.play("dale_walk")
+		else:
+			dale_anim.play("dale_jump")
 		
 		_dale_slam()
 		rect.visible = true
