@@ -9,6 +9,10 @@
 [ext_resource type="Script" uid="uid://cyoy54itlaf8n" path="res://scripts/Characters/DaleCamera.gd" id="6_tvhot"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_rwti3"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
+[ext_resource type="Texture2D" uid="uid://t2lfmh2i447b" path="res://assets/Character sprites/dale_gp.png" id="10_2rk0a"]
+[ext_resource type="Texture2D" uid="uid://y7omolf3g510" path="res://assets/Character sprites/dale_idle.png" id="10_2yoqr"]
+[ext_resource type="Texture2D" uid="uid://buih4wwhi5kos" path="res://assets/Character sprites/dale_jump.png" id="11_735xi"]
+[ext_resource type="Texture2D" uid="uid://dkn54apyobw0g" path="res://assets/Character sprites/dale_walk.png" id="12_gj256"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
 
@@ -17,6 +21,120 @@ size = Vector2(34, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k47w"]
 size = Vector2(28, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbigx"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(0, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raohh"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(91, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo6tf"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(182, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vkbo"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(273, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aspg"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(364, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmbtb"]
+atlas = ExtResource("10_2rk0a")
+region = Rect2(455, 0, 90, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_735xi"]
+atlas = ExtResource("10_2yoqr")
+region = Rect2(0, 0, 63, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj256"]
+atlas = ExtResource("11_735xi")
+region = Rect2(0, 0, 96, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rk0a"]
+atlas = ExtResource("11_735xi")
+region = Rect2(96, 0, 96, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4jcc"]
+atlas = ExtResource("12_gj256")
+region = Rect2(228, 0, 114, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clbum"]
+atlas = ExtResource("12_gj256")
+region = Rect2(342, 0, 114, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l1fg"]
+atlas = ExtResource("12_gj256")
+region = Rect2(456, 0, 114, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohilt"]
+atlas = ExtResource("12_gj256")
+region = Rect2(570, 0, 114, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvhot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbigx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raohh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo6tf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vkbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8aspg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmbtb")
+}],
+"loop": false,
+"name": &"dale_gp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_735xi")
+}],
+"loop": false,
+"name": &"dale_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj256")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rk0a")
+}],
+"loop": false,
+"name": &"dale_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4jcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clbum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l1fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohilt")
+}],
+"loop": true,
+"name": &"dale_walk",
+"speed": 5.0
+}]
 
 [node name="Dale" type="CharacterBody2D" unique_id=1644848735 node_paths=PackedStringArray("collision", "charMesh")]
 collision_layer = 2
@@ -33,6 +151,7 @@ ladder_speed = -150.515
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=990098150]
+visible = false
 position = Vector2(-9.536743e-07, -4.999999)
 scale = Vector2(36.875, 30)
 mesh = SubResource("BoxMesh_lm3dp")
@@ -71,7 +190,6 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1406507692]
 offset = Vector2(0, -75)
-zoom = Vector2(0.6, 0.6)
 limit_enabled = false
 limit_left = -4767
 limit_right = 2500000
@@ -94,3 +212,10 @@ color = Color(18.892157, 18.892157, 18.892157, 1)
 
 [node name="JumpParticles" parent="." unique_id=503132651 instance=ExtResource("8_tvhot")]
 emitting = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=77553711]
+position = Vector2(-1, -28)
+sprite_frames = SubResource("SpriteFrames_tvhot")
+animation = &"dale_walk"
+frame = 2
+frame_progress = 0.15850243

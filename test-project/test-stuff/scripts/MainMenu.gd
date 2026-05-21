@@ -40,3 +40,7 @@ func _on_credits_pressed() -> void:
 #func _quit_level() -> void:
 	#print("quit")
 	#$AudioStreamPlayer.play(0.0)
+
+
+func _on_options_focus_entered() -> void:
+	pass # Replace with function body.
