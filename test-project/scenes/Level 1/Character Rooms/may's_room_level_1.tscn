@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
 [ext_resource type="Texture2D" uid="uid://xy15pbvyog8e" path="res://assets/Tile Sets/tclp_bg_sky_alt_big.png" id="19_ul6ce"]
+[ext_resource type="Script" uid="uid://ctd1ikw1o2dg5" path="res://test-stuff/scripts/hint.gd" id="21_gh8nl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
 texture = ExtResource("3_0o0qt")
@@ -263,6 +264,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1od7"]
+size = Vector2(738, 93)
+
 [node name="May\'s Room - Level 1" type="Node2D" unique_id=520772052]
 script = ExtResource("1_bt1rw")
 
@@ -434,6 +438,7 @@ text = "May's Room"
 script = ExtResource("16_0o0qt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=833969280]
+visible = false
 z_index = -1
 offset_left = -1038.0
 offset_top = -732.0
@@ -441,4 +446,23 @@ offset_right = 3459.0
 offset_bottom = 1868.0
 texture = ExtResource("19_ul6ce")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=2066113578]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21_gh8nl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=101078590]
+position = Vector2(462, 623.5)
+shape = SubResource("RectangleShape2D_f1od7")
+
+[node name="Label" type="Label" parent="Area2D" unique_id=1996106365]
+visible = false
+offset_left = 363.0
+offset_top = 585.0
+offset_right = 543.0
+offset_bottom = 627.0
+text = "Dale can block wind..."
+
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
