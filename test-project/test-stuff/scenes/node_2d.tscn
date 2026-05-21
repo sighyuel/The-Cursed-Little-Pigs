@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://cfbynoao0yg34"]
+[gd_scene format=3 uid="uid://7nxtdill31u4"]
 
-[ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMenu.gd" id="1_hwiu5"]
-[ext_resource type="Script" uid="uid://ceegwfrl177cv" path="res://test-stuff/scenes/start.gd" id="2_8usxe"]
-[ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_ji2f2"]
-[ext_resource type="Texture2D" uid="uid://ccmwcckbs6qwy" path="res://assets/Menu Text/tclp_start.png" id="2_v7d8h"]
-[ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="3_8usxe"]
-[ext_resource type="Texture2D" uid="uid://db2anjstrjkv3" path="res://assets/Menu Text/tclp_credits.png" id="3_mq833"]
-[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://assets/Menu Text/tclp_quit.png" id="3_v7d8h"]
-[ext_resource type="Texture2D" uid="uid://bekheckxd0hwq" path="res://assets/Menu Text/tclp_settings.png" id="4_dccth"]
-[ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="4_mq833"]
-[ext_resource type="Script" uid="uid://c8o0dlcd7o3xa" path="res://test-stuff/scenes/bounce_effect.gd" id="5_kh432"]
-[ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
-[ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
-[ext_resource type="Script" uid="uid://cjd67lselahx8" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_bjgp6"]
-[ext_resource type="Texture2D" uid="uid://bsscsltnuc07s" path="res://assets/Tile Sets/tclp_bg_small.png" id="14_r1073"]
+[ext_resource type="Script" uid="uid://ckt0unhkn0v73" path="res://test-stuff/scripts/MainMenu.gd" id="1_hmhmb"]
+[ext_resource type="Texture2D" uid="uid://ccmwcckbs6qwy" path="res://assets/Menu Text/tclp_start.png" id="2_ub2xe"]
+[ext_resource type="Script" uid="uid://ceegwfrl177cv" path="res://test-stuff/scenes/start.gd" id="3_6cooh"]
+[ext_resource type="Texture2D" uid="uid://bekheckxd0hwq" path="res://assets/Menu Text/tclp_settings.png" id="4_jsdrf"]
+[ext_resource type="Script" path="res://test-stuff/scenes/bounce_effect.gd" id="5_uxyvq"]
+[ext_resource type="Texture2D" uid="uid://c3jr54812rfo7" path="res://assets/Menu Text/tclp_quit.png" id="6_untsy"]
+[ext_resource type="Script" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_6hh4q"]
+[ext_resource type="Texture2D" uid="uid://db2anjstrjkv3" path="res://assets/Menu Text/tclp_credits.png" id="8_40q2f"]
+[ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="9_3eyo2"]
+[ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="10_es4i7"]
+[ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="11_1rpyq"]
+[ext_resource type="Script" uid="uid://bjwahy8260e4a" path="res://test-stuff/scenes/audio_control.gd" id="12_ntbi6"]
+[ext_resource type="Script" uid="uid://cj5874d10co0o" path="res://test-stuff/scenes/full_screen_control.gd" id="13_7y3dt"]
+[ext_resource type="Texture2D" uid="uid://bsscsltnuc07s" path="res://assets/Tile Sets/tclp_bg_small.png" id="14_xdb46"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgp6"]
 content_margin_left = 4.0
@@ -92,7 +92,7 @@ color = Color(0.92941177, 0, 0.7058824, 1)
 thickness = 6
 
 [node name="Node2D" type="Node2D" unique_id=2099744671]
-script = ExtResource("1_hwiu5")
+script = ExtResource("1_hmhmb")
 
 [node name="Button_manager" type="Control" parent="." unique_id=1985874251]
 layout_mode = 3
@@ -102,35 +102,35 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 125.0
-offset_right = 1041.0
-offset_bottom = 361.0
-scale = Vector2(0.15, 0.15)
+offset_left = 230.0
+offset_top = 120.0
+offset_right = 1016.0
+offset_bottom = 356.0
+scale = Vector2(0.2, 0.2)
 focus_neighbor_bottom = NodePath("../Options")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bjgp6")
 text = "
 
 "
-icon = ExtResource("2_v7d8h")
+icon = ExtResource("2_ub2xe")
 flat = true
-script = ExtResource("2_8usxe")
+script = ExtResource("3_6cooh")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 230.00002
-offset_top = 163.0
-offset_right = 1376.0
-offset_bottom = 495.76465
-scale = Vector2(0.15, 0.15)
+offset_left = 195.0
+offset_top = 167.0
+offset_right = 1341.0
+offset_bottom = 499.76465
+scale = Vector2(0.2, 0.2)
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Credits")
 theme_override_styles/focus = SubResource("StyleBoxFlat_r1073")
 text = "
 "
-icon = ExtResource("4_dccth")
+icon = ExtResource("4_jsdrf")
 flat = true
-script = ExtResource("5_kh432")
+script = ExtResource("5_uxyvq")
 
 [node name="Quit" type="Button" parent="Button_manager" unique_id=1855586134]
 layout_mode = 0
@@ -140,22 +140,22 @@ offset_right = 391.0
 offset_bottom = 457.0
 scale = Vector2(0.3, 0.3)
 focus_neighbor_top = NodePath("../Credits")
-focus_neighbor_bottom = NodePath("../Start")
+focus_neighbor_bottom = NodePath("../Credits")
 theme_override_styles/focus = SubResource("StyleBoxFlat_b7ff0")
 text = "
 
 "
-icon = ExtResource("3_v7d8h")
+icon = ExtResource("6_untsy")
 flat = true
-script = ExtResource("7_bjgp6")
+script = ExtResource("7_6hh4q")
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 217.0
-offset_right = 1364.0
-offset_bottom = 461.0
-scale = Vector2(0.15, 0.15)
+offset_left = 197.0
+offset_top = 233.0
+offset_right = 1330.0
+offset_bottom = 477.0
+scale = Vector2(0.2, 0.2)
 focus_neighbor_left = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Quit")
 theme_override_styles/focus = SubResource("StyleBoxFlat_c67ay")
@@ -163,21 +163,21 @@ text = "
 
 
 "
-icon = ExtResource("3_mq833")
+icon = ExtResource("8_40q2f")
 flat = true
-script = ExtResource("5_kh432")
+script = ExtResource("5_uxyvq")
 
 [node name="TextureRect" type="TextureRect" parent="Button_manager" unique_id=672795725]
 layout_mode = 0
-offset_left = 153.0
+offset_left = 158.0
 offset_top = 10.0
-offset_right = 479.0
-offset_bottom = 119.0
-texture = ExtResource("6_06m78")
+offset_right = 451.0
+offset_bottom = 107.0
+texture = ExtResource("9_3eyo2")
 expand_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
-stream = ExtResource("2_ji2f2")
+stream = ExtResource("10_es4i7")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
@@ -190,12 +190,22 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 1.0
-offset_top = 1.0
-offset_right = 639.0
+offset_top = 2.0
+offset_right = 628.0
 offset_bottom = 359.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="OptionsBox" unique_id=1907951004]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Options"
+horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="OptionsBox" unique_id=1509320610]
 layout_mode = 0
@@ -204,7 +214,7 @@ offset_top = 280.0
 offset_right = 568.0
 offset_bottom = 391.0
 scale = Vector2(0.5, 0.5)
-icon = ExtResource("7_ahe0o")
+icon = ExtResource("11_1rpyq")
 flat = true
 
 [node name="AudioControl" type="HSlider" parent="OptionsBox" unique_id=1844353224]
@@ -219,36 +229,26 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6lnw2")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("3_8usxe")
+script = ExtResource("12_ntbi6")
 audio_bus_name = "Music"
 
 [node name="FullScreenControl" type="CheckBox" parent="OptionsBox" unique_id=604426549]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 103.0
-offset_right = 145.0
-offset_bottom = 138.5
+offset_left = 13.0
+offset_top = 53.0
+offset_right = 143.0
+offset_bottom = 123.0
 scale = Vector2(2, 2)
-theme_override_font_sizes/font_size = 8
 text = "FullScreen
 "
-script = ExtResource("4_mq833")
-
-[node name="TextureRect" type="TextureRect" parent="OptionsBox" unique_id=52857285]
-layout_mode = 0
-offset_left = 205.0
-offset_top = 8.0
-offset_right = 432.0
-offset_bottom = 54.0
-texture = ExtResource("4_dccth")
-expand_mode = 1
+script = ExtResource("13_7y3dt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1584445154]
 modulate = Color(0.6431373, 0.6431373, 0.6431373, 0.8784314)
 z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("14_r1073")
+texture = ExtResource("14_xdb46")
 
 [connection signal="focus_entered" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_entered"]
 [connection signal="focus_exited" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_exited"]
