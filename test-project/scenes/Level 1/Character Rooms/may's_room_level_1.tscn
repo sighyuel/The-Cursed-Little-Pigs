@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dih4h8d1x03gc" path="res://scenes/Hazards/circle saw.tscn" id="7_ul6ce"]
 [ext_resource type="PackedScene" uid="uid://c0okeewunxbf3" path="res://scenes/Hazards/PatrolEnemy.tscn" id="8_dmf30"]
 [ext_resource type="PackedScene" uid="uid://byk6fpot64dxq" path="res://scenes/Level Object Scenes/breakable_platform.tscn" id="9_gh8nl"]
+[ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="10_dmf30"]
 [ext_resource type="PackedScene" uid="uid://cj8hlo6pgadi5" path="res://scenes/Hazards/wind_area_2d.tscn" id="10_f1od7"]
 [ext_resource type="PackedScene" uid="uid://lot82cr82vef" path="res://test-stuff/scenes/pogo.tscn" id="11_b7or8"]
 [ext_resource type="PackedScene" uid="uid://c0j6ua1jnes08" path="res://scenes/Particle Scenes/wind_particles.tscn" id="12_d0xow"]
@@ -152,6 +153,42 @@ physics_layer_0/collision_layer = 8
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_hknmq")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh8nl"]
+texture = ExtResource("10_dmf30")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0.449646, 0.35971832, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, -8, -0.62950706, 0, -8, -8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1od7"]
+texture = ExtResource("3_0o0qt")
+margins = Vector2i(4, 0)
+texture_region_size = Vector2i(32, 32)
+4:4/0 = 0
+4:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+5:4/0 = 0
+5:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-6.5772934, -16, 16, -16, 16, 16, -5.918867, 16)
+
+[sub_resource type="TileSet" id="TileSet_b7or8"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 2
+physics_layer_1/collision_layer = 4
+physics_layer_1/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_gh8nl")
+sources/3 = SubResource("TileSetAtlasSource_f1od7")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt1rw"]
 size = Vector2(79, 478)
 
@@ -286,7 +323,8 @@ scale = Vector2(0.71, 0.455)
 
 [node name="Spikes" parent="Hazards Phase 1" unique_id=639613534 instance=ExtResource("2_pkgsr")]
 position = Vector2(1178, 203)
-tile_map_data = PackedByteArray()
+tile_map_data = PackedByteArray("AAD9/wYAAwAFAAQAAFD+/wYAAwAFAAQAAFD//wYAAwAFAAQAAFAAAAYAAwAFAAQAAFABAAYAAwAFAAQAAFACAAYAAwAFAAQAAFD6/wAAAwAFAAQAAFD7/wAAAwAFAAQAAFD8/wAAAwAFAAQAAFADAAkAAwAFAAQAAFAEAAkAAwAFAAQAAFAFAAkAAwAFAAQAAFAGAAkAAwAFAAQAAFAHAAkAAwAFAAQAAFAIAAkAAwAFAAQAAFAJAAkAAwAFAAQAAFAKAAkAAwAFAAQAAFALAAkAAwAFAAQAAFAMAAkAAwAFAAQAAFANAAkAAwAFAAQAAFAOAAkAAwAFAAQAAFAPAAYAAwAFAAQAAFAQAAYAAwAFAAQAAFARAAYAAwAFAAQAAFASAAYAAwAFAAQAAFATAAYAAwAFAAQAAFA=")
+tile_set = SubResource("TileSet_b7or8")
 
 [node name="Hazards Phase 2" type="Node2D" parent="." unique_id=1815192711]
 
@@ -357,7 +395,7 @@ shape = SubResource("RectangleShape2D_bgxgs")
 debug_color = Color(0, 0.6431373, 0.32156864, 0.41960785)
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("13_6uoqi")]
-position = Vector2(719, 34)
+position = Vector2(720, 107)
 
 [node name="Teleporter" type="Area2D" parent="Level Objects" unique_id=253013132]
 position = Vector2(-1221, -27)

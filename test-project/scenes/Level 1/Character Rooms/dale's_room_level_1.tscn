@@ -274,6 +274,7 @@ texture = ExtResource("4_vot2m")
 margins = Vector2i(3, 0)
 texture_region_size = Vector2i(32, 29)
 4:4/0 = 0
+4:4/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_itvtr"]
@@ -385,7 +386,7 @@ tile_set = SubResource("TileSet_jouvp")
 [node name="Characters" type="Node2D" parent="." unique_id=712391642]
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("1_5dxv5")]
-position = Vector2(604, 849)
+position = Vector2(366, 1991)
 JUMP_VELOCITY = 410.0
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_7y7bp")]
@@ -442,7 +443,7 @@ scale = Vector2(378.91, 1)
 [node name="Level Objects" type="Node2D" parent="." unique_id=1703724514]
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("9_6kk03")]
-position = Vector2(1601, 2556)
+position = Vector2(1597, 2677)
 
 [node name="CPUParticles2D" parent="Level Objects" unique_id=879730158 instance=ExtResource("10_jouvp")]
 position = Vector2(393, 694)

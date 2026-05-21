@@ -6,3 +6,5 @@ signal oneway_disabled
 signal coin_collect
 #for quiting levels in pause menu
 signal quit_level
+
+signal dale_wind_off

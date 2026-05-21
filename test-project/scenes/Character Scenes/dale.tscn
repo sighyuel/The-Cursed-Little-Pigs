@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
 [ext_resource type="Texture2D" uid="uid://t2lfmh2i447b" path="res://assets/Character sprites/dale_gp.png" id="10_2rk0a"]
 [ext_resource type="Texture2D" uid="uid://y7omolf3g510" path="res://assets/Character sprites/dale_idle.png" id="10_2yoqr"]
+[ext_resource type="Texture2D" uid="uid://uqu83b4ai23k" path="res://assets/Character sprites/dale_climb.png" id="10_e4jcc"]
 [ext_resource type="Texture2D" uid="uid://buih4wwhi5kos" path="res://assets/Character sprites/dale_jump.png" id="11_735xi"]
 [ext_resource type="Texture2D" uid="uid://dkn54apyobw0g" path="res://assets/Character sprites/dale_walk.png" id="12_gj256"]
 
@@ -21,6 +22,22 @@ size = Vector2(34, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k47w"]
 size = Vector2(28, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2fpj"]
+atlas = ExtResource("10_e4jcc")
+region = Rect2(0, 0, 93, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h7c4"]
+atlas = ExtResource("10_e4jcc")
+region = Rect2(93, 0, 93, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08fiu"]
+atlas = ExtResource("10_e4jcc")
+region = Rect2(186, 0, 93, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bqyw"]
+atlas = ExtResource("10_e4jcc")
+region = Rect2(279, 0, 93, 83)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbigx"]
 atlas = ExtResource("10_2rk0a")
@@ -76,6 +93,23 @@ region = Rect2(570, 0, 114, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tvhot"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2fpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h7c4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08fiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bqyw")
+}],
+"loop": true,
+"name": &"dale_climb",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rbigx")
@@ -214,6 +248,4 @@ emitting = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=77553711]
 position = Vector2(-1, -28)
 sprite_frames = SubResource("SpriteFrames_tvhot")
-animation = &"dale_walk"
-frame = 2
-frame_progress = 0.15850243
+animation = &"dale_idle"

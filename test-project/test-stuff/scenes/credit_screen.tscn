@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmetcyxen21hs"]
 
 [ext_resource type="Script" uid="uid://bti1w6pkxogv8" path="res://test-stuff/scenes/credit_screen.gd" id="1_we1kd"]
-[ext_resource type="Script" uid="uid://b0oayp8fgv07l" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
+[ext_resource type="Script" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="2_et2vd"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_psj60"]
 [ext_resource type="Texture2D" uid="uid://db2anjstrjkv3" path="res://assets/Menu Text/tclp_credits.png" id="2_ry1q5"]
@@ -20,35 +20,36 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = 83.0
 offset_top = 70.0
-offset_right = 536.0
-offset_bottom = 115.0
-text = "Main Progammers:  eariza3, awesomeking279,  kom0"
+offset_right = 563.0
+offset_bottom = 127.0
+text = "Main Progammers:  eariza3, awesomeking279,  kom0
+siulsighyuel"
 editable = false
 
 [node name="Artist" type="TextEdit" parent="Credit movement" unique_id=360561047]
 layout_mode = 0
-offset_left = 176.0
-offset_top = 122.0
-offset_right = 447.0
-offset_bottom = 167.0
+offset_left = 175.0
+offset_top = 129.0
+offset_right = 446.0
+offset_bottom = 174.0
 text = "Art by: kinokiita, mr.taxevader"
 editable = false
 
 [node name="Level desginer" type="TextEdit" parent="Credit movement" unique_id=1193245774]
 layout_mode = 0
-offset_left = 123.0
-offset_top = 172.0
-offset_right = 496.0
-offset_bottom = 217.0
+offset_left = 124.0
+offset_top = 175.0
+offset_right = 497.0
+offset_bottom = 220.0
 text = "Level design by: mr.taxevader, siulsighyuel"
 editable = false
 
 [node name="Music" type="TextEdit" parent="Credit movement" unique_id=1079682085]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 219.0
+offset_top = 226.0
 offset_right = 402.0
-offset_bottom = 267.0
+offset_bottom = 274.0
 text = "Music by: nekan0v1_"
 editable = false
 
