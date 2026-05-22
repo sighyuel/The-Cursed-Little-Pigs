@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
 [ext_resource type="Script" uid="uid://cjd67lselahx8" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_bjgp6"]
-[ext_resource type="Texture2D" uid="uid://5cw7mvnvyb37" path="res://assets/Tile Sets/tclp_bg_sky.png" id="14_r1073"]
+[ext_resource type="Texture2D" uid="uid://b3fktyyuqkua6" path="res://assets/Tile Sets/tclp_title.png" id="14_r1073"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgp6"]
 content_margin_left = 4.0
@@ -300,7 +300,6 @@ icon = ExtResource("7_ahe0o")
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1810158974]
-modulate = Color(0.75398386, 0.75398386, 0.75398374, 1)
 z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0

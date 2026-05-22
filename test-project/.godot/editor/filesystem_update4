@@ -12,3 +12,4 @@ res://scenes/Character Scenes/perry.tscn
 res://scripts/Characters/perry.gd
 res://scenes/Class Scenes/character_class.tscn
 res://scripts/Classes/character_class.gd
+res://test-stuff/scenes/MainMenu.tscn
