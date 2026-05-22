@@ -13,8 +13,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	if Input.is_action_just_pressed("B"):
-		get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")
+
 
 
 func _input(_event: InputEvent) -> void:
@@ -37,5 +36,4 @@ func _on_resume_pressed() -> void:
 
 
 func _on_quit_game_pressed() -> void:
-	if Input.is_action_just_pressed("B"):
-		get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://test-stuff/scenes/MainMenu.tscn")

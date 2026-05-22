@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dwdj0hfapimid" path="res://assets/Tile Sets/spikes1.png" id="16_almst"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="17_almst"]
 [ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="19_eupdf"]
+[ext_resource type="Texture2D" uid="uid://2qbnoi5hqsrb" path="res://assets/Tile Sets/tclp_bg.png" id="20_4ty6k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljhq3"]
 texture = ExtResource("1_88ydc")
@@ -553,7 +554,13 @@ script = ExtResource("17_almst")
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1369125377]
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = -1
+offset_left = -5535.0
+offset_top = -3910.0
+offset_right = -2335.0
+offset_bottom = -2110.0
+scale = Vector2(3.505, 3.505)
+texture = ExtResource("20_4ty6k")
+stretch_mode = 1
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]

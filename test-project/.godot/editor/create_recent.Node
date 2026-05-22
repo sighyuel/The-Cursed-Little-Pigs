@@ -1,3 +1,4 @@
+AnimatedSprite2D
 TextureRect
 Button
 TextEdit
@@ -8,7 +9,6 @@ Area2D
 DirectionalLight2D
 Control
 Container
-AnimatedSprite2D
 Container
 TileMapLayer
 PointLight2D

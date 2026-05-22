@@ -8,6 +8,12 @@ extends Node2D
 
 func _ready() -> void:
 	GlobalSignals.connect("coin_collect",_coin_collect)
+	await fade_in()
+
+func fade_in() -> void:
+	var t = get_tree().create_tween()
+	t.tween_property(self,"modulate:a", 1.0,3.0).from(0.0)
+	await t.finished
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

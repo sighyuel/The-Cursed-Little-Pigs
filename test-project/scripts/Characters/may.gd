@@ -48,14 +48,6 @@ func _physics_process(delta: float) -> void:
 	may_camera.enabled = false
 	walking_feedback()
 	
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = speed
-		may_anim.scale.x = 1
-	elif Input.is_action_pressed("ui_left"):
-		velocity.x = speed
-		may_anim.scale.x = -1
-	else:
-		velocity.x = 0
 	
 	if health == 0:
 		global_position = original_pos
@@ -82,6 +74,14 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor() and Input.is_action_just_pressed("ui_down"):
 			GlobalSignals.oneway_disabled.emit()
 		
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = speed
+			may_anim.scale.x = 1
+		elif Input.is_action_pressed("ui_left"):
+			velocity.x = speed
+			may_anim.scale.x = -1
+		else:
+			velocity.x = 0
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
 		
