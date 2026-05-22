@@ -75,10 +75,10 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_pressed("ui_right"):
 			velocity.x = speed
-			may_anim.scale.x = 1
+			may_anim.flip_h = false
 		elif Input.is_action_pressed("ui_left"):
 			velocity.x = speed
-			may_anim.scale.x = -1
+			may_anim.flip_h = true
 		else:
 			velocity.x = 0
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)

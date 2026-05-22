@@ -180,7 +180,6 @@ expand_mode = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=594715394]
 stream = ExtResource("2_ji2f2")
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]

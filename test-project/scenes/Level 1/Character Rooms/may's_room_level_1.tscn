@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
+[ext_resource type="PackedScene" uid="uid://drn87fsb1rnmp" path="res://assets/Sounds/audio_stream_player.tscn" id="21_b7or8"]
 [ext_resource type="Texture2D" uid="uid://2qbnoi5hqsrb" path="res://assets/Tile Sets/tclp_bg.png" id="21_f1od7"]
 [ext_resource type="Script" uid="uid://ctd1ikw1o2dg5" path="res://test-stuff/scripts/hint.gd" id="21_gh8nl"]
 
@@ -445,6 +446,10 @@ offset_top = 585.0
 offset_right = 543.0
 offset_bottom = 627.0
 text = "Dale can block wind..."
+
+[node name="AudioStreamPlayer" parent="." unique_id=1982507938 instance=ExtResource("21_b7or8")]
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

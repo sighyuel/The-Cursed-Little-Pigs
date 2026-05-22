@@ -96,5 +96,7 @@ emission_rect_extents = Vector2(10.945, 3.83)
 scale_amount_max = 22.98
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1757564086]
-position = Vector2(15, -36)
+position = Vector2(-1, -36)
 texture = ExtResource("10_vhu2n")
+region_enabled = true
+region_rect = Rect2(5, 0, 52, 96)

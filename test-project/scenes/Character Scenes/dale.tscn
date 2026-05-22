@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_5r3sg"]
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="4_kneoj"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="5_q8mqc"]
-[ext_resource type="Script" path="res://scripts/Characters/DaleCamera.gd" id="6_e4jcc"]
+[ext_resource type="Script" uid="uid://cyoy54itlaf8n" path="res://scripts/Characters/DaleCamera.gd" id="6_e4jcc"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_kiko6"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_rwti3"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
@@ -180,7 +180,7 @@ piggy = "Dale"
 collision = NodePath("charCol")
 charMesh = NodePath("mesh")
 JUMP_VELOCITY = 400.0
-acceleration = 3.0
+acceleration = 5.0
 ladder_speed = -150.515
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 

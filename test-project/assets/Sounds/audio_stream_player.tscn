@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://drn87fsb1rnmp"]
+
+[ext_resource type="AudioStream" uid="uid://c87k3vhk7tbnd" path="res://assets/Sounds/Bad Piggies - Level Music.ogg" id="1_7u3ak"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1982507938]
+stream = ExtResource("1_7u3ak")

@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="17_d4us3"]
 [ext_resource type="Texture2D" uid="uid://2qbnoi5hqsrb" path="res://assets/Tile Sets/tclp_bg.png" id="18_itvtr"]
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="19_hca3b"]
+[ext_resource type="PackedScene" uid="uid://drn87fsb1rnmp" path="res://assets/Sounds/audio_stream_player.tscn" id="20_d6ol8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
 texture = ExtResource("4_vot2m")
@@ -520,5 +521,9 @@ offset_right = 1169.0
 offset_bottom = 124.0
 text = "Dale's Room"
 script = ExtResource("19_hca3b")
+
+[node name="AudioStreamPlayer" parent="." unique_id=1982507938 instance=ExtResource("20_d6ol8")]
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
