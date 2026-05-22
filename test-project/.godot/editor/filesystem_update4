@@ -21,3 +21,4 @@ res://scripts/Level Objects/collectible_key.gd
 res://scenes/Level 1/Character Rooms/DaleRoomToMayRoom.gd
 res://scenes/Character Scenes/may.tscn
 res://scenes/Hazards/PatrolEnemy.tscn
+res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn

@@ -401,10 +401,10 @@ position = Vector2(658, 119)
 position = Vector2(837, 117)
 
 [node name="PatrolEnemy3" parent="Hazards" unique_id=343333006 instance=ExtResource("5_bjr28")]
-position = Vector2(668, 1617)
+position = Vector2(669, 1620)
 
 [node name="PatrolEnemy4" parent="Hazards" unique_id=1401291409 instance=ExtResource("5_bjr28")]
-position = Vector2(1305, 1610)
+position = Vector2(1305, 1621)
 
 [node name="Pogo" parent="Hazards" unique_id=1144140681 instance=ExtResource("6_mhsti")]
 position = Vector2(790, 864)

@@ -485,7 +485,7 @@ scale = Vector2(1.77, 1.71)
 libraries/ = SubResource("AnimationLibrary_y2v12")
 
 [node name="CollectibleKey" parent="Level Objects" unique_id=1180161614 instance=ExtResource("6_k5c3y")]
-position = Vector2(-525, -2718)
+position = Vector2(-526, -2707)
 
 [node name="Teleporter" type="Area2D" parent="Level Objects" unique_id=1321778032]
 collision_layer = 0
@@ -505,7 +505,7 @@ animation = &"new_animation"
 [node name="Hazards" type="Node2D" parent="." unique_id=1055649095]
 
 [node name="PatrolEnemy" parent="Hazards" unique_id=812782412 instance=ExtResource("5_y2v12")]
-position = Vector2(496, -329)
+position = Vector2(447, -330)
 
 [node name="Spikes" parent="Hazards" unique_id=639613534 instance=ExtResource("6_ljhq3")]
 tile_map_data = PackedByteArray("AAAEAOr/AwAEAAQAAAAFAOr/AwAEAAQAAAAIAOr/AwAEAAQAAAAJAOr/AwAEAAQAAADy/9P/AwAEAAQAADDz/9P/AwAEAAQAADD0/9P/AwAEAAQAADD1/9P/AwAEAAQAADD2/9P/AwAEAAQAADD3/9P/AwAEAAQAADD4/9P/AwAEAAQAADD5/9P/AwAEAAQAADD6/9P/AwAEAAQAADD7/9P/AwAEAAQAADA=")
