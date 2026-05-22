@@ -3,6 +3,7 @@ extends character
 @onready var may_camera = $Camera2D
 @onready var dust_particle = $DustParticles
 @onready var jump_particle = $JumpParticles
+@onready var may_anim = $Sprite2D
 var vec = Vector2(0,10)
 var first_cam_pos = Vector2(0,-20)
 var second_cam_pos = first_cam_pos + vec * 5
@@ -47,7 +48,14 @@ func _physics_process(delta: float) -> void:
 	may_camera.enabled = false
 	walking_feedback()
 	
-	
+	if Input.is_action_pressed("ui_right"):
+		velocity.x = speed
+		may_anim.scale.x = 1
+	elif Input.is_action_pressed("ui_left"):
+		velocity.x = speed
+		may_anim.scale.x = -1
+	else:
+		velocity.x = 0
 	
 	if health == 0:
 		global_position = original_pos

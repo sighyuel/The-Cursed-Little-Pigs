@@ -102,10 +102,10 @@ offset_bottom = 40.0
 
 [node name="Start" type="Button" parent="Button_manager" unique_id=64433444]
 layout_mode = 0
-offset_left = 255.0
-offset_top = 125.0
+offset_left = 254.99998
+offset_top = 141.0
 offset_right = 1041.0
-offset_bottom = 361.0
+offset_bottom = 377.0
 scale = Vector2(0.15, 0.15)
 focus_neighbor_bottom = NodePath("../Options")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bjgp6")
@@ -118,10 +118,10 @@ script = ExtResource("2_8usxe")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=625667630]
 layout_mode = 0
-offset_left = 230.00002
-offset_top = 163.0
+offset_left = 230.0
+offset_top = 179.0
 offset_right = 1376.0
-offset_bottom = 495.76465
+offset_bottom = 511.76465
 scale = Vector2(0.15, 0.15)
 focus_neighbor_top = NodePath("../Start")
 focus_neighbor_bottom = NodePath("../Credits")
@@ -151,10 +151,10 @@ script = ExtResource("7_bjgp6")
 
 [node name="Credits" type="Button" parent="Button_manager" unique_id=297037759]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 217.0
+offset_left = 230.99998
+offset_top = 233.0
 offset_right = 1364.0
-offset_bottom = 461.0
+offset_bottom = 477.0
 scale = Vector2(0.15, 0.15)
 focus_neighbor_left = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Quit")

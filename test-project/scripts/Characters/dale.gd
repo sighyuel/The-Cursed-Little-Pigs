@@ -59,6 +59,7 @@ func _physics_process(delta: float) -> void:
 	if Global_Variables.active == 1:
 		if _on_ladder:
 			ladder_movement(delta)
+			dale_anim.play("dale_climb")
 		else:
 			_movement(delta)
 		if _is_on_ladder() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down")):
@@ -84,6 +85,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			dale_anim.play("dale_jump")
 		
+		if move_dir == 0:
+			dale_anim.play("dale_idle")
 		_dale_slam()
 		rect.visible = true
 		_camera_transition()

@@ -28,3 +28,7 @@ func _coin_collect() -> void:
 	
 	TP.set_collision_mask_value(2, true)
 	tp_anim.play("new_animation")
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

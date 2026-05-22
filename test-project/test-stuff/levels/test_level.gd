@@ -1,7 +1,6 @@
 extends Node2D
 
 func _ready() -> void:
-	$Collectibles/CollectibleKey._coin_count = 0
 	await fade_in()
 
 func fade_in() -> void:
