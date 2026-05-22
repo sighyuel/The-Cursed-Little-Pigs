@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="16_0o0qt"]
 [ext_resource type="Texture2D" uid="uid://dnp2ox0utdpim" path="res://assets/Tile Sets/portalv2.png" id="16_s0os6"]
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="17_hknmq"]
-[ext_resource type="Texture2D" uid="uid://xy15pbvyog8e" path="res://assets/Tile Sets/tclp_bg_sky_alt_big.png" id="19_ul6ce"]
+[ext_resource type="Texture2D" uid="uid://2qbnoi5hqsrb" path="res://assets/Tile Sets/tclp_bg.png" id="21_f1od7"]
 [ext_resource type="Script" uid="uid://ctd1ikw1o2dg5" path="res://test-stuff/scripts/hint.gd" id="21_gh8nl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hknmq"]
@@ -437,14 +437,14 @@ theme_override_font_sizes/font_size = 24
 text = "May's Room"
 script = ExtResource("16_0o0qt")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=833969280]
-visible = false
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=886914049]
 z_index = -1
-offset_left = -1038.0
-offset_top = -732.0
-offset_right = 3459.0
-offset_bottom = 1868.0
-texture = ExtResource("19_ul6ce")
+offset_left = -993.00006
+offset_top = -1398.0
+offset_right = 1705.0
+offset_bottom = 119.0
+scale = Vector2(1.73, 1.73)
+texture = ExtResource("21_f1od7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2066113578]
 collision_layer = 0
