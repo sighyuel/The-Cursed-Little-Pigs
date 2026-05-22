@@ -382,20 +382,19 @@ animations = [{
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8pl3"]
 texture = ExtResource("16_almst")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(0.449646, 0.35971832, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, 8, -0.62950706, 0, 8, -8)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(8, -8, -0.62950706, 0, -8, -8)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, -0.62950706, 0, -8, 8)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbsnr"]
 texture = ExtResource("1_88ydc")
@@ -403,14 +402,13 @@ margins = Vector2i(3, 0)
 texture_region_size = Vector2i(32, 29)
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:4/0/physics_layer_0/polygon_1/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_repao"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 2
-physics_layer_1/collision_layer = 4
-physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_x8pl3")
 sources/3 = SubResource("TileSetAtlasSource_fbsnr")
 
@@ -455,10 +453,10 @@ tile_set = SubResource("TileSet_g7rqu")
 position = Vector2(-383, 16)
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("3_87yb3")]
-position = Vector2(-339, 2)
+position = Vector2(-267, 18)
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("4_pal0a")]
-position = Vector2(-246, 16)
+position = Vector2(-122, 7)
 
 [node name="Level Objects" type="Node2D" parent="." unique_id=630541944]
 position = Vector2(117, -52)

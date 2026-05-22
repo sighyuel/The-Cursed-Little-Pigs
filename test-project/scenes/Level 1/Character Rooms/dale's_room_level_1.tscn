@@ -391,10 +391,10 @@ tile_set = SubResource("TileSet_jouvp")
 position = Vector2(300, -18)
 
 [node name="Dale" parent="Characters" unique_id=1644848735 instance=ExtResource("1_5dxv5")]
-position = Vector2(1600, 2325)
+position = Vector2(1353, 106)
 
 [node name="May" parent="Characters" unique_id=1187849158 instance=ExtResource("2_7y7bp")]
-position = Vector2(1013, 1949)
+position = Vector2(681, 104)
 
 [node name="Hazards" type="Node2D" parent="." unique_id=256593876]
 

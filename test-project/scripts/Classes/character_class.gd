@@ -130,11 +130,8 @@ func _perry_stretch():
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .6
-		$Camera2D.zoom -= Vector2(.006, .006)
+		$Camera2D._perry_stretch()
 		tree_mode_activated = true
-		#acceleration -= 1
-		if $Camera2D.zoom < min_camera_zoom:
-			$Camera2D.zoom = min_camera_zoom
 
 
 	if charCol.scale.y >= max_height and $Sprite2D.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
@@ -152,7 +149,7 @@ func _perry_reset():
 		global_position.y -= tree_reset_height
 		rect.position.y = -10
 		$Ladder.scale.y = 1
-		$Camera2D.zoom = Vector2(1,1)
+		$Camera2D._perry_reset()
 		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities
