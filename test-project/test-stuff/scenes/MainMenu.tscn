@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
 [ext_resource type="Script" uid="uid://cjd67lselahx8" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_bjgp6"]
-[ext_resource type="Texture2D" uid="uid://bsscsltnuc07s" path="res://assets/Tile Sets/tclp_bg_small.png" id="14_r1073"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgp6"]
 content_margin_left = 4.0
@@ -183,6 +182,7 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -234,6 +234,7 @@ text = "FullScreen
 script = ExtResource("4_mq833")
 
 [node name="CreditsBox" type="Panel" parent="." unique_id=772092988]
+visible = false
 offset_right = 627.0
 offset_bottom = 357.0
 
@@ -295,7 +296,6 @@ offset_bottom = 411.0
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("7_ahe0o")
 flat = true
-
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="focus_entered" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_entered"]
