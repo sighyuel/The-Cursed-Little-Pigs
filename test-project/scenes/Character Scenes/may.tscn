@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_rukwq"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_alu5n"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_p18jy"]
+[ext_resource type="Texture2D" uid="uid://bj7syrgxcr7lo" path="res://assets/Character sprites/MayIdle.png" id="10_vhu2n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ii0t2"]
 
@@ -33,6 +34,7 @@ ladder_speed = -150.0
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=1836331763]
+visible = false
 position = Vector2(0, -12.499999)
 scale = Vector2(20, 45)
 mesh = SubResource("BoxMesh_ii0t2")
@@ -91,3 +93,7 @@ position = Vector2(0, 6.705)
 emitting = false
 emission_rect_extents = Vector2(10.945, 3.83)
 scale_amount_max = 22.98
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1757564086]
+position = Vector2(15, -36)
+texture = ExtResource("10_vhu2n")
