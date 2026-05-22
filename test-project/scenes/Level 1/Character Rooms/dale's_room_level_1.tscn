@@ -503,7 +503,6 @@ libraries/ = SubResource("AnimationLibrary_tv2mr")
 [node name="PauseMenu" parent="." unique_id=1148108138 instance=ExtResource("17_d4us3")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=161755489]
-visible = false
 z_index = -1
 offset_left = -3308.0
 offset_top = -1637.0001

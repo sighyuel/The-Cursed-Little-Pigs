@@ -419,7 +419,6 @@ text = "May's Room"
 script = ExtResource("16_0o0qt")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=886914049]
-visible = false
 z_index = -1
 offset_left = -1489.0
 offset_top = -1311.0

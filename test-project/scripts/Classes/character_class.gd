@@ -37,7 +37,7 @@ var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
 @onready var max_height = 35
-@onready var max_sprite_height = 380
+@onready var max_sprite_height = 1.1
 var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
@@ -139,7 +139,7 @@ func _perry_stretch():
 
 	if charCol.scale.y >= max_height and $Sprite2D.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
 		charCol.scale.y = max_height
-		$Sprite2D.scale.y = max_sprite_height
+		$Sprite2D.scale.y = 7.5
 		$Ladder.scale.y = max_ladder_height
 
 #resets perry back to original height
