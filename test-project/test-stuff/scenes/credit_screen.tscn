@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cmetcyxen21hs"]
 
 [ext_resource type="Script" uid="uid://bti1w6pkxogv8" path="res://test-stuff/scenes/credit_screen.gd" id="1_we1kd"]
-[ext_resource type="Script" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
+[ext_resource type="Script" uid="uid://b0oayp8fgv07l" path="res://test-stuff/scenes/back.gd" id="2_5qwgu"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="2_et2vd"]
 [ext_resource type="AudioStream" uid="uid://buehksl5glbia" path="res://bad piggies.ogg" id="2_psj60"]
 [ext_resource type="Texture2D" uid="uid://db2anjstrjkv3" path="res://assets/Menu Text/tclp_credits.png" id="2_ry1q5"]
 [ext_resource type="Texture2D" uid="uid://dmq3ydlfn7goh" path="res://picture of john godot/New Project (1).png" id="6_jcwk6"]
+[ext_resource type="Texture2D" uid="uid://5cw7mvnvyb37" path="res://assets/Tile Sets/tclp_bg_sky.png" id="7_jcwk6"]
 
 [node name="Credit Screen" type="Node2D" unique_id=301742647]
 script = ExtResource("1_we1kd")
@@ -82,5 +83,13 @@ show_behind_parent = true
 position = Vector2(524.00006, 314)
 scale = Vector2(0.43847653, 0.1777344)
 texture = ExtResource("6_jcwk6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1349369846]
+modulate = Color(0.585062, 0.585062, 0.5850621, 1)
+z_index = -1
+offset_left = -1.0
+offset_right = 639.0
+offset_bottom = 360.0
+texture = ExtResource("7_jcwk6")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

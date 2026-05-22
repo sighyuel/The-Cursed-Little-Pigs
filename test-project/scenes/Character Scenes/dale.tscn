@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://db2nswri8t7lw" path="res://scenes/Component Scenes/hitbox_component.tscn" id="3_5r3sg"]
 [ext_resource type="PackedScene" uid="uid://ddavqlnlsktct" path="res://scenes/Component Scenes/ladder_detect_ray.tscn" id="4_kneoj"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="5_q8mqc"]
+[ext_resource type="Script" path="res://scripts/Characters/DaleCamera.gd" id="6_e4jcc"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="6_kiko6"]
-[ext_resource type="Script" uid="uid://cyoy54itlaf8n" path="res://scripts/Characters/DaleCamera.gd" id="6_tvhot"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="7_rwti3"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="8_tvhot"]
 [ext_resource type="Texture2D" uid="uid://t2lfmh2i447b" path="res://assets/Character sprites/dale_gp.png" id="10_2rk0a"]
@@ -18,7 +18,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_lm3dp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oudw0"]
-size = Vector2(34, 30)
+size = Vector2(31, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k47w"]
 size = Vector2(28, 27)
@@ -191,7 +191,7 @@ scale = Vector2(36.875, 30)
 mesh = SubResource("BoxMesh_lm3dp")
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=770709682]
-position = Vector2(0, -5)
+position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_oudw0")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=760327598]
@@ -232,9 +232,7 @@ position_smoothing_speed = 10.0
 drag_vertical_enabled = true
 drag_bottom_margin = 0.45
 editor_draw_drag_margin = true
-script = ExtResource("6_tvhot")
-max_shake = 20.0
-shake_fade = 7.5
+script = ExtResource("6_e4jcc")
 
 [node name="Sounds" parent="." unique_id=2000688459 instance=ExtResource("6_kiko6")]
 

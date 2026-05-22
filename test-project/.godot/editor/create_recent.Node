@@ -1,9 +1,9 @@
-AnimatedSprite2D
+Label
 TextureRect
+AnimatedSprite2D
 Button
 TextEdit
 Sprite2D
-Label
 CollisionShape2D
 Area2D
 DirectionalLight2D

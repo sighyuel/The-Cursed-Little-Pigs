@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func fade_in() -> void:
 	var t = get_tree().create_tween()
-	t.tween_property(self,"modulate:a", 1.0,3.0).from(0.0)
+	t.tween_property(self,"modulate:a", 1.0,2.0).from(0.0)
 	await t.finished
 
 

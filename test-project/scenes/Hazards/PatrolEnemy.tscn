@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://k3ilfteom5ro" path="res://assets/Tile Sets/patrol_enemy.png" id="2_ptcdf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rgpn"]
+size = Vector2(14, 14)
 
 [node name="PatrolEnemy" type="Area2D" unique_id=812782412]
 collision_layer = 0

@@ -9,8 +9,12 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GlobalSignals.connect("coin_collect",_coin_collect)
+	await fade_out()
 
-
+func fade_out() -> void:
+	var t = get_tree().create_tween()
+	t.tween_property(self,"modulate:a", 1.0,2.0).from(0.0)
+	await t.finished
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

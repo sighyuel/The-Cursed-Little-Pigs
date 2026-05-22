@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cylkwcbg55nff" path="res://assets/Tile Sets/portal.png" id="15_62dag"]
 [ext_resource type="PackedScene" uid="uid://dewxnwnjohhwk" path="res://test-stuff/scenes/pause_menu.tscn" id="17_d4us3"]
 [ext_resource type="Texture2D" uid="uid://2qbnoi5hqsrb" path="res://assets/Tile Sets/tclp_bg.png" id="18_itvtr"]
+[ext_resource type="Script" uid="uid://db4x7y7ttretw" path="res://test-stuff/scripts/fade_out.gd" id="19_hca3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6kk03"]
 texture = ExtResource("4_vot2m")
@@ -511,5 +512,13 @@ offset_bottom = 215.0
 scale = Vector2(3.1, 3.1)
 texture = ExtResource("18_itvtr")
 stretch_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=495477520]
+offset_left = 1068.0
+offset_top = 104.0
+offset_right = 1169.0
+offset_bottom = 124.0
+text = "Dale's Room"
+script = ExtResource("19_hca3b")
 
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
