@@ -33,7 +33,7 @@ res://assets/Sounds/sounds.tscn::3a851cbf1af3ffe7b88f733f8ccb44b9::1778355389::r
 res://scenes/Hazards/circle saw.tscn::6c1f5fb7500df9fc2b7714ba6251851b::1778346516::res://.godot/exported/133200997/export-84927d25addb8574b1a799479f82f7ab-circle saw.scn
 res://scenes/Hazards/PatrolEnemy.tscn::e7c0afc1ee73196f75a3ccdff0fc5b62::1779431616::res://.godot/exported/133200997/export-c7dea484d1c5083d9ef8e1fec2ba2d00-PatrolEnemy.scn
 res://scenes/Hazards/spikes.tscn::1e684e28a3c2d72b815e39c445e2b179::1778350744::res://.godot/exported/133200997/export-83cc4267043ae81b770d8c961e024cac-spikes.scn
-res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn::0e54cf5869383f5a0d4fa5f469c1bc1b::1779431901::res://.godot/exported/133200997/export-205cf7ffb16db1800dfd5694637f3129-dale's_room_level_1.scn
+res://scenes/Level 1/Character Rooms/dale's_room_level_1.tscn::f76d810e9b4e8c8f78684ddc6ac2629c::1779435337::res://.godot/exported/133200997/export-205cf7ffb16db1800dfd5694637f3129-dale's_room_level_1.scn
 res://scenes/Level 1/Character Rooms/may's_room_level_1.tscn::7f72810954185d6e9fb800e05b317576::1779431901::res://.godot/exported/133200997/export-55b915f44604f65a6f5802320e21466f-may's_room_level_1.scn
 res://scenes/Level Object Scenes/moving_platform.tscn::ace890573c58b299b59b6fdfece853a8::1778959943::res://.godot/exported/133200997/export-deb70c2a7d4845c9167b1a775b66f726-moving_platform.scn
 res://test-stuff/scenes/credit_screen.tscn::e0bd0e8eff2ae519215424c5c863257e::1779431617::res://.godot/exported/133200997/export-865c81d82cd2d2051257f469f73573a0-credit_screen.scn
