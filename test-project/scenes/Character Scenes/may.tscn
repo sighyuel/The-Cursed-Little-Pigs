@@ -44,6 +44,7 @@ position = Vector2(0, -12.5)
 shape = SubResource("RectangleShape2D_qbito")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=1239872276]
+visible = false
 offset_left = -4.0
 offset_top = -48.0
 offset_right = 4.0
@@ -73,7 +74,6 @@ shape = SubResource("RectangleShape2D_2kyhc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=40045717]
 offset = Vector2(0, -75)
-zoom = Vector2(0.6, 0.6)
 limit_enabled = false
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

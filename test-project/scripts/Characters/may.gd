@@ -44,7 +44,6 @@ func may_camera_feedback():
 func _physics_process(delta: float) -> void:
 	velocity += wind_velocity * 0.8
 	move_and_slide()
-	rect.visible = false
 	may_camera.enabled = false
 	walking_feedback()
 	
@@ -83,7 +82,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = 0
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
-		rect.visible = true
 		
 		
 		_camera_transition()

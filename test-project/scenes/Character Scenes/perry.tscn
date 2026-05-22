@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh8oglowmwkph" path="res://scenes/Level Object Scenes/ladder.tscn" id="4_56pri"]
 [ext_resource type="PackedScene" uid="uid://cdkve2vn8anc2" path="res://test-stuff/scenes/ladder_detect.tscn" id="4_fd7e2"]
 [ext_resource type="PackedScene" uid="uid://c8jroke7dv2yh" path="res://assets/Sounds/sounds.tscn" id="7_3m2jw"]
-[ext_resource type="Script" uid="uid://bxvfkoq1srrrr" path="res://scenes/Character Scenes/PerryCamera.gd" id="7_68f5o"]
+[ext_resource type="Script" path="res://scenes/Character Scenes/PerryCamera.gd" id="7_68f5o"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="8_8tqdd"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="9_68f5o"]
 
@@ -80,7 +80,7 @@ shape = SubResource("RectangleShape2D_wjqgi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
 offset = Vector2(0, -75)
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_vertical_enabled = true
