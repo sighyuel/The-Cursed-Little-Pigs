@@ -2,12 +2,14 @@ extends Node2D
 
 @onready var button_manager: Control = $Button_manager
 @onready var options_box: Panel = $OptionsBox
+@onready var credits_box: Panel = $CreditsBox
 
 func _ready():
-	#GlobalSignals.connect("quit_level",_quit_level)
+	
 	$Button_manager/Start.grab_focus()
 	button_manager.visible = true
 	options_box.visible = false
+	credits_box.visible = false
 	await fade_in()
 
 	process_mode = Node.PROCESS_MODE_INHERIT
@@ -35,12 +37,14 @@ func _on_back_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://test-stuff/scenes/credit_screen.tscn")
+	$CreditsBox/BackButton.grab_focus()
+	print("Credits pressed")
+	button_manager.visible = false
+	credits_box.visible = true
 
-#func _quit_level() -> void:
-	#print("quit")
-	#$AudioStreamPlayer.play(0.0)
 
 
-func _on_options_focus_entered() -> void:
-	pass # Replace with function body.
+
+func _on_back_button_pressed() -> void:
+	_ready()
+

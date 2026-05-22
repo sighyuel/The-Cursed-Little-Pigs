@@ -1,5 +1,10 @@
+Button
+TextEdit
 TextureRect
+Panel
+Label
 Control
+Container
 AnimatedSprite2D
 Label
 Container
@@ -8,7 +13,4 @@ PointLight2D
 Sprite2D
 CPUParticles2D
 AudioStreamPlayer
-Button
-Panel
 AnimatableBody2D
-AnimationPlayer

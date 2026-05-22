@@ -183,7 +183,6 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="OptionsBox" type="Panel" parent="." unique_id=71234060]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -234,24 +233,70 @@ text = "FullScreen
 "
 script = ExtResource("4_mq833")
 
-[node name="TextureRect" type="TextureRect" parent="OptionsBox" unique_id=52857285]
+[node name="CreditsBox" type="Panel" parent="." unique_id=772092988]
+offset_right = 627.0
+offset_bottom = 357.0
+
+[node name="Credits UI" type="TextureRect" parent="CreditsBox" unique_id=1691955827]
 layout_mode = 0
-offset_left = 205.0
-offset_top = 8.0
-offset_right = 432.0
-offset_bottom = 54.0
-texture = ExtResource("4_dccth")
-expand_mode = 1
+offset_left = 200.0
+offset_right = 1321.0
+offset_bottom = 236.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_mq833")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1584445154]
-modulate = Color(0.6431373, 0.6431373, 0.6431373, 0.8784314)
-z_index = -1
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("14_r1073")
+[node name="Main People" type="TextEdit" parent="CreditsBox" unique_id=498549855]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 677.0
+offset_bottom = 90.0
+scale = Vector2(0.9, 0.9)
+text = "Made by mr.taxevader, siulsighyuel, kom0, eariza3, kinokiita, awesomeking279"
+editable = false
 
-[connection signal="focus_entered" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_entered"]
-[connection signal="focus_exited" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_exited"]
+[node name="Programmers" type="TextEdit" parent="CreditsBox" unique_id=1004976675]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 647.0
+offset_bottom = 130.0
+scale = Vector2(0.9, 0.9)
+text = "Progammer by:  eariza3, awesomeking279, mr.taxevader, siulsighyuel, kom0"
+editable = false
+
+[node name="Art" type="TextEdit" parent="CreditsBox" unique_id=509869646]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 609.0
+offset_bottom = 160.0
+text = "Art by: kinokiita, mr.taxevader"
+editable = false
+
+[node name="Level" type="TextEdit" parent="CreditsBox" unique_id=819811830]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 627.0
+offset_bottom = 200.0
+text = "Level designer by: mr.taxevader, siulsighyuel"
+editable = false
+
+[node name="TextEdit" type="TextEdit" parent="CreditsBox" unique_id=527764784]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 623.0
+offset_bottom = 240.0
+text = "Music by: nekan0v1_"
+editable = false
+
+[node name="BackButton" type="Button" parent="CreditsBox" unique_id=1905118581]
+layout_mode = 0
+offset_top = 300.0
+offset_right = 339.0
+offset_bottom = 411.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("7_ahe0o")
+flat = true
+
+
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="focus_entered" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_entered"]
 [connection signal="focus_exited" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_exited"]
@@ -266,3 +311,4 @@ texture = ExtResource("14_r1073")
 [connection signal="pressed" from="OptionsBox/Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="OptionsBox/AudioControl" to="OptionsBox/AudioControl" method="_on_value_changed"]
 [connection signal="toggled" from="OptionsBox/FullScreenControl" to="OptionsBox/FullScreenControl" method="_on_toggled"]
+[connection signal="pressed" from="CreditsBox/BackButton" to="." method="_on_back_button_pressed"]
