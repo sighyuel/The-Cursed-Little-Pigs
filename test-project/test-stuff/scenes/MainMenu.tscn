@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c4uon3fmwqpko" path="res://assets/logo/tclp_logo.png" id="6_06m78"]
 [ext_resource type="Texture2D" uid="uid://cgspah4haw0hj" path="res://tclp_back.png" id="7_ahe0o"]
 [ext_resource type="Script" uid="uid://cjd67lselahx8" path="res://test-stuff/scenes/quit_bounce_effect.gd" id="7_bjgp6"]
+[ext_resource type="Texture2D" uid="uid://bsscsltnuc07s" path="res://assets/Tile Sets/tclp_bg_small.png" id="14_r1073"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgp6"]
 content_margin_left = 4.0
@@ -106,6 +107,7 @@ offset_top = 141.0
 offset_right = 1041.0
 offset_bottom = 377.0
 scale = Vector2(0.15, 0.15)
+focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Options")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bjgp6")
 text = "
@@ -297,6 +299,15 @@ scale = Vector2(0.5, 0.5)
 icon = ExtResource("7_ahe0o")
 flat = true
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1810158974]
+modulate = Color(0.6052743, 0.6052743, 0.6052743, 0.6901961)
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_r1073")
+
+[connection signal="focus_entered" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Button_manager/Start" to="Button_manager/Start" method="_on_focus_exited"]
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="focus_entered" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_entered"]
 [connection signal="focus_exited" from="Button_manager/Options" to="Button_manager/Options" method="_on_focus_exited"]

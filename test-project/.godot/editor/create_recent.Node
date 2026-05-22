@@ -1,6 +1,6 @@
+TextureRect
 Button
 TextEdit
-TextureRect
 Sprite2D
 Label
 CollisionShape2D
@@ -12,6 +12,3 @@ AnimatedSprite2D
 Container
 TileMapLayer
 PointLight2D
-CPUParticles2D
-AudioStreamPlayer
-Button

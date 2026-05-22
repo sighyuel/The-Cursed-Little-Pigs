@@ -20,3 +20,7 @@ func reset_tween() -> void:
 	if tween:
 		tween.kill()
 	tween = create_tween()
+
+
+func _on_options_focus_entered() -> void:
+	pass # Replace with function body.

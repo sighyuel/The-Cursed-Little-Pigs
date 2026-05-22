@@ -47,4 +47,3 @@ func _on_credits_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	_ready()
-

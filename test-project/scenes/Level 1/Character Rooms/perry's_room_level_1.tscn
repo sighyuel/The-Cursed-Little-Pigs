@@ -552,4 +552,8 @@ script = ExtResource("17_almst")
 [node name="PauseMenu" parent="Control/Label" unique_id=1148108138 instance=ExtResource("19_eupdf")]
 visible = false
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1369125377]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="body_entered" from="Level Objects/Teleporter" to="Level Objects/Teleporter" method="_on_body_entered"]
