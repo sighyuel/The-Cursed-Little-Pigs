@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://scenes/Character Scenes/PerryCamera.gd" id="7_68f5o"]
 [ext_resource type="PackedScene" uid="uid://dodgmr4v6f253" path="res://scenes/Particle Scenes/dust_particles.tscn" id="8_8tqdd"]
 [ext_resource type="PackedScene" uid="uid://c1c482q5jrp4w" path="res://scenes/Particle Scenes/jump_particles.tscn" id="9_68f5o"]
+[ext_resource type="Texture2D" uid="uid://bvup0x1g751m" path="res://assets/Character sprites/PerrySprite.png" id="11_ck32b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wjqgi"]
 
@@ -34,6 +35,7 @@ ladder_speed = -100.0
 metadata/_custom_type_script = "uid://ui4vyukh73sy"
 
 [node name="mesh" type="MeshInstance2D" parent="." unique_id=2126410221]
+visible = false
 scale = Vector2(20, 20)
 mesh = SubResource("BoxMesh_wjqgi")
 
@@ -80,7 +82,6 @@ shape = SubResource("RectangleShape2D_wjqgi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
 offset = Vector2(0, -75)
-zoom = Vector2(0.9, 0.9)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 drag_vertical_enabled = true
@@ -98,3 +99,7 @@ scale_amount_max = 6.5
 position = Vector2(0, 6.89)
 emitting = false
 emission_rect_extents = Vector2(10.225, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1935257893]
+position = Vector2(-1, -37)
+texture = ExtResource("11_ck32b")

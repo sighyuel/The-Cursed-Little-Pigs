@@ -555,10 +555,10 @@ visible = false
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1369125377]
 z_index = -1
-offset_left = -5535.0
-offset_top = -3910.0
-offset_right = -2335.0
-offset_bottom = -2110.0
+offset_left = -4702.0
+offset_top = -2979.0
+offset_right = -2004.0
+offset_bottom = -1179.0
 scale = Vector2(3.505, 3.505)
 texture = ExtResource("20_4ty6k")
 stretch_mode = 1

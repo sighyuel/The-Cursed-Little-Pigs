@@ -3,6 +3,7 @@ extends character
 @onready var perry_camera = $Camera2D
 @onready var dust_particle = $DustParticles
 @onready var jump_particle = $JumpParticles
+@onready var perry_anim = $Sprite2D
 var original_pos
 
 func _ready():
@@ -66,6 +67,15 @@ func _physics_process(delta: float) -> void:
 		
 		$LadderDetect.text = "is on ladder: " + str(_on_ladder)
 		rect.visible = true
+		
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = speed
+			perry_anim.scale.x = 1
+		elif Input.is_action_pressed("ui_left"):
+			velocity.x = speed
+			perry_anim.scale.x = -1
+		else:
+			velocity.x = 0
 		
 		_camera_transition()
 		_perry_stretch()

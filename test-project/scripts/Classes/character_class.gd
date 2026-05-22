@@ -126,7 +126,7 @@ func death():
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		mesh.scale.y += 5
+		$Sprite2D.scale.y += .05
 		charCol.scale.y += .3
 		rect.position.y = -15
 		$Ladder.scale.y += .6
@@ -137,22 +137,22 @@ func _perry_stretch():
 			$Camera2D.zoom = min_camera_zoom
 
 
-	if charCol.scale.y >= max_height and mesh.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
+	if charCol.scale.y >= max_height and $Sprite2D.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
 		charCol.scale.y = max_height
-		mesh.scale.y = max_sprite_height
+		$Sprite2D.scale.y = max_sprite_height
 		$Ladder.scale.y = max_ladder_height
 
 #resets perry back to original height
 func _perry_reset():
 	if Input.is_action_just_pressed("B") and tree_mode_activated:
-		mesh.scale.y = 21
+		$Sprite2D.scale.y = 1
 		charCol.scale.y = 1
 		acceleration = 5
 		JUMP_VELOCITY = 500.0
 		global_position.y -= tree_reset_height
 		rect.position.y = -10
 		$Ladder.scale.y = 1
-		$Camera2D.zoom = Vector2(0.6,0.6)
+		$Camera2D.zoom = Vector2(1,1)
 		tree_mode_activated = false
 
 #our favorite pig(dale)'s abilities
