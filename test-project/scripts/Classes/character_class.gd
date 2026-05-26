@@ -37,7 +37,7 @@ var tree_mode_activated = false
 var may_is_flying = false
 var dale_ground_pounding = false
 @onready var max_height = 35
-@onready var max_sprite_height = 1.1
+@onready var max_sprite_height = 1.3
 var tree_reset_height = 60
 #wind variable that moves our characters
 var wind_velocity: Vector2 = Vector2.ZERO
@@ -126,17 +126,17 @@ func death():
 #perry's ability
 func _perry_stretch():
 	if Input.is_action_pressed("Y"):
-		$Sprite2D.scale.y += .05
-		charCol.scale.y += .3
+		$Sprite2D.scale.y += .02
+		charCol.scale.y += .04
 		rect.position.y = -15
-		$Ladder.scale.y += .6
+		$Ladder.scale.y += .02
 		$Camera2D._perry_stretch()
 		tree_mode_activated = true
 
 
 	if charCol.scale.y >= max_height and $Sprite2D.scale.y >= max_sprite_height and $Ladder.scale.y >= max_ladder_height:
 		charCol.scale.y = max_height
-		$Sprite2D.scale.y = 7.5
+		$Sprite2D.scale.y = 9.5
 		$Ladder.scale.y = max_ladder_height
 
 #resets perry back to original height

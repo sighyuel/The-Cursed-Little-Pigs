@@ -40,6 +40,7 @@ scale = Vector2(20, 20)
 mesh = SubResource("BoxMesh_wjqgi")
 
 [node name="charCol" type="CollisionShape2D" parent="." unique_id=650430691]
+position = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_njcns")
 
 [node name="Indicator" type="ColorRect" parent="." unique_id=1000644162]
@@ -62,7 +63,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Ladder" parent="." unique_id=185563685 instance=ExtResource("4_56pri")]
-position = Vector2(0, 1)
+position = Vector2(0, -8)
 scale = Vector2(1, 1.01)
 
 [node name="ladder_detect_ray" parent="." unique_id=1353371322 instance=ExtResource("3_p7v80")]
@@ -77,7 +78,7 @@ health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" unique_id=466315033]
 modulate = Color(0, 0.4862745, 0.03529412, 1)
-position = Vector2(0, 2)
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_wjqgi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1237612714]
